@@ -110,7 +110,8 @@ bet_files <- tribble(
   "nba_24_25", "NBA 2024-2025",     "NBA/2024-2025/bet_tracking_consolidated.csv",     "standard",
   "nba_25_26", "NBA 2025-2026",     "NBA/2025-2026/bet_tracking_consolidated.csv",     "standard",
   "wnba_24",   "WNBA 2024",         "WNBA/2024/bet_tracking_consolidated.csv",         "standard",
-  "wnba_25",   "WNBA 2025",         "WNBA/2025/bet_tracking_consolidated.csv",         "standard"
+  "wnba_25",   "WNBA 2025",         "WNBA/2025/bet_tracking_consolidated.csv",         "standard",
+  "wnba_26",   "WNBA 2026",         "WNBA/2026/bet_tracking_consolidated.csv",         "standard"
 )
 
 # -----------------------------
