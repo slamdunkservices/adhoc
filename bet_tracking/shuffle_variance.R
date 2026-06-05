@@ -14,28 +14,59 @@ read_bets <- function(path) {
 }
 
 plot_shuffle_variance <- function(data, title, n_sims = 250, seed = 42,
+                                  shuffle_by = c("game", "date"),
                                   overlay_data = NULL, overlay_title = NULL) {
+  shuffle_by <- match.arg(shuffle_by)
+
   data <- data %>% arrange(date, game_id)
 
-  game_blocks <- data %>%
-    group_by(game_id) %>%
-    summarise(units = list(units_net), .groups = "drop")
+  if (shuffle_by == "date") {
 
-  true_df <- tibble(
-    bet_number  = seq_len(nrow(data)),
-    running_sum = cumsum(data$units_net)
-  )
+    blocks <- data %>%
+      group_by(date) %>%
+      summarise(units_total = sum(units_net), .groups = "drop") %>%
+      arrange(date)
 
-  set.seed(seed)
-  sim_df <- map_dfr(seq_len(n_sims), function(i) {
-    shuffled <- game_blocks[sample(nrow(game_blocks)), ]
-    u <- unlist(shuffled$units)
-    tibble(
-      bet_number  = seq_along(u),
-      running_sum = cumsum(u),
-      run         = i
+    true_df <- blocks %>%
+      mutate(x_val = row_number(), running_sum = cumsum(units_total))
+
+    set.seed(seed)
+    sim_df <- map_dfr(seq_len(n_sims), function(i) {
+      shuffled <- blocks[sample(nrow(blocks)), ]
+      tibble(
+        x_val       = seq_len(nrow(shuffled)),
+        running_sum = cumsum(shuffled$units_total),
+        run         = i
+      )
+    })
+
+    x_label <- "Day of Season"
+
+  } else {
+
+    blocks <- data %>%
+      group_by(game_id) %>%
+      summarise(units = list(units_net), .groups = "drop")
+
+    true_df <- tibble(
+      x_val       = seq_len(nrow(data)),
+      running_sum = cumsum(data$units_net)
     )
-  })
+
+    set.seed(seed)
+    sim_df <- map_dfr(seq_len(n_sims), function(i) {
+      shuffled <- blocks[sample(nrow(blocks)), ]
+      u <- unlist(shuffled$units)
+      tibble(
+        x_val       = seq_along(u),
+        running_sum = cumsum(u),
+        run         = i
+      )
+    })
+
+    x_label <- "Bet Number"
+
+  }
 
   shuffled_label <- paste0(title, " shuffled")
   actual_label   <- paste0(title, " actuals")
@@ -53,20 +84,20 @@ plot_shuffle_variance <- function(data, title, n_sims = 250, seed = 42,
   p <- ggplot() +
     geom_line(
       data = sim_df,
-      aes(x = bet_number, y = running_sum, group = run, color = label),
+      aes(x = x_val, y = running_sum, group = run, color = label),
       alpha = 0.2, linewidth = 0.4
     ) +
     geom_hline(yintercept = 0, linetype = "dashed", color = "grey70") +
     geom_line(
       data = true_df,
-      aes(x = bet_number, y = running_sum, color = actual_label),
+      aes(x = x_val, y = running_sum, color = actual_label),
       linewidth = 1.4
     ) +
     scale_color_manual(values = color_map, name = NULL) +
     guides(color = guide_legend(override.aes = list(alpha = 1, linewidth = 1.2))) +
     labs(
       title = "Cumulative Unit Performance — Actuals vs. Simulated",
-      x     = "Bet Number",
+      x     = x_label,
       y     = "Cumulative Units"
     ) +
     theme_minimal(base_size = 14) +
@@ -76,15 +107,20 @@ plot_shuffle_variance <- function(data, title, n_sims = 250, seed = 42,
     )
 
   if (!is.null(overlay_data)) {
-    overlay_df <- overlay_data %>%
-      arrange(date, game_id) %>%
-      mutate(
-        bet_number  = row_number(),
-        running_sum = cumsum(units_net)
-      )
+    overlay_df <- if (shuffle_by == "date") {
+      overlay_data %>%
+        arrange(date) %>%
+        group_by(date) %>%
+        summarise(units_total = sum(units_net), .groups = "drop") %>%
+        mutate(x_val = row_number(), running_sum = cumsum(units_total))
+    } else {
+      overlay_data %>%
+        arrange(date, game_id) %>%
+        mutate(x_val = row_number(), running_sum = cumsum(units_net))
+    }
     p <- p + geom_line(
       data = overlay_df,
-      aes(x = bet_number, y = running_sum, color = overlay_actual_label),
+      aes(x = x_val, y = running_sum, color = overlay_actual_label),
       linewidth = 1.4
     )
   }
@@ -109,19 +145,21 @@ bet_files <- tribble(
 # -----------------------------
 # Run
 # Change `shuffle_target` to any name in bet_files above.
-# Optionally set `overlay_target` to a second season to draw its actuals in green.
+# Set `shuffle_by` to "game" (default) or "date".
+# Optionally set `overlay_target` to a second season to draw its actuals in blue.
 # Set `overlay_target <- NULL` to omit the overlay.
 # -----------------------------
 
 shuffle_target  <- "wnba_25"
+shuffle_by      <- "game"      # "game" or "date"
 overlay_target  <- "wnba_26"   # or NULL
 
 target <- bet_files %>% filter(name == shuffle_target)
 data   <- read_bets(target$path)
 
 if (!is.null(overlay_target)) {
-  overlay_row  <- bet_files %>% filter(name == overlay_target)
-  overlay_data <- read_bets(overlay_row$path)
+  overlay_row   <- bet_files %>% filter(name == overlay_target)
+  overlay_data  <- read_bets(overlay_row$path)
   overlay_title <- overlay_row$title
 } else {
   overlay_data  <- NULL
@@ -130,5 +168,6 @@ if (!is.null(overlay_target)) {
 
 plot_shuffle_variance(
   data, title = target$title, n_sims = 250,
+  shuffle_by   = shuffle_by,
   overlay_data = overlay_data, overlay_title = overlay_title
 )
