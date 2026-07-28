@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128">
+  <rect width="128" height="128" fill="#0a0a0a" rx="19.2"></rect>
+  <path d="M 12.8 83.2 Q 64 25.6 115.2 83.2" stroke="#39ff14" stroke-width="3.584" fill="none" stroke-dasharray="11.52 7.68" opacity="0.85"></path>
+  <text x="64" y="74.24" text-anchor="middle" font-family="&#39;Barlow Condensed&#39;, sans-serif" font-size="51.2" font-weight="900" fill="#ffffff">SDB</text>
+</svg>

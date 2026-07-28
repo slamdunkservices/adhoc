@@ -1,0 +1,208 @@
+<meta charset="utf-8">
+<style>
+__FONTS__
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+
+:root{
+  --green:#39ff14;
+  --cyan:#00e5ff;
+  --pink:#ff3ea5;
+  --ink:#0a0a0a;
+  --white:#ffffff;
+  --off:#f5f5f5;
+  --muted:#9aa0a6;
+}
+
+.card{
+  position:relative;
+  width:1080px;
+  height:1350px;
+  overflow:hidden;
+  background:
+    radial-gradient(1100px 700px at 78% -8%, rgba(0,229,255,.10), transparent 60%),
+    radial-gradient(1200px 900px at 15% 8%, rgba(57,255,20,.12), transparent 55%),
+    linear-gradient(180deg,#0c0c0c 0%, #070707 55%, #050505 100%);
+  font-family:'Barlow Condensed', system-ui, sans-serif;
+  color:var(--white);
+}
+
+/* decorative home-run trajectory arc (brand DNA) */
+.bg-arc{ position:absolute; inset:0; z-index:1; opacity:.5; }
+
+/* inner trading-card frame */
+.frame{
+  position:absolute; z-index:6; inset:22px;
+  border:1.5px solid rgba(57,255,20,.28);
+  border-radius:20px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.6) inset, 0 0 34px rgba(57,255,20,.10) inset;
+  pointer-events:none;
+}
+
+.inner{ position:absolute; z-index:5; inset:22px; display:flex; flex-direction:column; }
+
+/* ── header ── */
+.header{ display:flex; align-items:flex-start; justify-content:space-between; padding:34px 42px 0; }
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand-slam{ font-weight:800; font-size:40px; letter-spacing:.02em; line-height:.9; color:#fff; }
+.brand-bets{
+  font-weight:800; font-size:22px; letter-spacing:.34em; color:#0a0a0a;
+  background:var(--green); padding:5px 12px 4px 16px; border-radius:5px;
+  box-shadow:0 0 18px rgba(57,255,20,.55);
+}
+.tag{ text-align:right; line-height:1; }
+.tag-mlb{
+  display:inline-block; font-weight:800; font-size:20px; letter-spacing:.28em; color:var(--cyan);
+  border:1.5px solid rgba(0,229,255,.55); border-radius:999px; padding:7px 16px 5px;
+  box-shadow:0 0 16px rgba(0,229,255,.20);
+}
+.tag-sub{ display:block; margin-top:10px; font-weight:600; font-size:17px; letter-spacing:.30em; color:#c2c7cc; }
+
+/* ── hero photo ── */
+.hero{ position:relative; height:748px; margin-top:14px; }
+.photo{
+  position:absolute; inset:0;
+  background-image:url("__IMG__");
+  background-size:{{PHOTO_SIZE}};
+  background-position:{{PHOTO_POS}};
+  filter:{{PHOTO_FILTER}};
+}
+/* green rim glow around subject */
+.hero:after{
+  content:""; position:absolute; inset:0;
+  box-shadow:inset 0 0 120px 20px rgba(0,0,0,.55);
+}
+.scrim{
+  position:absolute; left:0; right:0; bottom:0; height:70%;
+  background:linear-gradient(180deg, transparent 0%, rgba(5,5,5,.18) 22%, rgba(5,5,5,.62) 50%, rgba(5,5,5,.88) 74%, #060606 100%);
+}
+.scrim-top{
+  position:absolute; left:0; right:0; top:0; height:30%;
+  background:linear-gradient(180deg, rgba(6,6,6,.92) 0%, rgba(6,6,6,.55) 45%, transparent 100%);
+}
+.jersey-no{
+  position:absolute; top:22px; right:34px; z-index:3;
+  font-weight:800; font-size:150px; line-height:.8; color:rgba(255,255,255,.06);
+  letter-spacing:-.02em;
+}
+.nameplate{ position:absolute; left:44px; right:44px; bottom:26px; z-index:4; }
+.kicker{
+  font-weight:700; font-size:20px; letter-spacing:.30em; color:var(--green);
+  text-shadow:0 0 16px rgba(57,255,20,.6); margin-bottom:2px;
+}
+.name{
+  font-weight:800; font-size:104px; line-height:.86; letter-spacing:.005em; color:#fff;
+  text-shadow:0 3px 26px rgba(0,0,0,.85);
+}
+.meta{ margin-top:10px; font-weight:600; font-size:26px; letter-spacing:.14em; color:var(--cyan); }
+.meta b{ color:#e9ecef; font-weight:700; }
+
+/* ── pick banner ── */
+.pick{ padding:26px 44px 8px; }
+.pick-label{ font-weight:700; font-size:19px; letter-spacing:.32em; color:var(--pink); text-shadow:0 0 14px rgba(255,62,165,.45); }
+.pick-row{ display:flex; align-items:center; gap:20px; margin-top:12px; }
+.chip1{
+  font-weight:800; font-size:58px; line-height:1; color:#08120a;
+  background:var(--green); padding:12px 20px 8px; border-radius:12px;
+  box-shadow:0 0 34px rgba(57,255,20,.5);
+}
+.pick-text{ font-weight:800; font-size:74px; line-height:.9; color:#fff; letter-spacing:.01em; }
+.pick-sub{ margin-top:14px; font-weight:500; font-size:24px; letter-spacing:.02em; color:var(--muted); }
+
+/* ── stats ── */
+.stats{ display:flex; gap:18px; padding:22px 44px 0; margin-top:auto; }
+.tile{
+  flex:1; background:linear-gradient(180deg,#151515,#0c0c0c);
+  border:1.5px solid #232323; border-radius:16px;
+  padding:22px 20px 20px; text-align:center; position:relative;
+}
+.tile .t-label{ font-weight:700; font-size:19px; letter-spacing:.20em; color:var(--muted); }
+.tile .t-val{ font-weight:800; font-size:70px; line-height:1; margin-top:8px; color:#fff; }
+.tile .t-sub{ font-weight:600; font-size:18px; letter-spacing:.06em; color:#6b7075; margin-top:9px; }
+.tile.play{
+  border:2px solid var(--green);
+  box-shadow:0 0 32px rgba(57,255,20,.30), inset 0 0 34px rgba(57,255,20,.06);
+  background:linear-gradient(180deg,#12210f,#0a0f08);
+}
+.tile.play .t-label{ color:var(--green); }
+.tile.play .t-val{ color:var(--green); text-shadow:0 0 22px rgba(57,255,20,.45); }
+.tile.play .t-sub{ color:#8fe08a; }
+.ribbon{
+  position:absolute; top:-13px; left:50%; transform:translateX(-50%);
+  font-weight:800; font-size:15px; letter-spacing:.20em; color:#08120a;
+  background:var(--green); padding:5px 14px 3px; border-radius:999px;
+  box-shadow:0 0 18px rgba(57,255,20,.55); white-space:nowrap;
+}
+
+/* ── footer ── */
+.footer{ display:flex; align-items:center; justify-content:space-between; padding:20px 44px 30px; }
+.site{ font-weight:800; font-size:28px; letter-spacing:.03em; color:var(--green); text-shadow:0 0 16px rgba(57,255,20,.4); }
+.disc{ font-family:system-ui,sans-serif; font-size:15px; letter-spacing:.02em; color:#6b7075; }
+</style>
+
+<div class="card">
+  <svg class="bg-arc" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+    <path d="M -40 1180 Q 560 120 1160 640" fill="none" stroke="#39ff14" stroke-width="3" stroke-dasharray="14 12" opacity="0.55"/>
+  </svg>
+
+  <div class="inner">
+    <div class="header">
+      <div class="brand">
+        <span class="brand-slam">SLAM DUNK</span>
+        <span class="brand-bets">BETS</span>
+      </div>
+      <div class="tag">
+        <span class="tag-mlb">{{LEAGUE}}</span>
+        <span class="tag-sub">{{TAG_SUB}}</span>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="photo"></div>
+      <div class="scrim-top"></div>
+      <div class="scrim"></div>
+      <div class="jersey-no">{{JERSEY}}</div>
+      <div class="nameplate">
+        <div class="kicker">{{KICKER}}</div>
+        <div class="name">{{NAME}}</div>
+        <div class="meta"><b>{{TEAM}}</b> &nbsp;•&nbsp; #{{JERSEY}}</div>
+      </div>
+    </div>
+
+    <div class="pick">
+      <div class="pick-label">{{PICK_LABEL}}</div>
+      <div class="pick-row">
+        <span class="chip1">{{CHIP}}</span>
+        <span class="pick-text">{{PICK_TEXT}}</span>
+      </div>
+      <div class="pick-sub">{{PICK_SUB}}</div>
+    </div>
+
+    <div class="stats">
+      <div class="tile">
+        <div class="t-label">MODEL PROJ</div>
+        <div class="t-val">{{PROJ}}</div>
+        <div class="t-sub">fair odds</div>
+      </div>
+      <div class="tile play">
+        <div class="ribbon">▲ VALUE</div>
+        <div class="t-label">{{BOOK}}</div>
+        <div class="t-val">{{ODDS}}</div>
+        <div class="t-sub">the play</div>
+      </div>
+      <div class="tile">
+        <div class="t-label">STAKE</div>
+        <div class="t-val">{{STAKE}}</div>
+        <div class="t-sub">{{STAKE_SUB}}</div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="site">slamdunk.bet</span>
+      <span class="disc">21+ · Gamble responsibly · 1-800-GAMBLER</span>
+    </div>
+  </div>
+
+  <div class="frame"></div>
+</div>

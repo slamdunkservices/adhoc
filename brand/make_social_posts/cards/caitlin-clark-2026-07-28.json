@@ -1,0 +1,21 @@
+{
+  "template": "multibook",
+  "slug": "caitlin-clark-first-basket-2026-07-28",
+  "photo": "photos/caitlin-clark.jpg",
+  "photo_pos": "54% 16%",
+  "photo_size": "114%",
+  "photo_filter": "brightness(0.86) saturate(0.88) contrast(1.10)",
+
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "CAITLIN CLARK",
+  "team": "INDIANA",
+  "jersey": "22",
+
+  "proj": "+629",
+  "books": [
+    { "book": "BETRIVERS", "odds": "+800", "stake": "1.3u", "best": true },
+    { "book": "BETMGM",    "odds": "+750", "stake": "1.0u" },
+    { "book": "FANATICS",  "odds": "+700", "stake": "0.6u" }
+  ]
+}
