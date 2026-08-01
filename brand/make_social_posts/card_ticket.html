@@ -1,0 +1,212 @@
+<meta charset="utf-8">
+<style>
+__FONTS__
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+
+:root{
+  --green:#39ff14;
+  --cyan:#00e5ff;
+  --pink:#ff3ea5;
+  --ink:#0a0a0a;
+  --white:#ffffff;
+  --off:#f5f5f5;
+  --muted:#9aa0a6;
+}
+
+/* accent = the pick/value colorway, set per card. --accent2 is its partner,
+   so every card carries two neons. The brand lockup, the footer wordmark and
+   the card frame stay green regardless. */
+.card{ --accent:var(--green); --accent-rgb:57,255,20;  --accent-ink:#08120a; --accent-soft:#8fe08a;
+       --accent2:var(--pink); --accent2-rgb:255,62,165; }
+.accent-cyan{ --accent:var(--cyan); --accent-rgb:0,229,255;  --accent-ink:#03181c; --accent-soft:#8fdfe8;
+       --accent2:var(--pink); --accent2-rgb:255,62,165; }
+.accent-pink{ --accent:var(--pink); --accent-rgb:255,62,165; --accent-ink:#1c0410; --accent-soft:#f0a8c9;
+       --accent2:var(--cyan); --accent2-rgb:0,229,255; }
+
+.card{
+  position:relative;
+  width:1080px;
+  height:1350px;
+  overflow:hidden;
+  background:
+    radial-gradient(900px 620px at 50% 4%, rgba(var(--accent-rgb),.14), transparent 62%),
+    radial-gradient(900px 700px at 82% 96%, rgba(0,229,255,.07), transparent 60%),
+    linear-gradient(180deg,#0d0d0d 0%, #080808 58%, #050505 100%);
+  font-family:'Barlow Condensed', system-ui, sans-serif;
+  color:var(--white);
+}
+
+/* decorative shot-arc (brand DNA) */
+.bg-arc{ position:absolute; inset:0; z-index:1; opacity:.42; }
+.bg-arc path{ stroke:var(--accent); }
+
+/* inner trading-card frame */
+.frame{
+  position:absolute; z-index:7; inset:22px;
+  border:1.5px solid rgba(57,255,20,.28);
+  border-radius:20px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.6) inset, 0 0 34px rgba(57,255,20,.10) inset;
+  pointer-events:none;
+}
+
+.inner{ position:absolute; z-index:5; inset:22px; display:flex; flex-direction:column; }
+
+/* ── header ── */
+.header{ display:flex; align-items:flex-start; justify-content:space-between; padding:32px 42px 0; }
+.brand{ display:flex; align-items:center; gap:12px; }
+.brand-slam{ font-weight:800; font-size:40px; letter-spacing:.02em; line-height:.9; color:#fff; }
+.brand-bets{
+  font-weight:800; font-size:22px; letter-spacing:.34em; color:#0a0a0a;
+  background:var(--green); padding:5px 12px 4px 16px; border-radius:5px;
+  box-shadow:0 0 18px rgba(57,255,20,.55);
+}
+.tag{ text-align:right; line-height:1; }
+.tag-league{
+  display:inline-block; font-weight:800; font-size:20px; letter-spacing:.28em; color:var(--cyan);
+  border:1.5px solid rgba(0,229,255,.55); border-radius:999px; padding:7px 16px 5px;
+  box-shadow:0 0 16px rgba(0,229,255,.20);
+}
+.tag-sub{ display:block; margin-top:10px; font-weight:600; font-size:17px; letter-spacing:.30em; color:#c2c7cc; }
+
+/* ── circular medallion: a square face crop, background thrown away ── */
+.medal-wrap{ position:relative; width:462px; margin:30px auto 0; }
+.medal{
+  position:relative; width:462px; height:462px;
+  border-radius:50%; overflow:hidden;
+  box-shadow:
+    0 0 0 4px var(--accent),
+    0 0 0 15px rgba(var(--accent-rgb),.13),
+    0 0 70px rgba(var(--accent-rgb),.34);
+}
+.photo{
+  position:absolute; inset:0;
+  background-image:url("__IMG__");
+  background-repeat:no-repeat;
+  background-size:{{PHOTO_SIZE}};
+  background-position:{{PHOTO_POS}};
+  filter:{{PHOTO_FILTER}};
+}
+.medal:after{ content:""; position:absolute; inset:0; box-shadow:inset 0 -70px 90px -30px rgba(0,0,0,.75); }
+.badge{
+  position:absolute; z-index:4; right:-10px; bottom:46px;
+  font-weight:800; font-size:30px; line-height:1; color:var(--accent-ink);
+  background:var(--accent); border-radius:999px; padding:8px 18px 5px;
+  box-shadow:0 0 26px rgba(var(--accent-rgb),.55);
+}
+
+/* ── name block, centred under the medallion ── */
+.who{ text-align:center; margin-top:26px; padding:0 60px; }
+.kicker{
+  font-weight:700; font-size:19px; letter-spacing:.34em; color:var(--accent);
+  text-shadow:0 0 16px rgba(var(--accent-rgb),.6);
+}
+.name{
+  margin-top:8px; font-weight:800; font-size:92px; line-height:.86; letter-spacing:.005em;
+  color:#fff; text-shadow:0 3px 26px rgba(0,0,0,.85);
+}
+.meta{ margin-top:10px; font-weight:600; font-size:23px; letter-spacing:.16em; color:var(--cyan); }
+.meta b{ color:#e9ecef; font-weight:700; }
+.pick-label{
+  margin-top:20px; font-weight:700; font-size:18px; letter-spacing:.32em;
+  color:var(--accent2); text-shadow:0 0 14px rgba(var(--accent2-rgb),.45);
+}
+.pick-row{ display:flex; align-items:center; justify-content:center; gap:14px; margin-top:10px; }
+.chip{
+  font-weight:800; font-size:34px; line-height:1; color:var(--accent-ink);
+  background:var(--accent); padding:8px 13px 5px; border-radius:9px;
+  box-shadow:0 0 26px rgba(var(--accent-rgb),.5);
+}
+.pick-text{ font-weight:800; font-size:46px; line-height:.92; color:#fff; letter-spacing:.02em; }
+.note{ margin-top:10px; font-weight:500; font-size:21px; color:var(--muted); }
+
+/* ── the slip: numbers as a torn-off bet receipt ── */
+.slip{
+  margin:auto 66px 0; padding:4px 32px 8px;
+  border:1.5px solid #232323; border-radius:18px;
+  background:linear-gradient(180deg,#141414,#0a0a0a);
+  box-shadow:0 20px 60px rgba(0,0,0,.55);
+}
+.perf{ position:relative; height:0; margin:0 -32px; border-top:2px dashed #2b2b2b; }
+.perf:before, .perf:after{
+  content:""; position:absolute; top:-17px; width:34px; height:34px;
+  border-radius:50%; background:#080808;
+}
+.perf:before{ left:-17px; }
+.perf:after{ right:-17px; }
+.row{ display:flex; align-items:baseline; justify-content:space-between; padding:22px 0 20px; }
+.row + .row{ border-top:1px dashed #242424; }
+.row .k{ font-weight:700; font-size:19px; letter-spacing:.22em; color:var(--muted); }
+.row .v{ font-weight:800; font-size:40px; line-height:1; color:#fff; }
+.row.price{ padding:26px 0 24px; }
+.row.price .k{ color:var(--accent); }
+.row.price .v{ font-size:60px; color:var(--accent); text-shadow:0 0 24px rgba(var(--accent-rgb),.45); }
+.row.stake .v{ font-size:34px; color:#c2c7cc; }
+
+/* ── footer ── */
+.footer{ display:flex; align-items:center; justify-content:space-between; padding:24px 44px 30px; }
+.site{ font-weight:800; font-size:28px; letter-spacing:.03em; color:var(--green); text-shadow:0 0 16px rgba(57,255,20,.4); }
+.disc{ font-family:system-ui,sans-serif; font-size:15px; letter-spacing:.02em; color:#6b7075; }
+</style>
+
+<div class="card accent-{{ACCENT}}">
+  <svg class="bg-arc" viewBox="0 0 1080 1350" preserveAspectRatio="none">
+    <path d="M -40 900 Q 540 -60 1120 900" fill="none" stroke-width="3" stroke-dasharray="14 12" opacity="0.5"/>
+  </svg>
+
+  <div class="inner">
+    <div class="header">
+      <div class="brand">
+        <span class="brand-slam">SLAM DUNK</span>
+        <span class="brand-bets">BETS</span>
+      </div>
+      <div class="tag">
+        <span class="tag-league">{{LEAGUE}}</span>
+        <span class="tag-sub">{{TAG_SUB}}</span>
+      </div>
+    </div>
+
+    <div class="medal-wrap">
+      <div class="medal">
+        <div class="photo"></div>
+      </div>
+      <div class="badge">#{{JERSEY}}</div>
+    </div>
+
+    <div class="who">
+      <div class="kicker">{{KICKER}}</div>
+      <div class="name">{{NAME}}</div>
+      <div class="meta"><b>{{TEAM}}</b></div>
+      <div class="pick-label">{{PICK_LABEL}}</div>
+      <div class="pick-row">
+        {{CHIP_HTML}}
+        <span class="pick-text">{{PICK_TEXT}}</span>
+      </div>
+      {{NOTE_HTML}}
+    </div>
+
+    <div class="slip">
+      <div class="row">
+        <span class="k">FAIR ODDS</span>
+        <span class="v">{{PROJ}}</span>
+      </div>
+      <div class="perf"></div>
+      <div class="row price">
+        <span class="k">{{BOOK}}</span>
+        <span class="v">{{ODDS}}</span>
+      </div>
+      <div class="row stake">
+        <span class="k">STAKE</span>
+        <span class="v">{{STAKE}}</span>
+      </div>
+    </div>
+
+    <div class="footer">
+      <span class="site">slamdunk.bet</span>
+      <span class="disc">21+ · Gamble responsibly · 1-800-GAMBLER</span>
+    </div>
+  </div>
+
+  <div class="frame"></div>
+</div>

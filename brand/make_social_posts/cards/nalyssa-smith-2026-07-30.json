@@ -1,0 +1,25 @@
+{
+  "template": "fullbleed",
+  "slug": "nalyssa-smith-first-basket-2026-07-30",
+  "photo": "photos/nalyssa-smith.jpg",
+  "photo_pos": "50% 50%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.88) saturate(0.90) contrast(1.08)",
+
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "NALYSSA SMITH",
+  "team": "LAS VEGAS",
+  "jersey": "3",
+
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "Model: +961 points · +888 FG",
+
+  "proj": "+961",
+  "book": "DRAFTKINGS",
+  "odds": "+1220",
+  "stake": "0.9u"
+}

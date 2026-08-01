@@ -1,9 +1,9 @@
 {
-  "template": "multibook",
+  "template": "split",
   "slug": "caitlin-clark-first-basket-2026-07-28",
   "photo": "photos/caitlin-clark.jpg",
-  "photo_pos": "54% 16%",
-  "photo_size": "114%",
+  "photo_pos": "58% 18%",
+  "photo_size": "cover",
   "photo_filter": "brightness(0.86) saturate(0.88) contrast(1.10)",
 
   "league": "WNBA",
@@ -11,6 +11,11 @@
   "name": "CAITLIN CLARK",
   "team": "INDIANA",
   "jersey": "22",
+
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "Shopped 3 books · this is the longest price on the board",
 
   "proj": "+629",
   "books": [

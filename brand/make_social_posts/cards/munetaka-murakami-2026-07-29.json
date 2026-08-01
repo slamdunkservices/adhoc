@@ -1,0 +1,24 @@
+{
+  "template": "poster",
+  "slug": "munetaka-murakami-hr-2026-07-29",
+  "photo": "photos/munetaka-murakami.jpeg",
+  "photo_pos": "50% 6%",
+  "photo_size": "cover",
+
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "MUNETAKA MURAKAMI",
+  "team": "CHICAGO",
+  "jersey": "5",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs NYY · Schlittler · 22 HR in 71 games",
+
+  "proj": "+275",
+  "book": "DRAFTKINGS",
+  "odds": "+323",
+  "stake": "1.0u"
+}

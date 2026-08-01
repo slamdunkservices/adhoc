@@ -1,0 +1,27 @@
+{
+  "template": "base",
+  "slug": "arike-ogunbowale-first-basket-2026-07-29",
+  "photo": "photos/arike-ogunbowale.jpg",
+  "photo_pos": "46% 50%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.88) saturate(0.90) contrast(1.08)",
+
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "ARIKE OGUNBOWALE",
+  "team": "DALLAS",
+  "jersey": "24",
+
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "Model: +984 points · +974 FG · shopped 3 books for the longest price",
+
+  "proj": "+984",
+  "books": [
+    { "book": "FANDUEL", "odds": "+1500", "stake": "1.4u", "best": true },
+    { "book": "BETMGM",  "odds": "+1400", "stake": "1.3u" },
+    { "book": "BETRIVERS", "odds": "+1200", "stake": "0.8u" }
+  ]
+}

@@ -15,6 +15,16 @@ html,body { background:#000; }
   --muted:#9aa0a6;
 }
 
+/* accent = the pick/value colorway, set per card. --accent2 is its partner,
+   so every card carries two neons. The brand lockup, the footer wordmark and
+   the card frame stay green regardless. */
+.card{ --accent:var(--green); --accent-rgb:57,255,20;  --accent-ink:#08120a; --accent-soft:#8fe08a;
+       --accent2:var(--pink); --accent2-rgb:255,62,165; }
+.accent-cyan{ --accent:var(--cyan); --accent-rgb:0,229,255;  --accent-ink:#03181c; --accent-soft:#8fdfe8;
+       --accent2:var(--pink); --accent2-rgb:255,62,165; }
+.accent-pink{ --accent:var(--pink); --accent-rgb:255,62,165; --accent-ink:#1c0410; --accent-soft:#f0a8c9;
+       --accent2:var(--cyan); --accent2-rgb:0,229,255; }
+
 .card{
   position:relative;
   width:1080px;
@@ -22,7 +32,7 @@ html,body { background:#000; }
   overflow:hidden;
   background:
     radial-gradient(1100px 700px at 78% -8%, rgba(0,229,255,.10), transparent 60%),
-    radial-gradient(1200px 900px at 15% 8%, rgba(57,255,20,.12), transparent 55%),
+    radial-gradient(1200px 900px at 15% 8%, rgba(var(--accent-rgb),.12), transparent 55%),
     linear-gradient(180deg,#0c0c0c 0%, #070707 55%, #050505 100%);
   font-family:'Barlow Condensed', system-ui, sans-serif;
   color:var(--white);
@@ -30,6 +40,7 @@ html,body { background:#000; }
 
 /* decorative home-run trajectory arc (brand DNA) */
 .bg-arc{ position:absolute; inset:0; z-index:1; opacity:.5; }
+.bg-arc path{ stroke:var(--accent); }
 
 /* inner trading-card frame */
 .frame{
@@ -52,7 +63,7 @@ html,body { background:#000; }
   box-shadow:0 0 18px rgba(57,255,20,.55);
 }
 .tag{ text-align:right; line-height:1; }
-.tag-mlb{
+.tag-league{
   display:inline-block; font-weight:800; font-size:20px; letter-spacing:.28em; color:var(--cyan);
   border:1.5px solid rgba(0,229,255,.55); border-radius:999px; padding:7px 16px 5px;
   box-shadow:0 0 16px rgba(0,229,255,.20);
@@ -64,6 +75,7 @@ html,body { background:#000; }
 .photo{
   position:absolute; inset:0;
   background-image:url("__IMG__");
+  background-repeat:no-repeat;
   background-size:{{PHOTO_SIZE}};
   background-position:{{PHOTO_POS}};
   filter:{{PHOTO_FILTER}};
@@ -88,8 +100,8 @@ html,body { background:#000; }
 }
 .nameplate{ position:absolute; left:44px; right:44px; bottom:26px; z-index:4; }
 .kicker{
-  font-weight:700; font-size:20px; letter-spacing:.30em; color:var(--green);
-  text-shadow:0 0 16px rgba(57,255,20,.6); margin-bottom:2px;
+  font-weight:700; font-size:20px; letter-spacing:.30em; color:var(--accent);
+  text-shadow:0 0 16px rgba(var(--accent-rgb),.6); margin-bottom:2px;
 }
 .name{
   font-weight:800; font-size:104px; line-height:.86; letter-spacing:.005em; color:#fff;
@@ -100,12 +112,12 @@ html,body { background:#000; }
 
 /* ── pick banner ── */
 .pick{ padding:26px 44px 8px; }
-.pick-label{ font-weight:700; font-size:19px; letter-spacing:.32em; color:var(--pink); text-shadow:0 0 14px rgba(255,62,165,.45); }
+.pick-label{ font-weight:700; font-size:19px; letter-spacing:.32em; color:var(--accent2); text-shadow:0 0 14px rgba(var(--accent2-rgb),.45); }
 .pick-row{ display:flex; align-items:center; gap:20px; margin-top:12px; }
-.chip1{
-  font-weight:800; font-size:58px; line-height:1; color:#08120a;
-  background:var(--green); padding:12px 20px 8px; border-radius:12px;
-  box-shadow:0 0 34px rgba(57,255,20,.5);
+.chip{
+  font-weight:800; font-size:58px; line-height:1; color:var(--accent-ink);
+  background:var(--accent); padding:12px 20px 8px; border-radius:12px;
+  box-shadow:0 0 34px rgba(var(--accent-rgb),.5);
 }
 .pick-text{ font-weight:800; font-size:74px; line-height:.9; color:#fff; letter-spacing:.01em; }
 .pick-sub{ margin-top:14px; font-weight:500; font-size:24px; letter-spacing:.02em; color:var(--muted); }
@@ -121,18 +133,20 @@ html,body { background:#000; }
 .tile .t-val{ font-weight:800; font-size:70px; line-height:1; margin-top:8px; color:#fff; }
 .tile .t-sub{ font-weight:600; font-size:18px; letter-spacing:.06em; color:#6b7075; margin-top:9px; }
 .tile.play{
-  border:2px solid var(--green);
-  box-shadow:0 0 32px rgba(57,255,20,.30), inset 0 0 34px rgba(57,255,20,.06);
-  background:linear-gradient(180deg,#12210f,#0a0f08);
+  border:2px solid var(--accent);
+  box-shadow:0 0 32px rgba(var(--accent-rgb),.30), inset 0 0 34px rgba(var(--accent-rgb),.06);
+  background:
+    linear-gradient(180deg, rgba(var(--accent-rgb),.08), rgba(var(--accent-rgb),.015)),
+    linear-gradient(180deg,#101010,#080808);
 }
-.tile.play .t-label{ color:var(--green); }
-.tile.play .t-val{ color:var(--green); text-shadow:0 0 22px rgba(57,255,20,.45); }
-.tile.play .t-sub{ color:#8fe08a; }
+.tile.play .t-label{ color:var(--accent); }
+.tile.play .t-val{ color:var(--accent); text-shadow:0 0 22px rgba(var(--accent-rgb),.45); }
+.tile.play .t-sub{ color:var(--accent-soft); }
 .ribbon{
   position:absolute; top:-13px; left:50%; transform:translateX(-50%);
-  font-weight:800; font-size:15px; letter-spacing:.20em; color:#08120a;
-  background:var(--green); padding:5px 14px 3px; border-radius:999px;
-  box-shadow:0 0 18px rgba(57,255,20,.55); white-space:nowrap;
+  font-weight:800; font-size:15px; letter-spacing:.20em; color:var(--accent-ink);
+  background:var(--accent); padding:5px 14px 3px; border-radius:999px;
+  box-shadow:0 0 18px rgba(var(--accent-rgb),.55); white-space:nowrap;
 }
 
 /* ── footer ── */
@@ -141,9 +155,9 @@ html,body { background:#000; }
 .disc{ font-family:system-ui,sans-serif; font-size:15px; letter-spacing:.02em; color:#6b7075; }
 </style>
 
-<div class="card">
+<div class="card accent-{{ACCENT}}">
   <svg class="bg-arc" viewBox="0 0 1080 1350" preserveAspectRatio="none">
-    <path d="M -40 1180 Q 560 120 1160 640" fill="none" stroke="#39ff14" stroke-width="3" stroke-dasharray="14 12" opacity="0.55"/>
+    <path d="M -40 1180 Q 560 120 1160 640" fill="none" stroke-width="3" stroke-dasharray="14 12" opacity="0.55"/>
   </svg>
 
   <div class="inner">
@@ -153,7 +167,7 @@ html,body { background:#000; }
         <span class="brand-bets">BETS</span>
       </div>
       <div class="tag">
-        <span class="tag-mlb">{{LEAGUE}}</span>
+        <span class="tag-league">{{LEAGUE}}</span>
         <span class="tag-sub">{{TAG_SUB}}</span>
       </div>
     </div>
@@ -173,7 +187,7 @@ html,body { background:#000; }
     <div class="pick">
       <div class="pick-label">{{PICK_LABEL}}</div>
       <div class="pick-row">
-        <span class="chip1">{{CHIP}}</span>
+        {{CHIP_HTML}}
         <span class="pick-text">{{PICK_TEXT}}</span>
       </div>
       <div class="pick-sub">{{PICK_SUB}}</div>

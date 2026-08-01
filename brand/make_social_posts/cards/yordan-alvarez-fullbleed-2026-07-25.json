@@ -1,0 +1,23 @@
+{
+  "template": "fullbleed",
+  "slug": "yordan-alvarez-hr-fullbleed-2026-07-25",
+  "photo": "photos/yordan-alvarez.jpg",
+  "photo_pos": "50% 14%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.90) saturate(0.92) contrast(1.06)",
+
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "YORDAN ALVAREZ",
+  "team": "HOUSTON",
+  "jersey": "44",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+
+  "proj": "+237",
+  "book": "KALSHI",
+  "odds": "+257",
+  "stake": "0.8u"
+}

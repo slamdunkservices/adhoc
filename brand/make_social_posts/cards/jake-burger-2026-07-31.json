@@ -1,0 +1,28 @@
+{
+  "template": "poster",
+  "slug": "jake-burger-hr-2026-07-31",
+  "photo": "photos/jake-burger.jpg",
+  "photo_pos": "50% 45%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.93) saturate(0.88) contrast(1.06)",
+
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JAKE BURGER",
+  "team": "TEXAS",
+  "jersey": "21",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "at HOU · Brown · 19 HR in 104 G",
+
+  "proj": "+435",
+  "books": [
+    { "book": "FANATICS",      "odds": "+525", "stake": "0.8u", "best": true },
+    { "book": "DRAFTKINGS",    "odds": "+506", "stake": "0.7u" },
+    { "book": "FANDUEL",       "odds": "+500", "stake": "0.6u" },
+    { "book": "HARD ROCK BET", "odds": "+500", "stake": "0.6u" }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "template": "ticket",
+  "slug": "mookie-betts-hr-ticket-2026-07-24",
+  "photo": "photos/mookie-betts.jpg",
+  "photo_pos": "52% 16%",
+  "photo_size": "cover",
+
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "MOOKIE BETTS",
+  "team": "LOS ANGELES",
+  "jersey": "50",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+
+  "proj": "+451",
+  "book": "DRAFTKINGS",
+  "odds": "+516",
+  "stake": "0.8u"
+}

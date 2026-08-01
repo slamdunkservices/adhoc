@@ -1,0 +1,25 @@
+{
+  "template": "fullbleed",
+  "slug": "jade-melbourne-first-basket-2026-07-31",
+  "photo": "photos/jade-melbourne.jpg",
+  "photo_pos": "50% 18%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.86) saturate(0.88) contrast(1.08)",
+
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "JADE MELBOURNE",
+  "team": "SEATTLE",
+  "jersey": "5",
+
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "Model: +1141 points · +1112 FG",
+
+  "proj": "+1141",
+  "book": "BETMGM",
+  "odds": "+1300",
+  "stake": "0.5u"
+}

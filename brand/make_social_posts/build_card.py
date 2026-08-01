@@ -13,7 +13,6 @@ Usage:
 Output lands in out/<slug>.png. See README.md for the config field reference.
 """
 import base64
-import html
 import json
 import os
 import re
@@ -27,6 +26,10 @@ CHROME = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
 CARD_W, CARD_H = 1080, 1350
 
+# Colorway for the pick/value elements. The brand lockup, the footer, and the
+# card frame stay neon green on every card — those aren't up for grabs.
+ACCENTS = ("green", "cyan", "pink")
+
 # Shared by every template: photo framing / grading, tuned per photo.
 PHOTO_DEFAULTS = {
     "photo_pos": "50% 12%",
@@ -35,45 +38,76 @@ PHOTO_DEFAULTS = {
 }
 PHOTO_FIELDS = ("photo_pos", "photo_size", "photo_filter")
 
-# One entry per template. `required` is validated against the raw config;
-# `defaults` fills the rest; `fields` is what gets substituted into the HTML.
+# Shared by every template: the pick itself. Templates may add to these, and
+# `base` overrides most of them with its home-run copy.
+COMMON_DEFAULTS = {
+    "accent": "green",
+    "league": "MLB",
+    "tag_sub": "PLAYER PROP",
+    "kicker": "TODAY'S PLAY",
+    "pick_label": "THE PICK",
+    "chip": "",
+    "note": "",
+}
+COMMON_REQUIRED = ("slug", "photo", "name", "team", "jersey",
+                   "proj", "book", "odds", "stake")
+# A superset is fine — substituting a token a template doesn't use is a no-op.
+# The reverse (a token nothing substitutes) trips the drift guard in build().
+COMMON_FIELDS = ("accent", "league", "tag_sub", "kicker", "name", "team",
+                 "jersey", "pick_label", "chip_html", "pick_text", "note_html",
+                 "proj", "book", "odds", "stake")
+
+# Every frame takes one expected price (`proj`) and one available price
+# (`odds`). They differ in how the photo is cropped and where the type sits.
 TEMPLATES = {
-    # Single book — one price, one stake.
+    # Landscape photo band, name over it, three tiles across the bottom.
     "base": {
         "file": "card_base.html",
-        "required": ("slug", "photo", "name", "team", "jersey",
-                     "proj", "book", "odds", "stake"),
+        "required": COMMON_REQUIRED,
         "defaults": {
-            "league": "MLB",
             "tag_sub": "HOME RUN PROP",
-            "kicker": "TODAY'S PLAY",
             "pick_label": "THE PICK — TO GO YARD",
             "chip": "1+",
             "pick_text": "HOME RUN",
             "pick_sub": "Anytime home run · book line beats our model = value",
             "stake_sub": "units",
         },
-        "fields": ("league", "tag_sub", "kicker", "name", "team", "jersey",
-                   "pick_label", "chip", "pick_text", "pick_sub", "proj",
-                   "book", "odds", "stake", "stake_sub"),
+        "fields": COMMON_FIELDS + ("pick_sub", "stake_sub"),
     },
-    # Same price shopped at 2–3 books, each with its own stake.
-    "multibook": {
-        "file": "card_multibook.html",
-        "required": ("slug", "photo", "name", "team", "jersey", "proj", "books"),
-        "defaults": {
-            "league": "WNBA",
-            "tag_sub": "FIRST BASKET PROP",
-            "kicker": "TODAY'S PLAY",
-            "pick_label": "THE PICK — TO SCORE FIRST",
-            "chip": "1ST",
-            "pick_text": "FIRST BASKET",
-            "proj_note": "fair odds · every book below is priced <em>longer</em>",
-            "total_line": None,  # computed from the stakes when omitted
-        },
-        "fields": ("league", "tag_sub", "kicker", "name", "team", "jersey",
-                   "pick_label", "chip", "pick_text", "proj", "proj_note",
-                   "book_tiles", "total_line"),
+    # Photo edge to edge, vertical rail down the left, one price bar.
+    "fullbleed": {
+        "file": "card_fullbleed.html",
+        "required": COMMON_REQUIRED + ("pick_text",),
+        "defaults": {"accent": "cyan"},
+        "fields": COMMON_FIELDS,
+    },
+    # Type column on the left, angled photo column on the right.
+    "split": {
+        "file": "card_split.html",
+        "required": COMMON_REQUIRED + ("pick_text",),
+        "defaults": {"accent": "pink"},
+        "fields": COMMON_FIELDS,
+    },
+    # Circular photo medallion over a bet-slip receipt.
+    "ticket": {
+        "file": "card_ticket.html",
+        "required": COMMON_REQUIRED + ("pick_text",),
+        "defaults": {"accent": "green"},
+        "fields": COMMON_FIELDS,
+    },
+    # Contained portrait panel, the two prices flanking it left and right.
+    "poster": {
+        "file": "card_poster.html",
+        "required": COMMON_REQUIRED + ("pick_text",),
+        "defaults": {"accent": "green"},
+        "fields": COMMON_FIELDS,
+    },
+    # The available price is the hero; the photo is atmosphere behind it.
+    "bigprice": {
+        "file": "card_bigprice.html",
+        "required": COMMON_REQUIRED + ("pick_text",),
+        "defaults": {"accent": "cyan"},
+        "fields": COMMON_FIELDS,
     },
 }
 
@@ -86,47 +120,45 @@ def die(msg):
     sys.exit("error: " + msg)
 
 
-def render_books(books, cfg_path):
-    """Build the book-tile markup and the total-stake line for a multibook card."""
-    if not isinstance(books, list) or not 2 <= len(books) <= 3:
-        die("%s: `books` must be a list of 2 or 3 entries" % cfg_path)
+def wrap(css_class, value, tag="span"):
+    """Markup for an optional bit of copy — nothing at all when it's empty."""
+    if not value:
+        return ""
+    return '<%s class="%s">%s</%s>' % (tag, css_class, value, tag)
 
-    best = [b for b in books if b.get("best")]
-    if len(best) != 1:
-        die("%s: exactly one book must be marked \"best\": true (found %d)"
-            % (cfg_path, len(best)))
 
-    tiles, total = [], 0.0
+def to_decimal(odds, cfg_path):
+    """American odds as a decimal payout multiplier, for comparing prices."""
+    m = re.match(r"\s*([+-]?)(\d+(?:\.\d+)?)\s*$", str(odds))
+    if not m or float(m.group(2)) == 0:
+        die("%s: %r is not American odds (e.g. \"+325\" or \"-110\")"
+            % (cfg_path, odds))
+    num = float(m.group(2))
+    return 100.0 / num + 1.0 if m.group(1) == "-" else num / 100.0 + 1.0
+
+
+def pick_best_book(books, cfg_path):
+    """Collapse a list of books down to the single best available price.
+
+    An explicit "best": true wins; otherwise the longest price does.
+    """
+    if not isinstance(books, list) or not books:
+        die("%s: `books` must be a non-empty list" % cfg_path)
+
     for b in books:
         missing = [k for k in ("book", "odds", "stake") if not b.get(k)]
         if missing:
             die("%s: book entry %r is missing %s"
                 % (cfg_path, b.get("book", "?"), ", ".join(missing)))
 
-        units = re.match(r"\s*([0-9]*\.?[0-9]+)", str(b["stake"]))
-        if not units:
-            die("%s: stake %r is not a number of units (e.g. \"1.3u\")"
-                % (cfg_path, b["stake"]))
-        total += float(units.group(1))
+    flagged = [b for b in books if b.get("best")]
+    if len(flagged) > 1:
+        die("%s: %d books are marked \"best\": true — mark one, or none and "
+            "let the longest price win" % (cfg_path, len(flagged)))
 
-        esc = {k: html.escape(str(b[k])) for k in ("book", "odds", "stake")}
-        tiles.append(
-            '<div class="tile%s">\n'
-            '        %s\n'
-            '        <div class="t-label">%s</div>\n'
-            '        <div class="t-val">%s</div>\n'
-            '        <div class="t-stake">%s</div>\n'
-            '      </div>' % (
-                " play" if b.get("best") else "",
-                '<div class="ribbon">▲ BEST PRICE</div>' if b.get("best") else "",
-                esc["book"], esc["odds"], esc["stake"],
-            )
-        )
-
-    total_line = ("Total exposure <b>%su</b> across %d books · take the best "
-                  "price you have" % (("%.2f" % total).rstrip("0").rstrip("."),
-                                      len(books)))
-    return "\n      ".join(tiles), total_line
+    best = flagged[0] if flagged else max(
+        books, key=lambda b: to_decimal(b["odds"], cfg_path))
+    return {k: best[k] for k in ("book", "odds", "stake")}
 
 
 def build(cfg_path):
@@ -139,18 +171,27 @@ def build(cfg_path):
             % (cfg_path, kind, ", ".join(sorted(TEMPLATES))))
     tpl = TEMPLATES[kind]
 
+    # Every frame renders one book. Hand it a shopped list and it takes the
+    # best price, unless the card names a book/odds/stake explicitly.
+    if cfg.get("books"):
+        for key, val in pick_best_book(cfg["books"], cfg_path).items():
+            cfg.setdefault(key, val)
+
     missing = [k for k in tpl["required"] if not cfg.get(k)]
     if missing:
         die("%s is missing required field(s): %s" % (cfg_path, ", ".join(missing)))
 
     c = dict(PHOTO_DEFAULTS)
+    c.update(COMMON_DEFAULTS)
     c.update(tpl["defaults"])
     c.update(cfg)
 
-    if kind == "multibook":
-        tiles, total_line = render_books(cfg["books"], cfg_path)
-        c["book_tiles"] = tiles
-        c["total_line"] = c.get("total_line") or total_line
+    if c["accent"] not in ACCENTS:
+        die("%s: unknown accent %r — pick one of %s"
+            % (cfg_path, c["accent"], ", ".join(ACCENTS)))
+
+    c["chip_html"] = wrap("chip", c["chip"])
+    c["note_html"] = wrap("note", c["note"], "div")
 
     photo = os.path.join(ROOT, c["photo"])
     if not os.path.exists(photo):

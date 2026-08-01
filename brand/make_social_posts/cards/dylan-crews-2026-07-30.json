@@ -1,0 +1,27 @@
+{
+  "template": "ticket",
+  "slug": "dylan-crews-hr-2026-07-30",
+  "photo": "photos/dylan-crews.webp",
+  "photo_pos": "50% 50%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.96) saturate(0.94) contrast(1.06)",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "DYLAN CREWS",
+  "team": "WASHINGTON",
+  "jersey": "3",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "3 HR in his last 10 · also +493 at DraftKings",
+
+  "proj": "+430",
+  "books": [
+    { "book": "HARD ROCK BET", "odds": "+500", "stake": "0.7u", "best": true },
+    { "book": "DRAFTKINGS",    "odds": "+493", "stake": "0.6u" }
+  ]
+}

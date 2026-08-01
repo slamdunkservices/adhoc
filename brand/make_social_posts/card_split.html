@@ -1,0 +1,202 @@
+<meta charset="utf-8">
+<style>
+__FONTS__
+
+* { margin:0; padding:0; box-sizing:border-box; }
+html,body { background:#000; }
+
+:root{
+  --green:#39ff14;
+  --cyan:#00e5ff;
+  --pink:#ff3ea5;
+  --ink:#0a0a0a;
+  --white:#ffffff;
+  --off:#f5f5f5;
+  --muted:#9aa0a6;
+}
+
+/* accent = the pick/value colorway, set per card. --accent2 is its partner,
+   so every card carries two neons. The brand lockup, the footer wordmark and
+   the card frame stay green regardless. */
+.card{ --accent:var(--green); --accent-rgb:57,255,20;  --accent-ink:#08120a; --accent-soft:#8fe08a;
+       --accent2:var(--pink); --accent2-rgb:255,62,165; }
+.accent-cyan{ --accent:var(--cyan); --accent-rgb:0,229,255;  --accent-ink:#03181c; --accent-soft:#8fdfe8;
+       --accent2:var(--pink); --accent2-rgb:255,62,165; }
+.accent-pink{ --accent:var(--pink); --accent-rgb:255,62,165; --accent-ink:#1c0410; --accent-soft:#f0a8c9;
+       --accent2:var(--cyan); --accent2-rgb:0,229,255; }
+
+.card{
+  position:relative;
+  width:1080px;
+  height:1350px;
+  overflow:hidden;
+  background:
+    radial-gradient(900px 700px at 12% 22%, rgba(var(--accent-rgb),.10), transparent 62%),
+    linear-gradient(180deg,#0d0d0d 0%, #080808 60%, #050505 100%);
+  font-family:'Barlow Condensed', system-ui, sans-serif;
+  color:var(--white);
+}
+
+/* ── photo: a tall column on the right, cut on a diagonal ── */
+.shot{
+  position:absolute; z-index:2; right:0; top:0; bottom:0; width:592px;
+  clip-path:polygon(0 0, 100% 0, 100% 100%, 176px 100%);
+}
+.shot .edge{ position:absolute; inset:0; background:var(--accent); box-shadow:0 0 60px rgba(var(--accent-rgb),.5); }
+.photo{
+  position:absolute; inset:0;
+  clip-path:polygon(5px 0, 100% 0, 100% 100%, 181px 100%);
+  background-image:url("__IMG__");
+  background-repeat:no-repeat;
+  background-size:{{PHOTO_SIZE}};
+  background-position:{{PHOTO_POS}};
+  filter:{{PHOTO_FILTER}};
+}
+.veil{
+  position:absolute; inset:0; clip-path:polygon(5px 0, 100% 0, 100% 100%, 181px 100%);
+  background:
+    linear-gradient(90deg, rgba(5,5,5,.88) 0%, rgba(5,5,5,.34) 24%, transparent 52%),
+    linear-gradient(180deg, rgba(5,5,5,.60) 0%, transparent 20%, transparent 60%, rgba(4,4,4,.82) 100%);
+}
+.jersey-no{
+  position:absolute; z-index:3; top:150px; right:46px;
+  font-weight:800; font-size:230px; line-height:.8; color:rgba(255,255,255,.07);
+  letter-spacing:-.03em;
+}
+
+/* inner trading-card frame */
+.frame{
+  position:absolute; z-index:7; inset:22px;
+  border:1.5px solid rgba(57,255,20,.28);
+  border-radius:20px;
+  box-shadow:0 0 0 1px rgba(0,0,0,.6) inset, 0 0 34px rgba(57,255,20,.10) inset;
+  pointer-events:none;
+}
+
+/* ── type column, left, vertically centred ── */
+.col{
+  position:absolute; z-index:5; left:22px; top:22px; bottom:22px; width:512px;
+  display:flex; flex-direction:column; padding:40px 24px 30px 44px;
+}
+
+.tag{ line-height:1; }
+.tag-league{
+  display:inline-block; font-weight:800; font-size:20px; letter-spacing:.28em; color:var(--cyan);
+  border:1.5px solid rgba(0,229,255,.55); border-radius:999px; padding:7px 16px 5px;
+  box-shadow:0 0 16px rgba(0,229,255,.20);
+}
+.tag-sub{ display:block; margin-top:12px; font-weight:600; font-size:17px; letter-spacing:.28em; color:#c2c7cc; }
+
+.mid{ margin:auto 0; }
+.kicker{
+  font-weight:700; font-size:19px; letter-spacing:.30em; color:var(--accent);
+  text-shadow:0 0 16px rgba(var(--accent-rgb),.6); margin-bottom:6px;
+}
+.name{
+  font-weight:800; font-size:90px; line-height:.84; letter-spacing:.005em; color:#fff;
+  text-shadow:0 3px 26px rgba(0,0,0,.85);
+}
+.meta{ margin-top:16px; font-weight:600; font-size:25px; letter-spacing:.14em; color:var(--cyan); }
+.meta b{ color:#e9ecef; font-weight:700; }
+
+.pick-label{
+  margin-top:38px; font-weight:700; font-size:17px; letter-spacing:.30em;
+  color:var(--accent2); text-shadow:0 0 14px rgba(var(--accent2-rgb),.45);
+}
+.pick-row{ display:flex; align-items:center; gap:15px; margin-top:14px; }
+.chip{
+  font-weight:800; font-size:40px; line-height:1; color:var(--accent-ink);
+  background:var(--accent); padding:9px 15px 6px; border-radius:10px;
+  box-shadow:0 0 26px rgba(var(--accent-rgb),.5);
+}
+.pick-text{ font-weight:800; font-size:52px; line-height:.92; color:#fff; letter-spacing:.02em; }
+.note{ margin-top:12px; font-weight:500; font-size:21px; letter-spacing:.02em; color:var(--muted); }
+
+/* ── prices stacked, not tiled across ── */
+.prices{ margin-top:42px; }
+.price{
+  display:flex; align-items:baseline; gap:16px;
+  padding:16px 0 14px 20px; border-left:4px solid #262626;
+}
+.price + .price{ margin-top:16px; }
+.p-k{ font-weight:700; font-size:16px; letter-spacing:.18em; color:var(--muted); width:156px; }
+.p-v{ font-weight:800; font-size:64px; line-height:1; color:#fff; }
+.price.best{
+  border-left:4px solid var(--accent);
+  background:linear-gradient(90deg, rgba(var(--accent-rgb),.12), transparent 78%);
+}
+.price.best .p-k{ color:var(--accent); }
+.price.best .p-v{ color:var(--accent); text-shadow:0 0 26px rgba(var(--accent-rgb),.45); font-size:78px; }
+.stake-line{
+  margin-top:24px; margin-left:24px; display:inline-block;
+  font-weight:700; font-size:22px; letter-spacing:.10em; color:#c2c7cc;
+  border:1.5px solid #2c2c2c; border-radius:999px; padding:7px 20px 4px;
+}
+
+/* ── sign-off: lockup drops to the bottom of the column ── */
+.signoff{ padding-top:26px; }
+.brand{ display:flex; align-items:center; gap:11px; }
+.brand-slam{ font-weight:800; font-size:34px; letter-spacing:.02em; line-height:.9; color:#fff; }
+.brand-bets{
+  font-weight:800; font-size:19px; letter-spacing:.34em; color:#0a0a0a;
+  background:var(--green); padding:4px 10px 3px 14px; border-radius:5px;
+  box-shadow:0 0 18px rgba(57,255,20,.55);
+}
+.signoff-sub{ display:flex; align-items:baseline; justify-content:space-between; margin-top:14px; }
+.site{ font-weight:800; font-size:23px; letter-spacing:.03em; color:var(--green); text-shadow:0 0 16px rgba(57,255,20,.4); }
+.disc{ font-family:system-ui,sans-serif; font-size:13px; letter-spacing:.01em; color:#6b7075; }
+</style>
+
+<div class="card accent-{{ACCENT}}">
+  <div class="shot">
+    <div class="edge"></div>
+    <div class="photo"></div>
+    <div class="veil"></div>
+  </div>
+  <div class="jersey-no">{{JERSEY}}</div>
+
+  <div class="col">
+    <div class="tag">
+      <span class="tag-league">{{LEAGUE}}</span>
+      <span class="tag-sub">{{TAG_SUB}}</span>
+    </div>
+
+    <div class="mid">
+      <div class="kicker">{{KICKER}}</div>
+      <div class="name">{{NAME}}</div>
+      <div class="meta"><b>{{TEAM}}</b> &nbsp;•&nbsp; #{{JERSEY}}</div>
+
+      <div class="pick-label">{{PICK_LABEL}}</div>
+      <div class="pick-row">
+        {{CHIP_HTML}}
+        <span class="pick-text">{{PICK_TEXT}}</span>
+      </div>
+      {{NOTE_HTML}}
+
+      <div class="prices">
+        <div class="price">
+          <span class="p-k">EXPECTED</span>
+          <span class="p-v">{{PROJ}}</span>
+        </div>
+        <div class="price best">
+          <span class="p-k">{{BOOK}}</span>
+          <span class="p-v">{{ODDS}}</span>
+        </div>
+        <span class="stake-line">STAKE {{STAKE}}</span>
+      </div>
+    </div>
+
+    <div class="signoff">
+      <div class="brand">
+        <span class="brand-slam">SLAM DUNK</span>
+        <span class="brand-bets">BETS</span>
+      </div>
+      <div class="signoff-sub">
+        <span class="site">slamdunk.bet</span>
+        <span class="disc">21+ · Gamble responsibly · 1-800-GAMBLER</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="frame"></div>
+</div>
