@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+
+# Derived from the odds archive on Desktop — rebuildable, never committed.
+odds_analysis/data/
+odds_analysis/out/
+
+# Rendered post cards — rebuildable from cards/*.json via build_card.py.
+brand/make_social_posts/out/
+
+# Generated charts.
+bet_tracking/WNBA/2025/discord_summary.png
