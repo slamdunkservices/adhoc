@@ -1,0 +1,26 @@
+{
+  "template": "fullbleed",
+  "slug": "kiah-stokes-first-basket-exact-2026-08-04",
+  "photo": "photos/kiah-stokes.png",
+  "photo_pos": "50% 30%",
+  "photo_size": "1163px auto",
+  "photo_filter": "brightness(1.06) saturate(0.97) contrast(1.04)",
+
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET EXACT",
+  "name": "KIAH STOKES",
+  "team": "GOLDEN STATE",
+  "jersey": "41",
+
+  "kicker": "55 BLOCKS — 2ND IN THE W",
+  "pick_label": "THE PICK — GOLDEN STATE'S FIRST, ON A TWO",
+  "chip": "2PT",
+  "pick_text": "FIRST BASKET",
+  "note": "Model: +916 · DK is the only board posting it",
+
+  "proj": "+916",
+  "book": "DRAFTKINGS",
+  "odds": "+1100",
+  "stake": "0.6u"
+}

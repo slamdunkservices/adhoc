@@ -1,0 +1,32 @@
+{
+  "template": "fullbleed",
+  "slug": "taylor-trammell-hr-2026-08-09",
+  "photo": "photos/taylor-trammell.jpg",
+  "photo_pos": "51% 50%",
+  "photo_size": "cover",
+  "photo_filter": "none",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "TAYLOR TRAMMELL",
+  "team": "HOUSTON",
+  "jersey": "26",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "Model: +450 · best of 7 books",
+
+  "proj": "+450",
+  "books": [
+    { "book": "THESCORE BET", "odds": "+700", "stake": "1.6u", "best": true },
+    { "book": "BETRIVERS",    "odds": "+650", "stake": "1.4u" },
+    { "book": "HARD ROCK BET","odds": "+650", "stake": "1.4u" },
+    { "book": "DRAFTKINGS",   "odds": "+640", "stake": "1.4u" },
+    { "book": "FANDUEL",      "odds": "+630", "stake": "1.3u" },
+    { "book": "CAESARS",      "odds": "+575", "stake": "1.0u" },
+    { "book": "BETMGM",       "odds": "+575", "stake": "1.0u" }
+  ]
+}

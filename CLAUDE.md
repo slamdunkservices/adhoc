@@ -12,6 +12,15 @@ Three subprojects, each with its own README:
 | `brand/make_social_posts/` | `build_card.py` renders a JSON config into a 1080×1350 PNG post card via one of the `card_*.html` templates |
 | `bet_tracking/` | R scripts over the tracked-bet spreadsheets in `NBA/` and `WNBA/` |
 
+## Skills
+
+| Skill | What it does |
+|---|---|
+| `pick-post` | Turns a pick alert into a finished post — card PNG, Instagram caption, hashtag comment, tweet. Wraps `brand/make_social_posts/` plus the copy rules that live nowhere else |
+
+Project-scoped, in `.claude/skills/`. They travel with the repo; nothing here
+is installed globally.
+
 ## Data roots
 
 **Data lives outside this repo.** Do not commit data files, and do not hardcode

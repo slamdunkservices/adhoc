@@ -1,0 +1,26 @@
+{
+  "template": "base",
+  "slug": "kyle-schwarber-hr-2026-08-03",
+  "photo": "photos/kyle-schwarber.jpg",
+  "photo_pos": "50% 8%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.98) saturate(0.96) contrast(1.06)",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "KYLE SCHWARBER",
+  "team": "PHILADELPHIA",
+  "jersey": "12",
+
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "pick_sub": "Anytime home run · model 32.4%, the board pays 30.3%",
+
+  "proj": "+209",
+  "book": "BETRIVERS",
+  "odds": "+230",
+  "stake": "0.7u"
+}

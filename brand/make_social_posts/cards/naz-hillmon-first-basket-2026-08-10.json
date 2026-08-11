@@ -1,0 +1,26 @@
+{
+  "slug": "naz-hillmon-first-basket-2026-08-10",
+  "template": "base",
+  "accent": "green",
+  "photo": "photos/naz-hillmon.jpg",
+  "photo_pos": "73% 40%",
+  "photo_size": "165%",
+  "photo_filter": "brightness(0.92) saturate(0.95) contrast(1.06)",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "NAZ HILLMON",
+  "team": "ATLANTA",
+  "jersey": "00",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "Model: +1040 points · +1039 FG · best of 4 books",
+  "proj": "+1040",
+  "books": [
+    { "book": "FANDUEL", "odds": "+1300", "stake": "0.8u", "best": true },
+    { "book": "BETMGM", "odds": "+1300", "stake": "0.8u" },
+    { "book": "THESCORE BET", "odds": "+1200", "stake": "0.5u" },
+    { "book": "CAESARS", "odds": "+1100", "stake": "0.2u" }
+  ]
+}

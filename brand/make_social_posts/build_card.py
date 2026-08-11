@@ -38,6 +38,42 @@ PHOTO_DEFAULTS = {
 }
 PHOTO_FIELDS = ("photo_pos", "photo_size", "photo_filter")
 
+# Source shapes, by aspect ratio. Which frames suit which shape is the whole
+# subject of README "Tuning the photo"; this is that table in code.
+SHAPES = ((0.00, 0.80, "tall"), (0.80, 1.20, "square"), (1.20, 9.99, "landscape"))
+
+# Starting crops per (template, source shape). Set "photo_preset": "auto" on a
+# config and the shape is measured from the file; name a key like
+# "poster-tall" to force one. Explicit photo_pos/photo_size/photo_filter in the
+# config always beat the preset, so this only ever fills in what you left out.
+#
+# These are opinionated starting points, not answers — the point is to make the
+# FIRST render usually right, not to remove the look-at-it step. Presets are
+# opt-in precisely so that every config already in cards/ renders byte-identical.
+PHOTO_PRESETS = {
+    # 530x930 portrait panel; a tall source barely crops, so zoom a little and
+    # keep the head clear of the top edge.
+    "poster-tall":       {"photo_pos": "50% 8%",  "photo_size": "125%"},
+    "poster-square":     {"photo_pos": "50% 10%", "photo_size": "150%"},
+    "poster-landscape":  {"photo_pos": "50% 22%", "photo_size": "185%"},
+    # 462px circle. README: aim the face at roughly 50% 15%.
+    "ticket-tall":       {"photo_pos": "50% 12%", "photo_size": "135%"},
+    "ticket-square":     {"photo_pos": "50% 15%", "photo_size": "125%"},
+    "ticket-landscape":  {"photo_pos": "50% 15%", "photo_size": "165%"},
+    # ~1036x748 landscape band. A tall source needs zoom and a pull upward.
+    "base-tall":         {"photo_pos": "50% 8%",  "photo_size": "118%"},
+    "base-square":       {"photo_pos": "50% 18%", "photo_size": "112%"},
+    "base-landscape":    {"photo_pos": "50% 28%", "photo_size": "cover"},
+    # Full 1080x1350; the bottom 40% sits under the scrim, so put the subject high.
+    "fullbleed-tall":    {"photo_pos": "50% 6%",  "photo_size": "cover"},
+    "fullbleed-square":  {"photo_pos": "50% 10%", "photo_size": "cover"},
+    "fullbleed-landscape": {"photo_pos": "50% 12%", "photo_size": "150%"},
+    # ~592x1306 column, diagonal eats the lower left — keep the subject right.
+    "split-tall":        {"photo_pos": "60% 10%", "photo_size": "cover"},
+    "split-square":      {"photo_pos": "62% 14%", "photo_size": "130%"},
+    "split-landscape":   {"photo_pos": "64% 20%", "photo_size": "165%"},
+}
+
 # Shared by every template: the pick itself. Templates may add to these, and
 # `base` overrides most of them with its home-run copy.
 COMMON_DEFAULTS = {
@@ -102,7 +138,9 @@ TEMPLATES = {
         "defaults": {"accent": "green"},
         "fields": COMMON_FIELDS,
     },
-    # The available price is the hero; the photo is atmosphere behind it.
+    # RETIRED 2026-08-10 — the price-as-hero look buries the player behind a
+    # graded photo. Kept so old configs still render; don't pick it for new
+    # cards. See README §Frames.
     "bigprice": {
         "file": "card_bigprice.html",
         "required": COMMON_REQUIRED + ("pick_text",),
@@ -161,6 +199,42 @@ def pick_best_book(books, cfg_path):
     return {k: best[k] for k in ("book", "odds", "stake")}
 
 
+def image_size(path):
+    """(width, height) via sips, which this script already shells out to."""
+    out = subprocess.run(["sips", "-g", "pixelWidth", "-g", "pixelHeight", path],
+                         capture_output=True, text=True).stdout
+    w = h = None
+    for line in out.splitlines():
+        if "pixelWidth:" in line:
+            w = int(line.split(":")[1])
+        if "pixelHeight:" in line:
+            h = int(line.split(":")[1])
+    return w, h
+
+
+def resolve_preset(cfg, kind, photo_path, cfg_path):
+    """The photo_* values a preset contributes, or {} when none is asked for."""
+    want = cfg.get("photo_preset")
+    if not want:
+        return {}
+    if want != "auto":
+        if want not in PHOTO_PRESETS:
+            die("%s: unknown photo_preset %r — use \"auto\" or one of %s"
+                % (cfg_path, want, ", ".join(sorted(PHOTO_PRESETS))))
+        return dict(PHOTO_PRESETS[want])
+
+    w, h = image_size(photo_path)
+    if not w or not h:
+        die("%s: photo_preset \"auto\" needs the photo's dimensions, and sips "
+            "could not read %s" % (cfg_path, photo_path))
+    aspect = w / h
+    shape = next((s for lo, hi, s in SHAPES if lo <= aspect < hi), "landscape")
+    key = "%s-%s" % (kind, shape)
+    if key not in PHOTO_PRESETS:
+        return {}
+    return dict(PHOTO_PRESETS[key])
+
+
 def build(cfg_path):
     with open(cfg_path) as fh:
         cfg = json.load(fh)
@@ -181,9 +255,16 @@ def build(cfg_path):
     if missing:
         die("%s is missing required field(s): %s" % (cfg_path, ", ".join(missing)))
 
+    photo = os.path.join(ROOT, cfg["photo"])
+    if not os.path.exists(photo):
+        die("photo not found: %s (referenced by %s)" % (photo, cfg_path))
+
     c = dict(PHOTO_DEFAULTS)
     c.update(COMMON_DEFAULTS)
     c.update(tpl["defaults"])
+    # Between the template's defaults and the config's own values: a preset can
+    # only fill in what the config left unset.
+    c.update(resolve_preset(cfg, kind, photo, cfg_path))
     c.update(cfg)
 
     if c["accent"] not in ACCENTS:
@@ -193,9 +274,6 @@ def build(cfg_path):
     c["chip_html"] = wrap("chip", c["chip"])
     c["note_html"] = wrap("note", c["note"], "div")
 
-    photo = os.path.join(ROOT, c["photo"])
-    if not os.path.exists(photo):
-        die("photo not found: %s (referenced by %s)" % (photo, cfg_path))
     ext = os.path.splitext(photo)[1].lower()
     if ext not in MIME:
         die("unsupported photo type %r — use jpg, png, or webp" % ext)
@@ -253,13 +331,78 @@ def build(cfg_path):
     return png_path
 
 
+CONTACT_TILE_W = 360           # a third of the card's 1080, so 3 fit across
+CONTACT_GAP = 16
+CONTACT_LABEL_H = 30
+
+
+def contact_sheet(pngs):
+    """Tile rendered cards into one reviewable image.
+
+    Looking at a card is not optional — but looking at five of them one PNG at a
+    time is five full-size images to pull in. At a third scale the crop, the
+    scrim, and the type are all still judgeable, and it is one image instead of
+    five. Rendered through the same headless Chrome the cards use, so this adds
+    no dependency.
+    """
+    if not pngs:
+        return None
+    cols = min(3, len(pngs))
+    rows = (len(pngs) + cols - 1) // cols
+    tile_h = int(CONTACT_TILE_W * CARD_H / CARD_W)
+    width = cols * CONTACT_TILE_W + (cols + 1) * CONTACT_GAP
+    height = rows * (tile_h + CONTACT_LABEL_H) + (rows + 1) * CONTACT_GAP
+
+    tiles = []
+    for p in pngs:
+        uri = "data:image/png;base64," + base64.b64encode(open(p, "rb").read()).decode()
+        tiles.append(
+            '<figure><img src="%s" width="%d" height="%d"><figcaption>%s</figcaption></figure>'
+            % (uri, CONTACT_TILE_W, tile_h, os.path.basename(p)[:-4]))
+
+    html = """<!doctype html><meta charset="utf-8"><style>
+      html,body{margin:0;background:#0a0a0a}
+      body{display:grid;grid-template-columns:repeat(%d,%dpx);gap:%dpx;padding:%dpx}
+      figure{margin:0}
+      img{display:block;border-radius:6px}
+      figcaption{font:11px ui-monospace,Menlo,monospace;color:#8a8a8a;
+                 padding-top:7px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+    </style>%s""" % (cols, CONTACT_TILE_W, CONTACT_GAP, CONTACT_GAP, "".join(tiles))
+
+    html_path = os.path.join(OUT_DIR, "_contact.html")
+    png_path = os.path.join(OUT_DIR, "_contact.png")
+    with open(html_path, "w") as fh:
+        fh.write(html)
+    if os.path.exists(png_path):
+        os.remove(png_path)
+
+    subprocess.run(
+        [CHROME, "--headless=new", "--disable-gpu", "--hide-scrollbars",
+         "--force-device-scale-factor=1", "--window-size=%d,%d" % (width, height),
+         "--default-background-color=ff0a0a0a",
+         "--screenshot=" + png_path, "file://" + html_path],
+        capture_output=True, text=True)
+    os.remove(html_path)
+    if not os.path.exists(png_path):
+        die("Chrome failed to render the contact sheet")
+    print("%s  (%d card%s)"
+          % (os.path.relpath(png_path, ROOT), len(pngs), "" if len(pngs) == 1 else "s"))
+    return png_path
+
+
 def main():
     args = [a for a in sys.argv[1:] if not a.startswith("-")]
-    reveal = "--open" in sys.argv[1:]
+    flags = sys.argv[1:]
+    reveal = "--open" in flags
     if not args:
         sys.exit(__doc__.strip())
 
     made = [build(a) for a in args]
+    if "--contact-sheet" in flags:
+        sheet = contact_sheet(made)
+        if reveal and sheet:
+            subprocess.run(["open", "-R", sheet])
+            return
     if reveal and made:
         subprocess.run(["open", "-R", made[0]])
 

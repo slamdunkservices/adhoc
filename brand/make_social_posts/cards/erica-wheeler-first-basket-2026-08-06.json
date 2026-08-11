@@ -1,0 +1,32 @@
+{
+  "template": "fullbleed",
+  "slug": "erica-wheeler-first-basket-2026-08-06",
+  "photo": "photos/erica-wheeler.png",
+  "photo_pos": "50% 12%",
+  "photo_size": "1200px",
+  "photo_filter": "none",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "ERICA WHEELER",
+  "team": "LOS ANGELES",
+  "jersey": "17",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "at MIN · Model: +1033 points · +1041 FG · best of 7 books",
+
+  "proj": "+1033",
+  "books": [
+    { "book": "DRAFTKINGS",   "odds": "+1440", "stake": "1.1u", "best": true },
+    { "book": "CAESARS",      "odds": "+1300", "stake": "0.8u" },
+    { "book": "FANATICS",     "odds": "+1300", "stake": "0.8u" },
+    { "book": "BETMGM",       "odds": "+1200", "stake": "0.6u" },
+    { "book": "BETRIVERS",    "odds": "+1200", "stake": "0.6u" },
+    { "book": "FANDUEL",      "odds": "+1200", "stake": "0.6u" },
+    { "book": "THESCORE BET", "odds": "+1050", "stake": "0.1u" }
+  ]
+}

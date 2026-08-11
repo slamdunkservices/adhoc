@@ -10,3 +10,12 @@ brand/make_social_posts/out/
 
 # Generated charts.
 bet_tracking/WNBA/2025/discord_summary.png
+
+# Source photos for the pick cards. Re-fetchable via
+# .claude/skills/pick-post/get_photo.py, which records where each one came from
+# in sources.json — that manifest is the part worth committing, not 30MB of
+# wire photos we don't own. Photos already in history stay recoverable there.
+# Exclude the CONTENTS, not the directory: git never descends into an excluded
+# directory, so a `photos/` rule makes the negation below unreachable.
+brand/make_social_posts/photos/*
+!brand/make_social_posts/photos/sources.json

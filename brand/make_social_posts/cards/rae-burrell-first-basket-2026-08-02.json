@@ -1,0 +1,25 @@
+{
+  "template": "base",
+  "slug": "rae-burrell-first-basket-2026-08-02",
+  "photo": "photos/rae-burrell.jpg",
+  "photo_pos": "54% 40%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.94) saturate(0.95) contrast(1.05)",
+
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "RAE BURRELL",
+  "team": "LOS ANGELES",
+  "jersey": "12",
+
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "Model: +940 points",
+
+  "proj": "+940",
+  "book": "DRAFTKINGS",
+  "odds": "+1100",
+  "stake": "0.6u"
+}

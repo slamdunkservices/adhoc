@@ -1,0 +1,31 @@
+{
+  "template": "ticket",
+  "slug": "chelsea-gray-first-basket-2026-08-11",
+  "photo": "photos/chelsea-gray.jpg",
+  "photo_pos": "62% 18%",
+  "photo_size": "180%",
+  "photo_filter": "brightness(0.98) saturate(0.97) contrast(1.05)",
+
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "CHELSEA GRAY",
+  "team": "LAS VEGAS",
+  "jersey": "12",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "Model: +1161 points · +1113 FG · best of 7 books",
+
+  "proj": "+1161",
+  "books": [
+    { "book": "BETRIVERS",    "odds": "+1300", "stake": "0.5u", "best": true },
+    { "book": "DRAFTKINGS",   "odds": "+1300", "stake": "0.4u" },
+    { "book": "THESCORE BET", "odds": "+1300", "stake": "0.4u" },
+    { "book": "FANATICS",     "odds": "+1200", "stake": "0.3u" },
+    { "book": "CAESARS",      "odds": "+1200", "stake": "0.1u" },
+    { "book": "FANDUEL",      "odds": "+1200", "stake": "0.1u" }
+  ]
+}

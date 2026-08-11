@@ -1,0 +1,31 @@
+{
+  "template": "poster",
+  "slug": "austin-riley-hr-2026-08-06",
+  "photo": "photos/austin-riley.png",
+  "photo_pos": "50% 6%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.93) saturate(0.94) contrast(1.08)",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "AUSTIN RILEY",
+  "team": "ATLANTA",
+  "jersey": "27",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs MIA · 83°F, 2mph out · best of 6 books",
+
+  "proj": "+417",
+  "books": [
+    { "book": "BETMGM",        "odds": "+525", "stake": "1.0u", "best": true },
+    { "book": "CAESARS",       "odds": "+500", "stake": "0.8u" },
+    { "book": "FANATICS",      "odds": "+500", "stake": "0.8u" },
+    { "book": "HARD ROCK BET", "odds": "+500", "stake": "0.8u" },
+    { "book": "THESCORE BET",  "odds": "+500", "stake": "0.8u" },
+    { "book": "DRAFTKINGS",    "odds": "+484", "stake": "0.7u" }
+  ]
+}

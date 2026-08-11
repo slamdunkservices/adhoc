@@ -1,0 +1,26 @@
+{
+  "template": "ticket",
+  "slug": "emily-engstler-first-basket-2026-08-08",
+  "photo": "photos/emily-engstler.png",
+  "photo_pos": "50% 8%",
+  "photo_size": "240%",
+  "photo_filter": "none",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "EMILY ENGSTLER",
+  "team": "PORTLAND",
+  "jersey": "21",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "Model: +907 points · +846 FG · best of 7 books",
+
+  "proj": "+907",
+  "book": "FANDUEL",
+  "odds": "+1000",
+  "stake": "0.7u"
+}

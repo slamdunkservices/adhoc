@@ -1,0 +1,33 @@
+{
+  "template": "split",
+  "slug": "joc-pederson-hr-2026-08-07",
+  "photo": "photos/joc-pederson.jpg",
+  "photo_pos": "45% 50%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.96) saturate(0.96) contrast(1.06)",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JOC PEDERSON",
+  "team": "TEXAS",
+  "jersey": "3",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs BAL · 74°F, roof closed · best of 8 books",
+
+  "proj": "+421",
+  "books": [
+    { "book": "THESCORE BET",  "odds": "+500", "stake": "0.8u", "best": true },
+    { "book": "FANATICS",      "odds": "+460", "stake": "0.4u" },
+    { "book": "DRAFTKINGS",    "odds": "+450", "stake": "0.3u" },
+    { "book": "FANDUEL",       "odds": "+450", "stake": "0.3u" },
+    { "book": "BETRIVERS",     "odds": "+450", "stake": "0.3u" },
+    { "book": "HARD ROCK BET", "odds": "+450", "stake": "0.3u" },
+    { "book": "CAESARS",       "odds": "+390", "stake": "0.0u" },
+    { "book": "BETMGM",        "odds": "+310", "stake": "0.0u" }
+  ]
+}

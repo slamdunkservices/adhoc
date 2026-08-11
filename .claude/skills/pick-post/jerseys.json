@@ -1,0 +1,4 @@
+{
+  "_comment": "MLB jersey numbers, keyed by StatsAPI player_id (the `player_id` column in 02_curated/players/current.csv). The curated MLB data carries no jersey column anywhere, so each number costs one web lookup the first time; cache it here and it never costs one again. WNBA needs no entries — rosters/current.csv carries JERSEY_NUMBER directly. Only add a number you have actually looked up: a wrong jersey goes straight onto a card, and a missing entry is handled (player_brief.py reports `jersey: null` and tells you to look it up), whereas a confidently wrong one is not.",
+  "595879": "28"
+}

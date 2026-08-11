@@ -1,0 +1,26 @@
+{
+  "template": "poster",
+  "slug": "javier-baez-hr-2026-08-11",
+  "photo": "photos/javier-baez.jpg",
+  "photo_pos": "50% 10%",
+  "photo_size": "132%",
+  "photo_filter": "brightness(0.96) saturate(0.96) contrast(1.06)",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JAVIER BÁEZ",
+  "team": "DETROIT",
+  "jersey": "28",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "Model: +816 · best of 8 books",
+
+  "proj": "+816",
+  "book": "BETRIVERS",
+  "odds": "+1050",
+  "stake": "0.6u"
+}

@@ -1,0 +1,33 @@
+{
+  "template": "bigprice",
+  "slug": "jung-hoo-lee-hr-2026-08-05",
+  "photo": "photos/jung-hoo-lee.jpg",
+  "photo_pos": "50% 0%",
+  "photo_size": "116%",
+  "photo_filter": "brightness(1.42) contrast(1.12) saturate(1.15)",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JUNG HOO LEE",
+  "team": "SAN FRANCISCO",
+  "jersey": "51",
+
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "at TEX · 2 HR at Globe Life Field on Aug 3 · best of 8 books",
+
+  "proj": "+937",
+  "books": [
+    { "book": "FANDUEL",      "odds": "+1400", "stake": "0.8u", "best": true },
+    { "book": "FANATICS",     "odds": "+1400", "stake": "0.8u" },
+    { "book": "HARD ROCK BET", "odds": "+1300", "stake": "0.7u" },
+    { "book": "DRAFTKINGS",   "odds": "+1160", "stake": "0.5u" },
+    { "book": "THESCORE BET", "odds": "+1000", "stake": "0.2u" },
+    { "book": "BETRIVERS",    "odds": "+1000", "stake": "0.2u" },
+    { "book": "CAESARS",      "odds": "+950",  "stake": "0.0u" },
+    { "book": "BETMGM",       "odds": "+725",  "stake": "0.0u" }
+  ]
+}

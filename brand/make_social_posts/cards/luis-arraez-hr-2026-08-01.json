@@ -1,0 +1,48 @@
+{
+  "template": "poster",
+  "slug": "luis-arraez-hr-2026-08-01",
+  "photo": "photos/luis-arraez.jpg",
+  "photo_pos": "46% 22%",
+  "photo_size": "138%",
+  "photo_filter": "brightness(1.04) saturate(0.92) contrast(1.08)",
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "LUIS ARRAEZ",
+  "team": "SAN FRANCISCO",
+  "jersey": "1",
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK \u2014 TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "at SD \u00b7 Buehler \u00b7 4 HR in 103 G \u00b7 best of 5 books",
+  "proj": "+1025",
+  "books": [
+    {
+      "book": "FANATICS",
+      "odds": "+1700",
+      "stake": "0.9u",
+      "best": true
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1600",
+      "stake": "0.8u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1500",
+      "stake": "0.7u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1500",
+      "stake": "0.7u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1400",
+      "stake": "0.6u"
+    }
+  ]
+}

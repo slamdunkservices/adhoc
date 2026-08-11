@@ -1,0 +1,26 @@
+{
+  "template": "ticket",
+  "slug": "carlos-narvaez-hr-2026-08-02",
+  "photo": "photos/carlos-narvaez.jpg",
+  "photo_pos": "50% 42%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(1.02) saturate(0.94) contrast(1.06)",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "CARLOS NARVÁEZ",
+  "team": "BOSTON",
+  "jersey": "75",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "at LAD · Sheehan · 8mph out to left · DK is the only board posting it",
+
+  "proj": "+667",
+  "book": "DRAFTKINGS",
+  "odds": "+840",
+  "stake": "0.7u"
+}

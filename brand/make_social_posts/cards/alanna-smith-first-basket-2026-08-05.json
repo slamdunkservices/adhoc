@@ -1,0 +1,32 @@
+{
+  "template": "base",
+  "slug": "alanna-smith-first-basket-2026-08-05",
+  "photo": "photos/alanna-smith.png",
+  "photo_pos": "50% 18%",
+  "photo_size": "760px",
+  "photo_filter": "none",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "ALANNA SMITH",
+  "team": "DALLAS",
+  "jersey": "8",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "Model: +983 points · +880 FG · best of 7 books",
+
+  "proj": "+983",
+  "books": [
+    { "book": "BETMGM",       "odds": "+1400", "stake": "1.7u", "best": true },
+    { "book": "FANDUEL",      "odds": "+1400", "stake": "1.2u" },
+    { "book": "BETRIVERS",    "odds": "+1200", "stake": "1.2u" },
+    { "book": "THESCORE BET", "odds": "+1200", "stake": "0.8u" },
+    { "book": "CAESARS",      "odds": "+1100", "stake": "0.4u" },
+    { "book": "DRAFTKINGS",   "odds": "+1000", "stake": "0.1u" },
+    { "book": "FANATICS",     "odds": "+900",  "stake": "0.1u" }
+  ]
+}

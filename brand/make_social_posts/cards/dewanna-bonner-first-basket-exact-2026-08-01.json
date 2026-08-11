@@ -1,0 +1,25 @@
+{
+  "template": "ticket",
+  "slug": "dewanna-bonner-first-basket-exact-2026-08-01",
+  "photo": "photos/dewanna-bonner.jpg",
+  "photo_pos": "50% 15%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.92) saturate(0.90) contrast(1.06)",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET EXACT",
+  "name": "DEWANNA BONNER",
+  "team": "PHOENIX",
+  "jersey": "24",
+
+  "pick_label": "THE PICK — PHOENIX'S FIRST, ON A TWO",
+  "chip": "2PT",
+  "pick_text": "FIRST BASKET",
+  "note": "Model: +653 · DK is the only board posting it",
+
+  "proj": "+653",
+  "book": "DRAFTKINGS",
+  "odds": "+800",
+  "stake": "0.9u"
+}

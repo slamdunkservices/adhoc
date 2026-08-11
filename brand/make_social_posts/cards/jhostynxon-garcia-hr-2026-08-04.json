@@ -1,0 +1,26 @@
+{
+  "template": "ticket",
+  "slug": "jhostynxon-garcia-hr-2026-08-04",
+  "photo": "photos/jhostynxon-garcia.jpg",
+  "photo_pos": "50% 30%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.98) saturate(0.96) contrast(1.07)",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JHOSTYNXON GARCIA",
+  "team": "PITTSBURGH",
+  "jersey": "34",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "at MIL · Henderson · 7 HR in 58 G at Triple-A",
+
+  "proj": "+873",
+  "book": "BETRIVERS",
+  "odds": "+1200",
+  "stake": "0.7u"
+}

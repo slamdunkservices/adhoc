@@ -138,7 +138,12 @@ say so — "Friends don't let friends play a bunch of stupid parlays"), any
 play/announcement · 🚀 edge at daily best · ⬇️ edge declined · 🙏 gratitude ·
 😎 nerd-cool aside · 🤓 math flex · 🤯 book mispricing disbelief · 📈 tracking ·
 🔒 locked in (we're playing it — never "it's a lock") · ✅ graded winner in lists.
-Typical density: 0–3 per post; recap lists may use one per line.
+**Density: 1–2 per post, and none is fine.** Use one when it carries something
+the words don't — not to decorate a line that already has a number doing the
+work. Stacking one in front of every stat line is the failure mode. Sole
+exception: a recap list that repeats a single bullet glyph down its items
+(🏀 or 🤑) reads as formatting rather than as six emoji. Per-platform floors
+below are tighter still (Reddit, LinkedIn, and ads cap at ≤1).
 
 ### Hashtags (X and IG only)
 

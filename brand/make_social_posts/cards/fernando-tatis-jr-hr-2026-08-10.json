@@ -1,0 +1,22 @@
+{
+  "slug": "fernando-tatis-jr-hr-2026-08-10",
+  "template": "bigprice",
+  "accent": "pink",
+  "photo": "photos/fernando-tatis-jr.jpg",
+  "photo_pos": "36% 33%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(2.5) saturate(1.45) contrast(0.94)",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "FERNANDO TATIS JR.",
+  "team": "SAN DIEGO",
+  "jersey": "23",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+447",
+  "book": "DRAFTKINGS",
+  "odds": "+563",
+  "stake": "1.0u"
+}

@@ -1,0 +1,26 @@
+{
+  "template": "poster",
+  "slug": "vladimir-guerrero-jr-hr-2026-08-08",
+  "photo": "photos/vladimir-guerrero-jr.jpg",
+  "photo_pos": "52% 50%",
+  "photo_size": "cover",
+  "photo_filter": "brightness(0.97) saturate(0.95) contrast(1.07)",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "VLAD GUERRERO JR.",
+  "team": "TORONTO",
+  "jersey": "27",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "at PHI · Citizens Bank Park, 1.13 HR park factor",
+
+  "proj": "+479",
+  "book": "DRAFTKINGS",
+  "odds": "+680",
+  "stake": "1.3u"
+}

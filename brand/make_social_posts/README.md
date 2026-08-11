@@ -10,7 +10,7 @@ means editing CSS, not fighting an image editor.
 
 ## Frames
 
-Six of them, picked with the `template` field. They all render one book; they
+Five of them, picked with the `template` field. They all render one book; they
 differ in how the photo is cropped and where the type sits, so a week of posts
 doesn't read as one template on repeat.
 
@@ -20,8 +20,17 @@ doesn't read as one template on repeat.
 | `fullbleed` | Photo edge to edge; pick label runs bottom-to-top up a rail on the left; one horizontal price bar | Tall or full-body shots that a landscape band would waste |
 | `split` | Type column on the left, photo column on the right cut on a diagonal; prices stacked, not tiled | Portrait crops, and when you want the copy to lead |
 | `ticket` | Circular photo medallion over a bet-slip receipt with a torn perforation | Junk backgrounds — the circle throws the background away |
-| `bigprice` | The available price at 300px, photo graded down to a backdrop behind it | The number is the story |
 | `poster` | Photo *contained* in a 530×930 portrait panel, name over its lower edge, model price left and available price right | Tall full-body shots the other frames would crop the head off — the panel matches the photo's own aspect instead of forcing 4:5 |
+
+### Retired: `bigprice`
+
+`card_bigprice.html` still builds, but **don't post cards with it.** It stages
+the available price at 300px over a photo graded to `grayscale(.55)
+brightness(.52)`, which turns the player into atmosphere and throws away the
+action shot the rest of this workflow exists to crop well. Fighting the grading
+back with `photo_filter: brightness(2.5)` gets you a legible jersey on a murky
+background, not a good card. Retired 2026-08-10. If the price really is the
+story, use a frame that keeps the player legible and let the copy carry it.
 
 ## Usage
 
@@ -37,6 +46,32 @@ python3 build_card.py cards/*.json --open
 
 Renders land in `out/<slug>.png`. The builder asserts the output is exactly
 1080×1350 and fails loudly if a template and the builder drift apart.
+
+### Reviewing a batch
+
+```bash
+python3 build_card.py cards/a.json cards/b.json cards/c.json --contact-sheet
+```
+
+Tiles the cards it just built into `out/_contact.png`, three across, each
+labelled with its slug. At a third scale the crop, the scrim and the type are
+all still judgeable, so a five-card night is one image to look at instead of
+five. Rendered through the same headless Chrome as the cards, so it adds no
+dependency.
+
+## Photos
+
+`photos/` is gitignored except for `sources.json`, which records where each
+photo came from — the URL, the resolver that found it, and its dimensions.
+Fetch them with the skill's helper rather than by hand:
+
+```bash
+python3 ../../.claude/skills/pick-post/get_photo.py --player "Riley Greene"
+```
+
+MLB action shots resolve automatically from the player id. WNBA needs a page or
+image URL, because the official CDN only carries headshot cutouts. See
+`.claude/skills/pick-post/SKILL.md` step 3.
 
 ## Making a new card
 
@@ -63,7 +98,7 @@ Required on every frame:
 | `odds` | `+257` | The **available** price we're taking |
 | `stake` | `0.8u` | |
 
-Also required on `fullbleed`, `split`, `ticket`, `bigprice` and `poster`:
+Also required on `fullbleed`, `split`, `ticket` and `poster`:
 
 | Field | Example | Notes |
 |---|---|---|
@@ -74,16 +109,42 @@ Optional on every frame:
 | Field | Default | Notes |
 |---|---|---|
 | `template` | `base` | One of the six above |
-| `accent` | `green` (`cyan` on `fullbleed`/`bigprice`, `pink` on `split`) | `green`, `cyan` or `pink` — see below |
+| `accent` | `green` (`cyan` on `fullbleed`, `pink` on `split`) | `green`, `cyan` or `pink` — see below |
 | `league` | `MLB` | Cyan pill, top right. `NBA`, `WNBA`, whatever |
 | `tag_sub` | `PLAYER PROP` (`HOME RUN PROP` on `base`) | Under the league pill |
 | `kicker` | `TODAY'S PLAY` | Small accent line above the name |
 | `pick_label` | `THE PICK` (`THE PICK — TO GO YARD` on `base`) | The `--accent2` line above the pick |
 | `chip` | none (`1+` on `base`) | Filled accent chip next to the pick text. Leave it out and nothing renders — no empty box |
-| `note` | none | Optional grey explainer line under the pick. Not used by `bigprice`'s layout |
+| `note` | none | Optional grey explainer line under the pick |
 | `photo_pos` | `50% 12%` | CSS `background-position` |
 | `photo_size` | `cover` | CSS `background-size`; use e.g. `118%` to zoom in |
 | `photo_filter` | `none` | CSS `filter` for per-photo grading |
+| `photo_preset` | none | `auto`, or a `<template>-<shape>` key — see below |
+
+### `photo_preset`
+
+Every frame crops to a different window, so the same photo needs different
+`photo_pos`/`photo_size` in each one — which is why a new card usually costs a
+render or two before the crop is right. `photo_preset` supplies a sane starting
+point for that combination:
+
+```json
+"photo_preset": "auto"
+```
+
+`auto` measures the photo and classifies it **tall** (aspect < 0.80), **square**
+(0.80–1.20) or **landscape** (> 1.20), then applies the preset for that shape
+and the chosen template. Name a key directly — `poster-tall`, `ticket-landscape`
+— to force one.
+
+A preset only ever fills in what the config leaves out: an explicit
+`photo_pos`, `photo_size` or `photo_filter` always wins. It is also opt-in, so
+every config written before it existed renders byte-for-byte identically.
+
+It gets the first render close. It does not replace looking at the result.
+
+`get_photo.py` prints the shape and the frames that suit it when it saves a
+photo, so the template choice and the preset agree by construction.
 
 ### `base` only
 
@@ -91,6 +152,41 @@ Optional on every frame:
 |---|---|---|
 | `pick_sub` | `Anytime home run · …` | Grey explainer line (the `note` equivalent) |
 | `stake_sub` | `units` | Small text under the stake |
+
+### Market copy
+
+No frame knows what market it's rendering — `tag_sub`, `pick_label`, `chip` and
+`pick_text` carry that, and they only read as a set if we write them the same
+way every time. The first-events markets we post most:
+
+| Market | `tag_sub` | `pick_label` | `chip` | `pick_text` |
+|---|---|---|---|---|
+| First basket (whole game) | `FIRST BASKET PROP` | `THE PICK — TO SCORE FIRST` | `1ST` | `FIRST BASKET` |
+| First basket by team | `FIRST BASKET PROP` | `THE PICK — <CITY>'S FIRST` | `1ST` | `FIRST BASKET` |
+| First basket by team **exact** | `FIRST BASKET EXACT` | `THE PICK — <CITY>'S FIRST, ON A <METHOD>` | `2PT` / `3PT` / `LAYUP` / `FT` | `FIRST BASKET` |
+| First three by team | `FIRST THREE PROP` | `THE PICK — <CITY>'S FIRST THREE` | `1ST 3` | `FIRST THREE` |
+
+The exact-method markets are the reason `chip` exists as a separate field —
+the method belongs in the chip, not welded into `pick_text`, so the headline
+stays the same size card to card while the method reads as the qualifier it is.
+
+The `note` line carries the model price — **the model the market actually
+settles on**, which is not the same one every time:
+
+- **Points-settled** markets (plain first basket, first basket by team) can be
+  won on a free throw, so they carry both: `Model: +961 points · +888 FG`,
+  points first.
+- **Exact-method** markets (`fg2`, `fg3`) only settle on a made field goal, so
+  the points model is noise. Carry the FG number alone: `Model: +653`. Quoting
+  a points price next to it invites the reader to compare two numbers only one
+  of which grades the bet.
+
+`stake` is not something to derive here — take the recommended units straight
+from the model outputs for that play and market, and quote the model that
+matches it.
+
+Add `· DK is the only board posting it` (or `· best of 8 books`) when the book
+count is itself part of the story.
 
 ### Shopping multiple books
 
@@ -140,7 +236,6 @@ usually wrong for another:
 | `split` | ~592×1306 portrait column | Narrow. Keep the subject right of centre — the diagonal eats the lower-left corner of the photo, and the left edge is veiled dark |
 | `ticket` | 462×462 circle | Square crop. Aim the face at roughly `50% 15%`; everything outside the circle is gone, which is the point |
 | `poster` | 530×930 panel (aspect ≈0.57) | Sized for a tall portrait source, so `cover` crops almost nothing. Aim `photo_pos` near `50% 6%` and check the head clears the top edge; the bottom ~20% sits under the name scrim. Sides of the card show the same photo blurred, so a busy crowd still reads as texture, not detail |
-| `bigprice` | the full 1080×1350, then graded | The template already applies `grayscale(.55) brightness(.52)` on top of your `photo_filter` — don't darken it twice or the photo disappears |
 
 General guidance, still true:
 
@@ -180,7 +275,7 @@ Every card carries `slamdunk.bet` and `21+ · Gamble responsibly ·
 | `card_fullbleed.html` | Edge-to-edge photo, vertical rail, one price bar |
 | `card_split.html` | Diagonal split, type left / photo right |
 | `card_ticket.html` | Circular medallion over a bet-slip receipt |
-| `card_bigprice.html` | Price-as-hero over a graded backdrop |
+| `card_bigprice.html` | Price-as-hero over a graded backdrop — **retired**, see Frames |
 | `card_poster.html` | Contained portrait panel, prices flanking it left and right |
 | `fonts.css` | Barlow Condensed 500/600/700/800, base64-embedded |
 | `fetch_fonts.sh` | Regenerates `fonts.css` (only needed to add weights) |
