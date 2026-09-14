@@ -1,0 +1,21 @@
+{
+  "template": "ticket",
+  "slug": "tj-rumfield-rbi-2026-09-14",
+  "photo": "photos/tj-rumfield.jpg",
+  "photo_preset": "auto",
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "RBI PROP",
+  "name": "TJ RUMFIELD",
+  "team": "COLORADO",
+  "jersey": "7",
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO DRIVE ONE IN",
+  "chip": "1+",
+  "pick_text": "RBI",
+  "note": "Model: +145 · best of 6 books",
+  "proj": "+145",
+  "book": "DRAFTKINGS",
+  "odds": "+198",
+  "stake": "1.7u"
+}
