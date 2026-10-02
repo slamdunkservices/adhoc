@@ -20,6 +20,20 @@
     "width": 1200,
     "height": 960
   },
+  "andres-chaparro": {
+    "file": "andres-chaparro.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "andrew-benintendi": {
+    "file": "andrew-benintendi.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "angel-reese": {
     "file": "angel-reese.jpg",
     "url": null,
@@ -41,6 +55,34 @@
     "width": 1000,
     "height": 1502
   },
+  "ben-rice": {
+    "file": "ben-rice.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "bo-bichette": {
+    "file": "bo-bichette.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "brandon-lowe": {
+    "file": "brandon-lowe.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "bryce-harper": {
+    "file": "bryce-harper.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "caitlin-clark": {
     "file": "caitlin-clark.jpg",
     "url": null,
@@ -48,12 +90,33 @@
     "width": 1800,
     "height": 1012
   },
+  "cal-raleigh": {
+    "file": "cal-raleigh.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "carlos-narvaez": {
     "file": "carlos-narvaez.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 1000,
     "height": 1502
+  },
+  "carter-jensen": {
+    "file": "carter-jensen.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "charlisse-leger-walker": {
+    "file": "charlisse-leger-walker.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 3924,
+    "height": 2616
   },
   "chelsea-gray": {
     "file": "chelsea-gray.jpg",
@@ -69,12 +132,61 @@
     "width": 1200,
     "height": 1800
   },
+  "courtney-vandersloot": {
+    "file": "courtney-vandersloot.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1260
+  },
+  "david-fry": {
+    "file": "david-fry.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "daylen-lile": {
+    "file": "daylen-lile.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "dewanna-bonner": {
     "file": "dewanna-bonner.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 1496,
     "height": 1996
+  },
+  "diamond-miller": {
+    "file": "diamond-miller.png",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1040,
+    "height": 760
+  },
+  "dk-metcalf": {
+    "file": "dk-metcalf.jpg",
+    "url": "https://static.clubs.nfl.com/image/upload/f_jpg,q_auto,w_2400/steelers/hsbuyw3ywb2dwujzcekq",
+    "resolver": "manual-url",
+    "width": 2400,
+    "height": 614
+  },
+  "drew-gilbert": {
+    "file": "drew-gilbert.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "dylan-beavers": {
+    "file": "dylan-beavers.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
   },
   "dylan-crews": {
     "file": "dylan-crews.webp",
@@ -83,12 +195,40 @@
     "width": 2000,
     "height": 1500
   },
+  "elly-de-la-cruz": {
+    "file": "elly-de-la-cruz.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "elly-de-la-cruz-sb": {
+    "file": "elly-de-la-cruz-sb.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 800
+  },
   "emily-engstler": {
     "file": "emily-engstler.png",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 1040,
     "height": 760
+  },
+  "emma-cannon": {
+    "file": "emma-cannon.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1600,
+    "height": 900
+  },
+  "enrique-hernandez": {
+    "file": "enrique-hernandez.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
   },
   "erica-wheeler": {
     "file": "erica-wheeler.png",
@@ -97,12 +237,26 @@
     "width": 1040,
     "height": 760
   },
+  "ezequiel-duran": {
+    "file": "ezequiel-duran.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "fernando-tatis-jr": {
     "file": "fernando-tatis-jr.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 2000,
     "height": 1333
+  },
+  "francisco-lindor": {
+    "file": "francisco-lindor.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
   },
   "georgia-amoore": {
     "file": "georgia-amoore.jpg",
@@ -111,12 +265,61 @@
     "width": 1107,
     "height": 1727
   },
+  "gleyber-torres": {
+    "file": "gleyber-torres.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "harry-ford": {
+    "file": "harry-ford.jpg",
+    "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/695670/action/vertical/current",
+    "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
+  },
+  "holly-winterburn": {
+    "file": "holly-winterburn.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 800,
+    "height": 533
+  },
+  "hunter-feduccia": {
+    "file": "hunter-feduccia.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1536,
+    "height": 1024
+  },
+  "isabelle-harrison": {
+    "file": "isabelle-harrison.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1601
+  },
+  "jackson-merrill": {
+    "file": "jackson-merrill.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "jade-melbourne": {
     "file": "jade-melbourne.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 3893,
     "height": 3586
+  },
+  "jahmai-jones": {
+    "file": "jahmai-jones.jpg",
+    "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/663330/action/vertical/current",
+    "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
   },
   "jake-burger": {
     "file": "jake-burger.jpg",
@@ -125,12 +328,40 @@
     "width": 2000,
     "height": 3000
   },
+  "jake-cronenworth": {
+    "file": "jake-cronenworth.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "jake-mccarthy": {
+    "file": "jake-mccarthy.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "james-wood": {
+    "file": "james-wood.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "javier-baez": {
     "file": "javier-baez.jpg",
     "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/595879/action/vertical/current",
     "resolver": "mlb-cdn-action-vertical",
     "width": 1200,
     "height": 1800
+  },
+  "jazz-chisholm-jr": {
+    "file": "jazz-chisholm-jr.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2048,
+    "height": 1152
   },
   "jhostynxon-garcia": {
     "file": "jhostynxon-garcia.jpg",
@@ -146,12 +377,96 @@
     "width": 2400,
     "height": 3600
   },
+  "joey-ortiz": {
+    "file": "joey-ortiz.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "jonah-cox": {
+    "file": "jonah-cox.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "jorbit-vivas": {
+    "file": "jorbit-vivas.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "jordin-canada": {
+    "file": "jordin-canada.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1600,
+    "height": 900
+  },
+  "jordin-canada-drive": {
+    "file": "jordin-canada-drive.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1280,
+    "height": 720
+  },
+  "jose-altuve": {
+    "file": "jose-altuve.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "josue-de-paula": {
+    "file": "josue-de-paula.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "julio-rodriguez": {
+    "file": "julio-rodriguez.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1024,
+    "height": 683
+  },
   "jung-hoo-lee": {
     "file": "jung-hoo-lee.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 640,
     "height": 962
+  },
+  "justin-foscue": {
+    "file": "justin-foscue.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "kayla-thornton": {
+    "file": "kayla-thornton.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2048,
+    "height": 1365
+  },
+  "kevin-mcgonigle": {
+    "file": "kevin-mcgonigle.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "kia-nurse": {
+    "file": "kia-nurse.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1600,
+    "height": 899
   },
   "kiah-stokes": {
     "file": "kiah-stokes.png",
@@ -167,12 +482,159 @@
     "width": 2278,
     "height": 2400
   },
+  "kyle-tucker": {
+    "file": "kyle-tucker.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1536,
+    "height": 864
+  },
+  "lars-nootbaar": {
+    "file": "lars-nootbaar.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "lazaro-montes": {
+    "file": "lazaro-montes.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "leo-bernal": {
+    "file": "leo-bernal.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "lexie-hull": {
+    "file": "lexie-hull.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1350
+  },
+  "liam-hicks": {
+    "file": "liam-hicks.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
   "luis-arraez": {
     "file": "luis-arraez.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 992,
     "height": 1857
+  },
+  "luke-keaschall": {
+    "file": "luke-keaschall.jpg",
+    "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/807712/action/vertical/current",
+    "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
+  },
+  "luke-keaschall-sb": {
+    "file": "luke-keaschall-sb.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 4962,
+    "height": 3308
+  },
+  "maddy-siegrist": {
+    "file": "maddy-siegrist.jpg",
+    "url": "https://nbc-sports-production-nbc-sports.s3.us-east-1.amazonaws.com/brightspot/a1/93/fe18b8c64df7a8de5f233c589a50/maddysiegrist.jpg",
+    "resolver": "manual-url",
+    "width": 7480,
+    "height": 4986
+  },
+  "makayla-timpson": {
+    "file": "makayla-timpson.jpg",
+    "url": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_275,w_5303,h_2982/c_fill,w_2400,ar_16:9,f_auto,q_auto,g_auto/images/ReutersImages/mmsport/indiana_fever_on_si/01kz3rtkhdvwn03dp6bd.jpg",
+    "resolver": "manual-url",
+    "width": 2400,
+    "height": 1350
+  },
+  "makayla-timpson-drive": {
+    "file": "makayla-timpson-drive.jpg",
+    "url": "https://images2.minutemediacdn.com/image/upload/f_jpg,q_auto,w_2400/images/ReutersImages/mmsport/indiana_fever_on_si/01kz3s7jk0dfrzs4015s.jpg",
+    "resolver": "manual-url",
+    "width": 2400,
+    "height": 1600
+  },
+  "maya-caldwell": {
+    "file": "maya-caldwell.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2388,
+    "height": 1592
+  },
+  "michael-busch": {
+    "file": "michael-busch.jpg",
+    "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/683737/action/vertical/current",
+    "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
+  },
+  "michael-conforto": {
+    "file": "michael-conforto.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "michael-harris-ii-sb": {
+    "file": "michael-harris-ii-sb.jpg",
+    "url": "https://img.mlbstatic.com/mlb-images/image/upload/q_auto:best,f_jpg/mlb/thmggkwbyz2lavgbmzru",
+    "resolver": "manual-url",
+    "width": 1280,
+    "height": 720
+  },
+  "michael-wilson": {
+    "file": "michael-wilson.jpg",
+    "url": "https://static.clubs.nfl.com/image/upload/f_jpg,q_auto,w_2400/cardinals/ee2dxhrwqiobgjoch8iu",
+    "resolver": "manual-url",
+    "width": 2400,
+    "height": 1350
+  },
+  "michaela-onyenwere": {
+    "file": "michaela-onyenwere.jpg",
+    "url": "https://www.theixsports.com/wp-content/uploads/2026/06/2026-06-09T002539Z_1101982701_MT1USATODAY29154351_RTRMADP_3_WNBA-INDIANA-FEVER-AT-WASHINGTON-MYSTICS-2048x1365.jpg",
+    "resolver": "manual-url",
+    "width": 2048,
+    "height": 1365
+  },
+  "mickey-gasper": {
+    "file": "mickey-gasper.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "mickey-moniak": {
+    "file": "mickey-moniak.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1602
+  },
+  "mike-trout": {
+    "file": "mike-trout.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "moises-ballesteros": {
+    "file": "moises-ballesteros.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
   },
   "mookie-betts": {
     "file": "mookie-betts.jpg",
@@ -188,12 +650,26 @@
     "width": 2608,
     "height": 4636
   },
+  "myles-straw": {
+    "file": "myles-straw.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1600,
+    "height": 900
+  },
   "nalyssa-smith": {
     "file": "nalyssa-smith.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 2858,
     "height": 3348
+  },
+  "natasha-cloud": {
+    "file": "natasha-cloud.jpg",
+    "url": "https://s.yimg.com/lo/mysterio/api/b8ee48bcf43ad3aa64c67f61a9c143cab3c7e7e21e57fc4d9eef22157d92ce88/lightyear_networkapi/resizefill_w1200%3Bquality_80%3Bformat_webp/https%3A%2F%2Fmedia.zenfs.com%2Fen%2Fessentiallysports_articles_591%2F54b0f870214312477a787d89dc929312",
+    "resolver": "manual-url",
+    "width": 1200,
+    "height": 800
   },
   "naz-hillmon": {
     "file": "naz-hillmon.jpg",
@@ -209,12 +685,124 @@
     "width": 768,
     "height": 1024
   },
+  "otto-lopez": {
+    "file": "otto-lopez.jpg",
+    "url": "https://images2.minutemediacdn.com/image/upload/c_crop,x_0,y_144,w_4895,h_2753/c_fill,w_2400,ar_1440:810,f_auto,q_auto,g_auto/images/ImagnImages/mmsport/inside_the_marlins/01k84ec7pn9py9r18b0e.jpg",
+    "resolver": "manual-url",
+    "width": 2400,
+    "height": 1350
+  },
+  "pauline-astier": {
+    "file": "pauline-astier.jpg",
+    "url": "https://www.tsn.ca/resizer/v2/CUOA7AQHZ5DVHMMRQVJFR4T2HY.jpg?smart=true&auth=e74c3af62566a940b310c5411ae52143e1068a7131f19a7c5dbe1ba7cbb96df9&width=2768&height=1557",
+    "resolver": "manual-url",
+    "width": 2768,
+    "height": 1557
+  },
+  "pete-crow-armstrong": {
+    "file": "pete-crow-armstrong.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "petey-halpin": {
+    "file": "petey-halpin.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1350
+  },
   "rae-burrell": {
     "file": "rae-burrell.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 959,
     "height": 640
+  },
+  "rece-hinds": {
+    "file": "rece-hinds.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "riley-greene": {
+    "file": "riley-greene.jpg",
+    "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/682985/action/vertical/current",
+    "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
+  },
+  "ronald-acuna-jr": {
+    "file": "ronald-acuna-jr.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "sal-frelick": {
+    "file": "sal-frelick.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1665
+  },
+  "salvador-perez": {
+    "file": "salvador-perez.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "sam-laporta": {
+    "file": "sam-laporta.jpg",
+    "url": "https://static.clubs.nfl.com/image/upload/f_jpg,q_auto,w_2400/lions/r66hkxajtma0rvvqqwiz",
+    "resolver": "manual-url",
+    "width": 2400,
+    "height": 1350
+  },
+  "sami-whitcomb": {
+    "file": "sami-whitcomb.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1080,
+    "height": 1350
+  },
+  "shohei-ohtani": {
+    "file": "shohei-ohtani.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "spencer-jones": {
+    "file": "spencer-jones.jpg",
+    "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/682987/action/vertical/current",
+    "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
+  },
+  "spencer-jones-dugout": {
+    "file": "spencer-jones-dugout.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 7830,
+    "height": 4404
+  },
+  "sydney-taylor": {
+    "file": "sydney-taylor.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2048,
+    "height": 1365
+  },
+  "tank-bigsby": {
+    "file": "tank-bigsby.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 2400,
+    "height": 1350
   },
   "taylor-trammell": {
     "file": "taylor-trammell.jpg",
@@ -223,10 +811,31 @@
     "width": 1862,
     "height": 1048
   },
+  "temi-fagbenle": {
+    "file": "temi-fagbenle.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1440,
+    "height": 810
+  },
   "tj-rumfield": {
     "file": "tj-rumfield.jpg",
     "url": "https://img.mlbstatic.com/mlb-photos/image/upload/w_1200,q_auto:good,f_jpg/v1/people/681198/action/vertical/current",
     "resolver": "mlb-cdn-action-vertical",
+    "width": 1200,
+    "height": 1800
+  },
+  "tommy-edman": {
+    "file": "tommy-edman.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "trea-turner": {
+    "file": "trea-turner.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
     "width": 1200,
     "height": 1800
   },
@@ -237,11 +846,32 @@
     "width": 1200,
     "height": 1800
   },
+  "wade-meckler": {
+    "file": "wade-meckler.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1763,
+    "height": 1176
+  },
   "yordan-alvarez": {
     "file": "yordan-alvarez.jpg",
     "url": null,
     "resolver": "unknown (pre-manifest)",
     "width": 1968,
     "height": 2452
+  },
+  "zac-veen": {
+    "file": "zac-veen.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
+  },
+  "zack-gelof": {
+    "file": "zack-gelof.jpg",
+    "url": null,
+    "resolver": "unknown (manifest lost 2026-09-30)",
+    "width": 1200,
+    "height": 1800
   }
 }

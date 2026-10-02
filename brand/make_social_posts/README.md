@@ -69,8 +69,8 @@ Fetch them with the skill's helper rather than by hand:
 python3 ../../.claude/skills/pick-post/get_photo.py --player "Riley Greene"
 ```
 
-MLB action shots resolve automatically from the player id. WNBA needs a page or
-image URL, because the official CDN only carries headshot cutouts. See
+MLB action shots resolve automatically from the player id. WNBA and NFL need a
+page or image URL, because their official CDNs only carry headshots. See
 `.claude/skills/pick-post/SKILL.md` step 3.
 
 ## Making a new card
@@ -112,10 +112,10 @@ Optional on every frame:
 | `accent` | `green` (`cyan` on `fullbleed`, `pink` on `split`) | `green`, `cyan` or `pink` — see below |
 | `league` | `MLB` | Cyan pill, top right. `NBA`, `WNBA`, whatever |
 | `tag_sub` | `PLAYER PROP` (`HOME RUN PROP` on `base`) | Under the league pill |
-| `kicker` | `TODAY'S PLAY` | Small accent line above the name |
+| `kicker` | `TODAY'S PLAY` | Small accent line above the name. Generic copy only — never a stat or highlight; stats live in the caption (skill rule 8) |
 | `pick_label` | `THE PICK` (`THE PICK — TO GO YARD` on `base`) | The `--accent2` line above the pick |
 | `chip` | none (`1+` on `base`) | Filled accent chip next to the pick text. Leave it out and nothing renders — no empty box |
-| `note` | none | Optional grey explainer line under the pick |
+| `note` | none | Optional grey explainer line under the pick. Matchup, model price and book count only — no stats |
 | `photo_pos` | `50% 12%` | CSS `background-position` |
 | `photo_size` | `cover` | CSS `background-size`; use e.g. `118%` to zoom in |
 | `photo_filter` | `none` | CSS `filter` for per-photo grading |
@@ -150,14 +150,34 @@ photo, so the template choice and the preset agree by construction.
 
 | Field | Default | Notes |
 |---|---|---|
-| `pick_sub` | `Anytime home run · …` | Grey explainer line (the `note` equivalent) |
+| `pick_sub` | `book line beats our model = value` | Grey explainer line. **`base` has no `note` slot — this IS its note line**, so put the matchup/model/books copy here; a `note` set on a `base` card renders nowhere |
 | `stake_sub` | `units` | Small text under the stake |
 
 ### Market copy
 
 No frame knows what market it's rendering — `tag_sub`, `pick_label`, `chip` and
 `pick_text` carry that, and they only read as a set if we write them the same
-way every time. The first-events markets we post most:
+way every time. The MLB player props:
+
+| Market | `tag_sub` | `pick_label` | `chip` | `pick_text` |
+|---|---|---|---|---|
+| Home run (1+) | `HOME RUN PROP` | `THE PICK — TO GO YARD` | `1+` | `HOME RUN` |
+| Stolen base (1+) | `STOLEN BASE PROP` | `THE PICK — TO STEAL A BAG` | `SB` | `STOLEN BASE` |
+| Total bases (2+) | `TOTAL BASES PROP` | `THE PICK — TO RACK UP BASES` | `2+` | `TOTAL BASES` |
+| RBI (1+) | `RBI PROP` | `THE PICK — TO DRIVE ONE IN` | `1+` | `RBI` |
+| Run scored (1+) | `RUN SCORED PROP` | `THE PICK — TO CROSS THE PLATE` | `1+` | `RUN SCORED` |
+
+The two stolen-base cards built before this table existed (Keaschall 09-02,
+Lopez 09-03) used a generic `PLAYER PROP` / `THE PICK` / `1+` set; rendered
+cards stand, but new ones follow the rows above.
+
+Home-run cards have always carried `1+` in the chip and keep it. The steal chip
+is `SB` instead: both MLB feeds call their rung "1+", and on a card with no
+other market word, `1+` alone reads as the home-run prop the last twenty cards
+were. The batter props keep the rung in the chip — total bases is the one `2+`
+market, and it matters — because their `pick_text` already names the market.
+
+And the WNBA first-event markets:
 
 | Market | `tag_sub` | `pick_label` | `chip` | `pick_text` |
 |---|---|---|---|---|
@@ -165,6 +185,19 @@ way every time. The first-events markets we post most:
 | First basket by team | `FIRST BASKET PROP` | `THE PICK — <CITY>'S FIRST` | `1ST` | `FIRST BASKET` |
 | First basket by team **exact** | `FIRST BASKET EXACT` | `THE PICK — <CITY>'S FIRST, ON A <METHOD>` | `2PT` / `3PT` / `LAYUP` / `FT` | `FIRST BASKET` |
 | First three by team | `FIRST THREE PROP` | `THE PICK — <CITY>'S FIRST THREE` | `1ST 3` | `FIRST THREE` |
+
+And the NFL touchdown scorer markets:
+
+| Market | `tag_sub` | `pick_label` | `chip` | `pick_text` |
+|---|---|---|---|---|
+| Anytime TD (1+) | `ANYTIME TD PROP` | `THE PICK — TO FIND THE END ZONE` | `ATD` | `TOUCHDOWN` |
+| Anytime TD 2+ | `ANYTIME TD PROP` | `THE PICK — TO SCORE TWICE` | `2+` | `TOUCHDOWNS` |
+| First touchdown (game) | `FIRST TD PROP` | `THE PICK — FIRST TO SCORE SIX` | `1ST` | `FIRST TOUCHDOWN` |
+
+The anytime chip is `ATD`, not `1+`, for the same reason the steal chip is
+`SB`: a bare `1+` reads as the home-run prop. `FIRST TOUCHDOWN` fits `base` on
+one line and wraps cleanly to two on `split`. Set `league` to `NFL`, and write
+the matchup in the note as `@ CHI` / `vs CHI` like the other leagues.
 
 The exact-method markets are the reason `chip` exists as a separate field —
 the method belongs in the chip, not welded into `pick_text`, so the headline
@@ -180,6 +213,15 @@ settles on**, which is not the same one every time:
   the points model is noise. Carry the FG number alone: `Model: +653`. Quoting
   a points price next to it invites the reader to compare two numbers only one
   of which grades the bet.
+- **MLB** carries one number, from the model that grades that market: `p_hr_cal`
+  for a home run, `p_sb_cal` for a steal, `p_2tb` for total bases 2+, `p_rbi`
+  for an RBI, `p_run` for a run scored. They come out of the same sim snapshot
+  and are not interchangeable.
+- **NFL** carries one number too, and each TD market has its own model:
+  anytime 1+ prices off `any_td_full`, 2+ off `two_plus_td_full`, and first
+  touchdown off `first_td_full` (a competing-processes model over every player
+  and D/ST in the game). `player_brief.py` names them `model_price_td` /
+  `model_price_td2` / `model_price_ftd`.
 
 `stake` is not something to derive here — take the recommended units straight
 from the model outputs for that play and market, and quote the model that

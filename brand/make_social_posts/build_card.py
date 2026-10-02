@@ -105,7 +105,10 @@ TEMPLATES = {
             "pick_label": "THE PICK — TO GO YARD",
             "chip": "1+",
             "pick_text": "HOME RUN",
-            "pick_sub": "Anytime home run · book line beats our model = value",
+            # Market-neutral on purpose. This frame has no NOTE slot — pick_sub
+            # IS its note line — so a market-specific default here lands on
+            # cards for other markets as a false claim about what the bet is.
+            "pick_sub": "book line beats our model = value",
             "stake_sub": "units",
         },
         "fields": COMMON_FIELDS + ("pick_sub", "stake_sub"),

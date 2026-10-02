@@ -35,8 +35,9 @@ cache, and record. That is the mechanical 90%.
 MLB action shots are a solved problem — img.mlbstatic.com serves one per
 player id, keyed off 02_curated/players/current.csv, and 404s cleanly on a bad
 id so the status code can be trusted. That covers every MLB card with no
-searching at all. WNBA has no action equivalent; the official CDN carries only
-transparent headshot cutouts, so WNBA action shots need --page or --url.
+searching at all. WNBA and NFL have no action equivalent; their official CDNs
+carry only headshots (WNBA transparent cutouts, NFL studio portraits), so their
+action shots need --page or --url.
 
 Fetching shells out to `curl`: the system python3 has no CA bundle and urllib
 dies with CERTIFICATE_VERIFY_FAILED on both CDNs, and `no pip installs` is a
@@ -213,6 +214,37 @@ def wnba_candidates(name):
              "resolver": "wnba-cdn-headshot", "player": p["PLAYER_NAME"],
              "note": "transparent headshot cutout — NOT an action shot; "
                      "use --page/--url for action"}]
+
+
+def nfl_candidates(name):
+    """The roster's static.nfl.com headshot — a fallback, never the first pick.
+
+    Like WNBA there is no official action-shot CDN keyed by player id, so NFL
+    action photos come in through --page/--url. The headshot is a studio
+    portrait on a plain background, in the CURRENT season's uniform, which is
+    at least rule 2-safe.
+    """
+    import glob as _glob
+    import pandas as pd
+    root = data_root("nfl")
+    if not root:
+        return []
+    files = sorted(_glob.glob(os.path.join(root, "01_raw", "rosters", "*.csv")))
+    if not files:
+        return []
+    df = pd.read_csv(files[-1], usecols=["full_name", "team", "week", "headshot_url"],
+                     low_memory=False)
+    hit = df[df["full_name"].map(fold).str.contains(fold(name), regex=False)]
+    hit = hit.dropna(subset=["headshot_url"]).sort_values("week")
+    if hit.empty:
+        return []
+    p = hit.iloc[-1]
+    # The roster stores a small f_auto,h_168 variant; ask the CDN for a big one.
+    url = re.sub(r"/upload/[^/]*(/league/)", r"/upload/f_png,q_auto,w_1200\1",
+                 p["headshot_url"])
+    return [{"url": url, "resolver": "nfl-cdn-headshot", "player": p["full_name"],
+             "note": "%s studio headshot — NOT an action shot; use --page/--url "
+                     "for action" % p["team"]}]
 
 
 class _Images(HTMLParser):
@@ -405,9 +437,10 @@ def main():
     if args.page:
         cands += page_candidates(args.page, args.player)
     if not cands:
-        cands = mlb_candidates(args.player) + wnba_candidates(args.player)
+        cands = (mlb_candidates(args.player) + wnba_candidates(args.player)
+                 + nfl_candidates(args.player))
     if not cands:
-        die("no candidates for %r. MLB/WNBA rosters have no such player, and no "
+        die("no candidates for %r. MLB/WNBA/NFL rosters have no such player, and no "
             "--page or --url was given." % args.player)
 
     # Name the file after the player the roster resolved, not the string that
@@ -433,7 +466,7 @@ def main():
             if why:
                 print("  %s" % why)
             print(describe(path))
-            if c["resolver"] == "wnba-cdn-headshot":
+            if c["resolver"] in ("wnba-cdn-headshot", "nfl-cdn-headshot"):
                 print("\n  NOTE: this is a headshot cutout, not an action shot. For "
                       "action,\n  find a page and re-run with --page <url>.")
             return

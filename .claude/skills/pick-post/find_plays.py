@@ -12,6 +12,10 @@ built without anyone pasting numbers in:
 Usage:
     python3 find_plays.py                     # every league, today
     python3 find_plays.py --league wnba
+    python3 find_plays.py --market steal      # MLB stolen bases only
+    python3 find_plays.py --market tb         # MLB total bases 2+ (also rbi, runs)
+    python3 find_plays.py --league nfl        # NFL anytime TD 1+/2+ and first TD
+    python3 find_plays.py --market ftd        # NFL first touchdown scorer only
     python3 find_plays.py --player "Kiah Stokes"
     python3 find_plays.py --date 2026-08-03
     python3 find_plays.py --json             # machine-readable
@@ -27,11 +31,17 @@ real Discord feed, and running it would corrupt them.
 Data roots come from ~/.<league>_jobs.env. Those files also hold webhooks and
 tokens — only *_DATA_ROOT is ever read out of them, and nothing is echoed.
 
-Covers MLB home runs and the WNBA first-event markets: the only two leagues a
-card has ever been made for. PGA and F1 also publish edge tables
+Covers MLB home runs, stolen bases, total bases 2+, rbi 1+ and run scored 1+,
+the WNBA first-event markets, and the NFL touchdown scorer markets (anytime TD
+1+ / 2+ and first touchdown). PGA and F1 also publish edge tables
 (``02_curated/edges/{pga,f1}_edges_current.csv``) and would slot in as another
-``*_plays()`` function; NFL and NHL have model outputs but no edge table yet,
-and NBA has no ~/.nba_jobs.env on this host.
+``*_plays()`` function; NHL has model outputs but no edge table yet, and NBA
+has no ~/.nba_jobs.env on this host.
+
+NFL is the one league whose default isn't "today": a slate runs Thursday
+through Monday and the edge table holds the whole upcoming week, so with no
+--date every priced NFL game is shown. --date narrows it to games on that day
+(and reads the archive for past ones).
 """
 import argparse
 import csv
@@ -57,10 +67,74 @@ ET = timezone(timedelta(hours=-4))  # matches the alert scripts' day boundary
 EXCLUDED = ("novig", "kalshi", "nvg", "ksh")
 
 # Per-market alert floors, mirroring jobs/mlb/_lib.sh
-# mlb_bet_min_edge_overrides_for_date(). 1+ tightened to 2% at the cutover.
+# mlb_bet_min_edge_for_date() + mlb_bet_min_edge_overrides_for_date(). HR 1+
+# tightened to 2% at the cutover; HR 2+/3+ are the one carve-out still at 1.5%.
 MLB_MIN_EDGE = 0.015
 MLB_MIN_EDGE_HR1 = 0.02
 MLB_HR1_CUTOVER = "2026-07-29"
+
+# Stolen bases, same source, applied chronologically: no override before
+# 2026-08-29 (rides the 1.5% base of the day), 3% on 08-29 while DraftKings was
+# the only book posting the prop and its hold was ~35%, 2% from 08-30 when the
+# webhook went live and 3% was passing about one play a slate. From 08-31 the
+# base itself is 2%, so SB rides it — unbroken 2% from 08-30 on.
+MLB_MIN_EDGE_SB1_LEGACY = 0.03
+MLB_MIN_EDGE_SB1 = 0.02
+MLB_SB1_CUTOVER = "2026-08-29"
+MLB_SB1_CUTOVER2 = "2026-08-30"
+
+# Batter props (total bases 2+, rbi 1+, run scored 1+) — the "rbi|runs|total_bases"
+# branch of the same _lib.sh function. Launched 2026-09-08 on the then-2% base,
+# carved UP to 3% from 2026-09-10: at ~29-37% win probability an absolute edge is
+# a far weaker relative screen than on HR (~12%) or SB (~7%).
+MLB_MIN_EDGE_BATTER_PROPS_LEGACY = 0.02
+MLB_MIN_EDGE_BATTER_PROPS = 0.03
+MLB_BATTER_PROPS_CUTOVER = "2026-09-10"
+MLB_BATTER_PROPS = ("tb", "rbi", "runs")
+
+# The MLB per-batter edge tables. Same schema, same renderer, one Discord
+# channel each. Every table already carries the alerted stake in units_std —
+# read it, never recompute it. Sizing differs by product and by date (see
+# mlb_units.py): from 2026-09-12 every product is quarter-Kelly over its own
+# measured norm; before that HR was half-Kelly over a norm while SB and the
+# batter props were raw quarter-Kelly.
+#
+# `label` prefixes the market rung in the rendered line. HR is left bare ("1+")
+# because that is what the HR feed posts. Everything else names its market,
+# because the feeds don't: SB, rbi and runs all call their rung "1+", and total
+# bases calls its "2+" — the same string as the HR 2+ rung — each in its own
+# channel, so a bare rung pasted out of context doesn't say which market it is.
+MLB_PRODUCTS = {
+    "hr":    {"stem": "home_runs_edges",    "label": "",             "market": "home runs"},
+    "steal": {"stem": "stolen_bases_edges", "label": "steal ",       "market": "stolen bases"},
+    "tb":    {"stem": "total_bases_edges",  "label": "total bases ", "market": "total bases"},
+    "rbi":   {"stem": "rbi_edges",          "label": "rbi ",         "market": "rbi"},
+    "runs":  {"stem": "runs_edges",         "label": "run scored ",  "market": "runs scored"},
+}
+
+# NFL touchdown scorer — one edge table, td_edges_current.csv, three markets
+# in its `market` column: "1+" / "2+" (anytime TD, the NFL_DISCORD_WEBHOOK_TD
+# feed) and "FTD" (the game's first touchdown, its own feed and floor from
+# 2026-09-24). Floors mirror jobs/nfl/intraday.sh: anytime 2% until the
+# 2026-09-11 raise to 2.5%; FTD 2% since it launched. Both feeds also apply a
+# usage gate — expected_total_opportunities (carries + targets + 0.25 x
+# returns) >= 3.5 — that D/ST rows are exempt from. units_std on every row is
+# the alerted stake (half-Kelly / 5.0 since 2026-09-11; nfl_units.py). Read it.
+NFL_MIN_EDGE_TD_LEGACY = 0.02
+NFL_MIN_EDGE_TD = 0.025
+NFL_TD_CUTOVER = "2026-09-11"
+NFL_MIN_EDGE_FTD = 0.02
+NFL_MIN_EXPECTED_OPPS = 3.5
+NFL_DST = "D/ST"
+
+# `markets` are the edge table's `market` values each product covers; `labels`
+# are what the rendered line calls them — the feed's own "1+" is as ambiguous
+# here as it is for MLB, so name the market.
+NFL_PRODUCTS = {
+    "td":  {"markets": ("1+", "2+"), "market": "anytime touchdown"},
+    "ftd": {"markets": ("FTD",),     "market": "first touchdown"},
+}
+NFL_LABELS = {"1+": "anytime TD 1+", "2+": "anytime TD 2+", "FTD": "first TD"}
 
 # WNBA plays_*.csv are already filtered to qualifying plays by the R edge
 # pipeline, so there is no threshold to re-apply here — only the per-book
@@ -185,10 +259,10 @@ def fmt_american(v):
 
 # ---------------------------------------------------------------- MLB
 
-def _mlb_frame(root, date):
-    """The fullest view of `date`: (DataFrame, path).
+def _mlb_frame(root, date, stem="home_runs_edges"):
+    """The fullest view of `date` for one product: (DataFrame, path).
 
-    home_runs_edges_current.csv holds the live slate. Older dates come out of
+    `<stem>_current.csv` holds the live slate. Older dates come out of
     the archive, whose filenames are UTC-stamped — a late ET game on date D
     lands in a file stamped D or D+1. Among those, take the file with the most
     rows for D, not the newest: the newest is a late-night snapshot with most
@@ -200,7 +274,7 @@ def _mlb_frame(root, date):
     # The edge job rewrites current.csv in place every ~30 min, so a read can
     # land mid-write and see an empty or truncated file. Fall through to the
     # archive rather than dying — it holds the same rows, timestamped.
-    cur = os.path.join(edges, "home_runs_edges_current.csv")
+    cur = os.path.join(edges, "%s_current.csv" % stem)
     if os.path.exists(cur):
         try:
             df = pd.read_csv(cur)
@@ -217,7 +291,7 @@ def _mlb_frame(root, date):
 
     best, best_n = None, 0
     for f in os.listdir(arc):
-        if not f.startswith("home_runs_edges_") or not any(s in f for s in stems):
+        if not f.startswith(stem + "_") or not any(s in f for s in stems):
             continue
         p = os.path.join(arc, f)
         try:  # cheap pass — one column
@@ -229,12 +303,29 @@ def _mlb_frame(root, date):
     return (pd.read_csv(best), best) if best else (None, None)
 
 
-def mlb_plays(root, date, player):
-    alerts = load_alert_helpers()
+def mlb_floors(df, date, product):
+    """Per-row alert floor for this product's rows, keyed on the game date."""
+    if product in MLB_BATTER_PROPS:
+        floor = (MLB_MIN_EDGE_BATTER_PROPS_LEGACY if date < MLB_BATTER_PROPS_CUTOVER
+                 else MLB_MIN_EDGE_BATTER_PROPS)
+        return df["market"].map(lambda m: floor)
+    if product == "steal":
+        floor = (MLB_MIN_EDGE if date < MLB_SB1_CUTOVER else
+                 MLB_MIN_EDGE_SB1_LEGACY if date < MLB_SB1_CUTOVER2 else
+                 MLB_MIN_EDGE_SB1)
+        return df["market"].map(lambda m: floor)
+    hr1 = MLB_MIN_EDGE_HR1 if date >= MLB_HR1_CUTOVER else MLB_MIN_EDGE
+    return df["market"].map(lambda m: hr1 if m == "1+" else MLB_MIN_EDGE)
 
-    df, path = _mlb_frame(root, date)
+
+def mlb_plays(root, date, player, product="hr"):
+    alerts = load_alert_helpers()
+    spec = MLB_PRODUCTS[product]
+
+    df, path = _mlb_frame(root, date, spec["stem"])
     if df is None:
-        return [], "no edge table holds %s (checked current + archive)" % date
+        return [], "no %s edge table holds %s (checked current + archive)" % (
+            spec["market"], date)
     df = df.dropna(subset=["projection", "american_odds", "edge", "player_id"])
     df = df[~df["book"].str.lower().isin(EXCLUDED)]
     df = df[df["date"].astype(str) == date]
@@ -243,9 +334,7 @@ def mlb_plays(root, date, player):
     if df.empty:
         return [], None
 
-    floor = MLB_MIN_EDGE_HR1 if date >= MLB_HR1_CUTOVER else MLB_MIN_EDGE
-    thresholds = df["market"].map(lambda m: floor if m == "1+" else MLB_MIN_EDGE)
-    qualifying = df[df["edge"] >= thresholds]
+    qualifying = df[df["edge"] >= mlb_floors(df, date, product)]
 
     out = []
     for (name, market), rows in qualifying.groupby(["player", "market"], sort=False):
@@ -291,9 +380,10 @@ def mlb_plays(root, date, player):
         matchup_ok = bool(event) and team in event
         out.append({
             "league": "MLB",
+            "product": product,
             "player": name,
             "market": market,
-            "market_label": market,
+            "market_label": spec["label"] + market,
             "team": team,
             "matchup": str(first.get("matchup", "")),
             "matchup_ok": matchup_ok,
@@ -308,6 +398,99 @@ def mlb_plays(root, date, player):
                  "game, which means a stale post-trade crosswalk. The game is "
                  "right; confirm the club before it reaches a card" % suspect
                  if suspect else None)
+
+
+# ---------------------------------------------------------------- NFL
+
+def nfl_floor(market, date):
+    if market == "FTD":
+        return NFL_MIN_EDGE_FTD
+    return NFL_MIN_EDGE_TD_LEGACY if date < NFL_TD_CUTOVER else NFL_MIN_EDGE_TD
+
+
+def nfl_plays(root, date, player, product="td"):
+    """Anytime TD / first TD plays. `date` None = the whole priced slate."""
+    import pandas as pd
+    alerts = load_alert_helpers()
+    spec = NFL_PRODUCTS[product]
+
+    if date:
+        df, path = _mlb_frame(root, date, "td_edges")  # same current+archive layout
+        if df is None:
+            return [], "no TD edge table holds %s (checked current + archive)" % date
+        df = df[df["date"].astype(str) == date]
+    else:
+        path = os.path.join(root, "02_curated", "edges", "td_edges_current.csv")
+        if not os.path.exists(path):
+            return [], "no edge table at %s" % path
+        df = pd.read_csv(path, dtype={"player_id": str})
+    df = df.dropna(subset=["projection", "american_odds", "edge", "player_id"])
+    df = df[df["market"].isin(spec["markets"])]
+    df = df[~df["book"].str.lower().isin(EXCLUDED)]
+    if player:
+        df = df[df["player"].map(fold).str.contains(fold(player), regex=False)]
+    if df.empty:
+        return [], None
+
+    floors = df.apply(lambda r: nfl_floor(r["market"], str(r["date"])), axis=1)
+    usage_col = ("expected_total_opportunities" if "expected_total_opportunities"
+                 in df.columns else "expected_opportunities")
+    usage = pd.to_numeric(df[usage_col], errors="coerce").fillna(0.0)
+    is_dst = df["position_group"] == NFL_DST
+    passes_edge = df["edge"] >= floors
+    gated = passes_edge & ~is_dst & (usage < NFL_MIN_EXPECTED_OPPS)
+    qualifying = df[passes_edge & ~gated]
+
+    out = []
+    for (name, market, game), rows in qualifying.groupby(
+            ["player", "market", "game_id"], sort=False):
+        groups = {}
+        for _, r in rows.iterrows():
+            try:
+                units = float(r["units_std"])
+                am = int(round(float(r["american_odds"])))
+            except (ValueError, TypeError):
+                continue
+            if units < 0.05:
+                continue
+            g = groups.setdefault(am, {"units": units, "codes": set()})
+            g["units"] = max(g["units"], units)
+            g["codes"].add(alerts.book_code(r["book"]))
+        if not groups:
+            continue
+        order = alerts.BOOK_ORDER
+        segments = []
+        for am, g in sorted(groups.items(), key=lambda kv: kv[1]["units"], reverse=True):
+            codes = "/".join(sorted(g["codes"],
+                                    key=lambda c: (order.index(c) if c in order else 99, c)))
+            segments.append("%s %s (%su)" % (alerts.fmt_american(am), codes,
+                                             fmt_units(g["units"])))
+        first = rows.iloc[0]
+        team, event = str(first["team"]), str(first.get("event", ""))
+        usage_v = first.get(usage_col)
+        out.append({
+            "league": "NFL",
+            "product": product,
+            "player": name,
+            "market": market,
+            "market_label": NFL_LABELS.get(market, market),
+            "team": team,
+            "position": str(first.get("position_group", "")),
+            "matchup": "%s · %s" % (event, str(first.get("date", ""))),
+            "game_id": game,
+            "matchup_ok": bool(event) and team in event,
+            "proj": [(alerts.prob_to_american(float(first["projection"])), "")],
+            "expected_opps": (None if pd.isna(usage_v) else round(float(usage_v), 1)),
+            "segments": segments,
+            "best_units": max(g["units"] for g in groups.values()),
+            "stamp": str(first.get("edge_run_timestamp", "")),
+        })
+    out.sort(key=lambda p: p["best_units"], reverse=True)
+    n_gated = int(gated.sum())
+    return out, ("%d edge row(s) cleared the floor but failed the %.1f expected-"
+                 "opportunities usage gate — the feed never alerts those, so "
+                 "neither does this" % (n_gated, NFL_MIN_EXPECTED_OPPS)
+                 if n_gated else None)
 
 
 # ---------------------------------------------------------------- WNBA
@@ -497,14 +680,23 @@ def render(play):
 def main():
     ap = argparse.ArgumentParser(description=__doc__,
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--league", choices=("mlb", "wnba"), help="default: both")
-    ap.add_argument("--date", default=None, help="YYYY-MM-DD (default: today ET)")
+    ap.add_argument("--league", choices=("mlb", "wnba", "nfl"), help="default: all")
+    ap.add_argument("--market", choices=tuple(MLB_PRODUCTS) + tuple(NFL_PRODUCTS),
+                    default=None,
+                    help="restrict to one product — MLB: hr, steal, tb (total "
+                         "bases 2+), rbi, runs; NFL: td (anytime 1+/2+), ftd "
+                         "(first touchdown). Implies the league")
+    ap.add_argument("--date", default=None,
+                    help="YYYY-MM-DD (default: today ET; NFL: the whole priced slate)")
     ap.add_argument("--player", default=None, help="substring match on player name")
     ap.add_argument("--json", action="store_true", help="machine-readable output")
     args = ap.parse_args()
 
     date = args.date or datetime.now(ET).strftime("%Y-%m-%d")
-    leagues = [args.league] if args.league else ["mlb", "wnba"]
+    implied = ("nfl" if args.market in NFL_PRODUCTS else
+               "mlb" if args.market in MLB_PRODUCTS else None)
+    leagues = [args.league] if args.league else ([implied] if implied
+                                                 else ["mlb", "wnba", "nfl"])
 
     everything, notes = [], []
     for lg in leagues:
@@ -515,13 +707,26 @@ def main():
         if not os.path.isdir(root):
             notes.append("%s: data root %s not mounted — skipped" % (lg.upper(), root))
             continue
-        plays, note = (mlb_plays if lg == "mlb" else wnba_plays)(root, date, args.player)
-        if lg == "wnba":
+        if lg == "mlb":
+            for product in ([args.market] if args.market else list(MLB_PRODUCTS)):
+                plays, note = mlb_plays(root, date, args.player, product)
+                everything += plays
+                if note:
+                    notes.append("MLB %s: %s" % (MLB_PRODUCTS[product]["market"], note))
+        elif lg == "nfl":
+            nfl_market = args.market if args.market in NFL_PRODUCTS else None
+            for product in ([nfl_market] if nfl_market else list(NFL_PRODUCTS)):
+                plays, note = nfl_plays(root, args.date, args.player, product)
+                everything += plays
+                if note:
+                    notes.append("NFL %s: %s" % (NFL_PRODUCTS[product]["market"], note))
+        else:
+            plays, note = wnba_plays(root, date, args.player)
             for p in plays:
                 p.update(wnba_roster(root, p["player"]))
-        everything += plays
-        if note:
-            notes.append("%s: %s" % (lg.upper(), note))
+            everything += plays
+            if note:
+                notes.append("%s: %s" % (lg.upper(), note))
 
     if args.json:
         print(json.dumps({"date": date, "plays": everything, "notes": notes}, indent=2))
@@ -548,6 +753,8 @@ def main():
                 print(render(p))
                 extra = [x for x in (("#%s" % p["jersey"]) if p.get("jersey") else "",
                                      p.get("team_city", ""),
+                                     ("opp %s" % p["expected_opps"])
+                                     if p.get("expected_opps") is not None else "",
                                      ("team says %s" % p["team"])
                                      if p.get("matchup_ok") is False else "",
                                      p.get("stamp", "")) if x]
