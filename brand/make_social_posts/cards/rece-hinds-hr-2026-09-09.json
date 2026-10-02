@@ -1,0 +1,22 @@
+{
+  "template": "split",
+  "slug": "rece-hinds-hr-2026-09-09",
+  "photo": "photos/rece-hinds.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "RECE HINDS",
+  "team": "BALTIMORE",
+  "jersey": "62",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs CLE · Model: +623 · best of 2 books",
+  "proj": "+623",
+  "books": [
+    { "book": "BETRIVERS", "odds": "+900", "stake": "1.1u", "best": true },
+    { "book": "FANATICS", "odds": "+750", "stake": "0.6u" }
+  ]
+}

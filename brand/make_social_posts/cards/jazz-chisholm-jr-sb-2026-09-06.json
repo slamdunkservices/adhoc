@@ -1,0 +1,33 @@
+{
+  "template": "ticket",
+  "slug": "jazz-chisholm-jr-sb-2026-09-06",
+  "photo": "photos/jazz-chisholm-jr.jpg",
+  "photo_preset": "auto",
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "JAZZ CHISHOLM JR.",
+  "team": "NEW YORK",
+  "jersey": "13",
+  "pick_label": "THE PICK \u2014 TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "@ SD \u00b7 Model: +438 \u00b7 best of 2 books",
+  "proj": "+438",
+  "books": [
+    {
+      "book": "BETRIVERS",
+      "odds": "+575",
+      "stake": "1.1u",
+      "best": true
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+569",
+      "stake": "1.1u"
+    }
+  ],
+  "photo_pos": "30% 30%",
+  "photo_size": "1300px auto"
+}

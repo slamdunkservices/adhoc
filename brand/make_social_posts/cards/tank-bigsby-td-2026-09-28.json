@@ -1,0 +1,28 @@
+{
+  "slug": "tank-bigsby-td-2026-09-28",
+  "template": "base",
+  "accent": "cyan",
+  "photo": "photos/tank-bigsby.jpg",
+  "photo_preset": "auto",
+  "name": "TANK BIGSBY",
+  "team": "PHILADELPHIA",
+  "jersey": "8",
+  "league": "NFL",
+  "tag_sub": "ANYTIME TD PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO FIND THE END ZONE",
+  "chip": "ATD",
+  "pick_text": "TOUCHDOWN",
+  "proj": "+319",
+  "pick_sub": "@ CHI · Model: +319 · best of 8 books",
+  "books": [
+    { "book": "BETMGM", "odds": "+775", "stake": "1.4u" },
+    { "book": "DRAFTKINGS", "odds": "+650", "stake": "1.2u" },
+    { "book": "FANDUEL", "odds": "+650", "stake": "1.2u" },
+    { "book": "THESCORE BET", "odds": "+650", "stake": "1.2u" },
+    { "book": "FANATICS", "odds": "+650", "stake": "1.2u" },
+    { "book": "CAESARS", "odds": "+625", "stake": "1.2u" },
+    { "book": "HARD ROCK BET", "odds": "+600", "stake": "1.1u" },
+    { "book": "BETRIVERS", "odds": "+510", "stake": "0.9u" }
+  ]
+}

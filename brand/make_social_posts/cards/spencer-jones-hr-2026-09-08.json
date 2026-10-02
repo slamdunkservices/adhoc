@@ -1,0 +1,24 @@
+{
+  "slug": "spencer-jones-hr-2026-09-08",
+  "template": "fullbleed",
+  "accent": "pink",
+  "photo": "photos/spencer-jones.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "SPENCER JONES",
+  "team": "NEW YORK",
+  "jersey": "78",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs COL · Model: +336 · best of 3 books",
+  "pick_sub": "vs COL · Model: +336 · best of 3 books",
+  "proj": "+336",
+  "books": [
+    { "book": "FANDUEL", "odds": "+390", "stake": "0.8u", "best": true },
+    { "book": "FANATICS", "odds": "+390", "stake": "0.8u" },
+    { "book": "BETMGM", "odds": "+380", "stake": "0.7u" }
+  ]
+}

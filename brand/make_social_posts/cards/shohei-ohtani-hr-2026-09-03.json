@@ -1,0 +1,20 @@
+{
+  "template": "split",
+  "slug": "shohei-ohtani-hr-2026-09-03",
+  "photo": "photos/shohei-ohtani.jpg",
+  "photo_preset": "auto",
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "SHOHEI OHTANI",
+  "team": "LOS ANGELES",
+  "jersey": "17",
+  "pick_label": "THE PICK \u2014 TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs STL \u00b7 Model: +291 \u00b7 best of 4 books",
+  "proj": "+291",
+  "book": "FANATICS",
+  "odds": "+340",
+  "stake": "0.9u"
+}

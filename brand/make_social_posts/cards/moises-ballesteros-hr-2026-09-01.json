@@ -1,0 +1,23 @@
+{
+  "template": "fullbleed",
+  "slug": "moises-ballesteros-hr-2026-09-01",
+  "photo": "photos/moises-ballesteros.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "MOISÉS BALLESTEROS",
+  "team": "LOS ANGELES",
+  "jersey": "13",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs NYY · Model: +719 · best of 2 books",
+
+  "proj": "+719",
+  "book": "FANATICS",
+  "odds": "+950",
+  "stake": "0.8u"
+}

@@ -1,0 +1,20 @@
+{
+  "template": "fullbleed",
+  "slug": "drew-gilbert-sb-2026-09-18",
+  "photo": "photos/drew-gilbert.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "name": "DREW GILBERT",
+  "team": "SAN FRANCISCO",
+  "jersey": "0",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "@ LAD · Model: +618 · +750 at 3 books",
+  "proj": "+618",
+  "book": "FANDUEL",
+  "odds": "+750",
+  "stake": "0.6u"
+}

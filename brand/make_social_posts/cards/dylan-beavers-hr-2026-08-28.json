@@ -1,0 +1,26 @@
+{
+  "template": "poster",
+  "slug": "dylan-beavers-hr-2026-08-28",
+  "photo": "photos/dylan-beavers.jpg",
+  "photo_preset": "auto",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "DYLAN BEAVERS",
+  "team": "BALTIMORE",
+  "jersey": "12",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ ATH · Model: +798 · best of 4 books",
+
+  "proj": "+798",
+  "books": [
+    { "book": "FANATICS", "odds": "+1300", "stake": "1.1u", "best": true },
+    { "book": "DRAFTKINGS", "odds": "+1140", "stake": "0.8u" },
+    { "book": "FANDUEL", "odds": "+1060", "stake": "0.7u" },
+    { "book": "HARD ROCK BET", "odds": "+1000", "stake": "0.6u" }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "slug": "jake-mccarthy-tb-2026-09-22",
+  "template": "poster",
+  "accent": "pink",
+  "photo": "photos/jake-mccarthy.jpg",
+  "photo_preset": "auto",
+  "name": "JAKE MCCARTHY",
+  "team": "COLORADO",
+  "jersey": "31",
+  "league": "MLB",
+  "tag_sub": "TOTAL BASES PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO RACK UP BASES",
+  "chip": "2+",
+  "pick_text": "TOTAL BASES",
+  "proj": "-130",
+  "note": "vs AZ · Model: -130 · best of 8 books",
+  "books": [
+    { "book": "BETRIVERS", "odds": "+102", "stake": "1.8u" },
+    { "book": "DRAFTKINGS", "odds": "+100", "stake": "1.6u" },
+    { "book": "THESCORE BET", "odds": "-110", "stake": "1.1u" },
+    { "book": "FANATICS", "odds": "-110", "stake": "1.1u" },
+    { "book": "CAESARS", "odds": "-110", "stake": "1.1u" },
+    { "book": "HARD ROCK BET", "odds": "-110", "stake": "1.1u" },
+    { "book": "FANDUEL", "odds": "-115", "stake": "0.8u" }
+  ]
+}

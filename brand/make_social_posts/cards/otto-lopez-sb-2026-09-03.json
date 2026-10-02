@@ -1,0 +1,21 @@
+{
+  "slug": "otto-lopez-sb-2026-09-03",
+  "template": "base",
+  "accent": "cyan",
+  "photo": "photos/otto-lopez.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "OTTO LOPEZ",
+  "team": "MIAMI",
+  "jersey": "6",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "pick_text": "STOLEN BASE",
+  "chip": "SB",
+  "pick_sub": "@ KC · Model: +656 · best of 7 books",
+  "proj": "+656",
+  "book": "FANDUEL",
+  "odds": "+850",
+  "stake": "0.8u"
+}

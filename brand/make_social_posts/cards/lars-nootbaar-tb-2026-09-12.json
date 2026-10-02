@@ -1,0 +1,21 @@
+{
+  "template": "split",
+  "slug": "lars-nootbaar-tb-2026-09-12",
+  "photo": "photos/lars-nootbaar.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "TOTAL BASES PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "LARS NOOTBAAR",
+  "team": "ARIZONA",
+  "jersey": "21",
+  "pick_label": "THE PICK — TO RACK UP BASES",
+  "chip": "2+",
+  "pick_text": "TOTAL BASES",
+  "note": "vs TEX · Model: +131 · DK is the only book over the line",
+  "proj": "+131",
+  "book": "DRAFTKINGS",
+  "odds": "+152",
+  "stake": "0.8u"
+}

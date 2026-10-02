@@ -1,0 +1,23 @@
+{
+  "template": "poster",
+  "slug": "gleyber-torres-hr-2026-08-31",
+  "photo": "photos/gleyber-torres.jpg",
+  "photo_preset": "auto",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "GLEYBER TORRES",
+  "team": "DETROIT",
+  "jersey": "25",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ MIN · Model: +692 · best of 6 books",
+
+  "proj": "+692",
+  "book": "FANATICS",
+  "odds": "+1050",
+  "stake": "1.1u"
+}

@@ -1,0 +1,42 @@
+{
+  "template": "base",
+  "slug": "charlisse-leger-walker-first-basket-2026-08-20",
+  "photo": "photos/charlisse-leger-walker.jpg",
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "CHARLISSE LEGER-WALKER",
+  "team": "CONNECTICUT",
+  "jersey": "4",
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+1114",
+  "books": [
+    {
+      "book": "BETMGM",
+      "odds": "+1800",
+      "stake": "1.4u",
+      "best": true
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1660",
+      "stake": "1.2u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1400",
+      "stake": "0.8u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1300",
+      "stake": "0.5u"
+    }
+  ],
+  "photo_pos": "60% 40%",
+  "photo_size": "160%",
+  "pick_sub": "@ LVA \u00b7 Model: +1114 points \u00b7 +1121 FG \u00b7 best of 6 books"
+}

@@ -1,0 +1,26 @@
+{
+  "slug": "michaela-onyenwere-first-basket-2026-09-30",
+  "template": "base",
+  "accent": "pink",
+  "photo": "photos/michaela-onyenwere.jpg",
+  "photo_preset": "auto",
+  "name": "MICHAELA ONYENWERE",
+  "team": "WASHINGTON",
+  "jersey": "12",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+1272",
+  "pick_sub": "vs ATL · Model: +1272 points · +1171 FG · best of 6 books",
+  "books": [
+    {"book": "DRAFTKINGS", "odds": "+1620", "stake": "0.7u"},
+    {"book": "FANATICS", "odds": "+1500", "stake": "0.8u"},
+    {"book": "FANDUEL", "odds": "+1400", "stake": "0.3u"},
+    {"book": "THESCORE BET", "odds": "+1400", "stake": "0.3u"},
+    {"book": "CAESARS", "odds": "+1400", "stake": "0.3u"},
+    {"book": "BETRIVERS", "odds": "+1200", "stake": "0.1u"}
+  ]
+}

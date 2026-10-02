@@ -1,0 +1,27 @@
+{
+  "template": "poster",
+  "slug": "zac-veen-hr-2026-09-04",
+  "photo": "photos/zac-veen.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "ZAC VEEN",
+  "team": "COLORADO",
+  "jersey": "13",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs STL · Model: +572 · best of 5 books",
+
+  "proj": "+572",
+  "books": [
+    { "book": "FANATICS",      "odds": "+750", "stake": "0.9u" },
+    { "book": "FANDUEL",       "odds": "+710", "stake": "0.7u" },
+    { "book": "THESCORE BET",  "odds": "+700", "stake": "0.7u" },
+    { "book": "CAESARS",       "odds": "+700", "stake": "0.7u" },
+    { "book": "HARD ROCK BET", "odds": "+700", "stake": "0.7u" }
+  ]
+}

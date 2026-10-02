@@ -1,0 +1,26 @@
+{
+  "slug": "michael-harris-ii-sb-2026-10-01",
+  "template": "base",
+  "accent": "cyan",
+  "photo": "photos/michael-harris-ii-sb.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "MICHAEL HARRIS II",
+  "team": "ATLANTA",
+  "jersey": "23",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "pick_sub": "vs PHI · Model: +558 · best of 6 books",
+  "proj": "+558",
+  "books": [
+    {"book": "DRAFTKINGS", "odds": "+940", "stake": "1.6u"},
+    {"book": "FANDUEL", "odds": "+920", "stake": "1.5u"},
+    {"book": "HARD ROCK BET", "odds": "+900", "stake": "1.5u"},
+    {"book": "FANATICS", "odds": "+800", "stake": "1.2u"},
+    {"book": "BETRIVERS", "odds": "+750", "stake": "1u"},
+    {"book": "CAESARS", "odds": "+700", "stake": "0.8u"}
+  ]
+}

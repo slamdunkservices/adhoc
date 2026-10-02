@@ -1,0 +1,26 @@
+{
+  "template": "fullbleed",
+  "slug": "trea-turner-hr-2026-08-18",
+  "photo": "photos/trea-turner.jpg",
+  "photo_preset": "auto",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "TREA TURNER",
+  "team": "PHILADELPHIA",
+  "jersey": "7",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs MIA · Model: +633 · best of 3 books",
+
+  "proj": "+633",
+  "books": [
+    { "book": "FANDUEL",     "odds": "+820", "stake": "0.8u", "best": true },
+    { "book": "FANATICS",    "odds": "+800", "stake": "0.7u" },
+    { "book": "DRAFTKINGS",  "odds": "+760", "stake": "0.6u" }
+  ]
+}

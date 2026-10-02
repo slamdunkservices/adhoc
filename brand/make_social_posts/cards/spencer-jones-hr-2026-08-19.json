@@ -1,0 +1,28 @@
+{
+  "template": "poster",
+  "slug": "spencer-jones-hr-2026-08-19",
+  "photo": "photos/spencer-jones.jpg",
+  "photo_preset": "auto",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "SPENCER JONES",
+  "team": "NEW YORK",
+  "jersey": "78",
+
+  "kicker": "13.1% BARREL RATE",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ BAL · Model: +391 · best of 5 books",
+
+  "proj": "+391",
+  "books": [
+    { "book": "BETRIVERS", "odds": "+525", "stake": "1.3u", "best": true },
+    { "book": "HARD ROCK BET", "odds": "+475", "stake": "0.9u" },
+    { "book": "DRAFTKINGS", "odds": "+471", "stake": "0.9u" },
+    { "book": "FANDUEL", "odds": "+470", "stake": "0.9u" },
+    { "book": "THESCORE BET", "odds": "+450", "stake": "0.7u" }
+  ]
+}

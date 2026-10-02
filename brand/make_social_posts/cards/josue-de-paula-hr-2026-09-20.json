@@ -1,0 +1,25 @@
+{
+  "template": "poster",
+  "slug": "josue-de-paula-hr-2026-09-20",
+  "photo": "photos/josue-de-paula.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JOSUE DE PAULA",
+  "team": "LOS ANGELES",
+  "jersey": "95",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs SF · Model: +516 · best of 6 books",
+  "proj": "+516",
+  "books": [
+    { "book": "FANATICS", "odds": "+950", "stake": "2u", "best": true },
+    { "book": "CAESARS", "odds": "+950", "stake": "2u" },
+    { "book": "FANDUEL", "odds": "+920", "stake": "1.9u" },
+    { "book": "BETRIVERS", "odds": "+900", "stake": "1.8u" },
+    { "book": "HARD ROCK BET", "odds": "+900", "stake": "1.8u" },
+    { "book": "DRAFTKINGS", "odds": "+880", "stake": "1.8u" }
+  ]
+}

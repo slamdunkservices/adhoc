@@ -1,0 +1,52 @@
+{
+  "template": "ticket",
+  "slug": "isabelle-harrison-first-basket-2026-08-23",
+  "photo": "photos/isabelle-harrison.jpg",
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "ISABELLE HARRISON",
+  "team": "TORONTO",
+  "jersey": "21",
+  "kicker": "TEAM-BEST 6.0 REB",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+517",
+  "books": [
+    {
+      "book": "BETRIVERS",
+      "odds": "+700",
+      "stake": "1.9u",
+      "best": true
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+700",
+      "stake": "1.9u"
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+650",
+      "stake": "0.8u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+600",
+      "stake": "1u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+530",
+      "stake": "0.2u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+525",
+      "stake": "0.1u"
+    }
+  ],
+  "pick_sub": "vs LVA \u00b7 Model: +517 points \u00b7 +572 FG \u00b7 best of 6 books",
+  "photo_pos": "44% 8%",
+  "photo_size": "cover"
+}

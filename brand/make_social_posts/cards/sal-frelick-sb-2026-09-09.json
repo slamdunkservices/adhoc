@@ -1,0 +1,52 @@
+{
+  "template": "base",
+  "slug": "sal-frelick-sb-2026-09-09",
+  "photo": "photos/sal-frelick.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "SAL FRELICK",
+  "team": "MILWAUKEE",
+  "jersey": "10",
+  "pick_label": "THE PICK \u2014 TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "vs CHC \u00b7 Model: +498 \u00b7 best of 6 books",
+  "pick_sub": "vs CHC \u00b7 Model: +498 \u00b7 best of 6 books",
+  "proj": "+498",
+  "books": [
+    {
+      "book": "BETRIVERS",
+      "odds": "+650",
+      "stake": "1u",
+      "best": true
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+630",
+      "stake": "0.9u"
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+600",
+      "stake": "0.7u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+600",
+      "stake": "0.7u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+600",
+      "stake": "0.7u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+597",
+      "stake": "0.7u"
+    }
+  ]
+}

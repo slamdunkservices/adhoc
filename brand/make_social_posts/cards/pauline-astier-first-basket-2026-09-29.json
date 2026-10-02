@@ -1,0 +1,57 @@
+{
+  "slug": "pauline-astier-first-basket-2026-09-29",
+  "template": "split",
+  "accent": "cyan",
+  "photo": "photos/pauline-astier.jpg",
+  "photo_preset": "auto",
+  "name": "PAULINE ASTIER",
+  "team": "NEW YORK",
+  "jersey": "18",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+975",
+  "note": "vs MIN · Model: +975 points · +944 FG · best of 7 books",
+  "books": [
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1480",
+      "stake": "1.4u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+1400",
+      "stake": "1.4u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1200",
+      "stake": "0.9u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1200",
+      "stake": "0.9u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+1200",
+      "stake": "0.9u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1200",
+      "stake": "0.9u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1100",
+      "stake": "0.5u"
+    }
+  ],
+  "photo_size": "cover",
+  "photo_pos": "53% 40%"
+}

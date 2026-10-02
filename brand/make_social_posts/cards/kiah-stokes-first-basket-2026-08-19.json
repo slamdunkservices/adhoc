@@ -1,0 +1,24 @@
+{
+  "template": "ticket",
+  "slug": "kiah-stokes-first-basket-2026-08-19",
+  "photo": "photos/kiah-stokes.png",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "KIAH STOKES",
+  "team": "GOLDEN STATE",
+  "jersey": "41",
+
+  "kicker": "TEAM-BEST 5.3 BOARDS A GAME",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "vs MIN · Model: +1220 points · +1196 FG · DK is the only board posting it",
+
+  "proj": "+1220",
+  "book": "DRAFTKINGS",
+  "odds": "+1480",
+  "stake": "0.6u"
+}

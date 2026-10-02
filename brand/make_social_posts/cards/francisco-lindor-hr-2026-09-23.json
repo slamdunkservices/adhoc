@@ -1,0 +1,55 @@
+{
+  "slug": "francisco-lindor-hr-2026-09-23",
+  "template": "split",
+  "accent": "green",
+  "photo": "photos/francisco-lindor.jpg",
+  "photo_preset": "auto",
+  "name": "FRANCISCO LINDOR",
+  "team": "NEW YORK",
+  "jersey": "12",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+360",
+  "note": "@ TEX · Model: +360 · best of 7 books",
+  "books": [
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+500",
+      "stake": "1.6u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+490",
+      "stake": "1.5u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+490",
+      "stake": "1.5u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+475",
+      "stake": "1.4u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+456",
+      "stake": "1.2u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+450",
+      "stake": "1.2u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+440",
+      "stake": "1u"
+    }
+  ]
+}

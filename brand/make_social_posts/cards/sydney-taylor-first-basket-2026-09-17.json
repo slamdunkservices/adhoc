@@ -1,0 +1,23 @@
+{
+  "template": "ticket",
+  "slug": "sydney-taylor-first-basket-2026-09-17",
+  "photo": "photos/sydney-taylor.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TONIGHT'S PLAY",
+  "name": "SYDNEY TAYLOR",
+  "team": "CHICAGO",
+  "jersey": "12",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "vs WAS · Model: +831 points · +848 FG · best of 8 books",
+  "proj": "+831",
+  "book": "DRAFTKINGS",
+  "odds": "+1100",
+  "stake": "1.2u",
+  "photo_size": "250%",
+  "photo_pos": "48% 20%"
+}

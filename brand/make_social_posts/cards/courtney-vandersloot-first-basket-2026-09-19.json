@@ -1,0 +1,25 @@
+{
+  "template": "base",
+  "slug": "courtney-vandersloot-first-basket-2026-09-19",
+  "photo": "photos/courtney-vandersloot.jpg",
+  "photo_preset": "auto",
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "COURTNEY VANDERSLOOT",
+  "team": "CHICAGO",
+  "jersey": "22",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "@ ATL · Model: +1077 points · +1058 FG · best of 8 books",
+  "proj": "+1077",
+  "books": [
+    { "book": "FANDUEL", "odds": "+1400", "stake": "0.9u", "best": true },
+    { "book": "BETMGM", "odds": "+1300", "stake": "0.7u" },
+    { "book": "DRAFTKINGS", "odds": "+1260", "stake": "0.6u" },
+    { "book": "BETRIVERS", "odds": "+1200", "stake": "0.5u" },
+    { "book": "FANATICS", "odds": "+1100", "stake": "0.1u" }
+  ]
+}

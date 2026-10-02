@@ -1,0 +1,50 @@
+{
+  "slug": "mookie-betts-hr-2026-09-25",
+  "template": "ticket",
+  "accent": "cyan",
+  "photo": "photos/mookie-betts.jpg",
+  "photo_preset": "auto",
+  "name": "MOOKIE BETTS",
+  "team": "LOS ANGELES",
+  "jersey": "50",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+536",
+  "note": "@ SF · Model: +536 · best of 6 books",
+  "books": [
+    {
+      "book": "FANATICS",
+      "odds": "+700",
+      "stake": "1u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+700",
+      "stake": "1u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+680",
+      "stake": "0.9u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+660",
+      "stake": "0.8u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+650",
+      "stake": "0.7u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+650",
+      "stake": "0.7u"
+    }
+  ]
+}

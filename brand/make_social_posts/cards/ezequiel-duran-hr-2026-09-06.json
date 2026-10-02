@@ -1,0 +1,23 @@
+{
+  "template": "split",
+  "slug": "ezequiel-duran-hr-2026-09-06",
+  "photo": "photos/ezequiel-duran.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "EZEQUIEL DURAN",
+  "team": "TEXAS",
+  "jersey": "20",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs TB · Model: +518 · best of 6 books",
+  "proj": "+518",
+  "books": [
+    { "book": "BETRIVERS", "odds": "+800", "stake": "1.4u", "best": true },
+    { "book": "HARD ROCK BET", "odds": "+750", "stake": "1.3u" },
+    { "book": "DRAFTKINGS", "odds": "+730", "stake": "1.2u" }
+  ]
+}

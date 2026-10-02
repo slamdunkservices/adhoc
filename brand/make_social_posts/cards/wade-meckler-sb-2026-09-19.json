@@ -1,0 +1,32 @@
+{
+  "template": "split",
+  "slug": "wade-meckler-sb-2026-09-19",
+  "photo": "photos/wade-meckler.jpg",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "WADE MECKLER",
+  "team": "LOS ANGELES",
+  "jersey": "53",
+  "pick_label": "THE PICK \u2014 TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "vs MIN \u00b7 Model: +465 \u00b7 +550 at 2 books",
+  "proj": "+465",
+  "books": [
+    {
+      "book": "BETRIVERS",
+      "odds": "+550",
+      "stake": "0.7u",
+      "best": true
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+550",
+      "stake": "0.7u"
+    }
+  ],
+  "photo_size": "cover",
+  "photo_pos": "78% 95%"
+}

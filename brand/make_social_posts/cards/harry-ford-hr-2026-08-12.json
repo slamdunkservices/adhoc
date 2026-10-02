@@ -1,0 +1,26 @@
+{
+  "template": "fullbleed",
+  "slug": "harry-ford-hr-2026-08-12",
+  "photo": "photos/harry-ford.jpg",
+  "photo_pos": "50% 15%",
+  "photo_size": "cover",
+  "photo_filter": "none",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "HARRY FORD",
+  "team": "WASHINGTON",
+  "jersey": "17",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs CHC · BetMGM is the only board posting it",
+
+  "proj": "+680",
+  "book": "BETMGM",
+  "odds": "+850",
+  "stake": "0.6u"
+}

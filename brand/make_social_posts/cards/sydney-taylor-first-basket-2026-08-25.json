@@ -1,0 +1,62 @@
+{
+  "template": "ticket",
+  "slug": "sydney-taylor-first-basket-2026-08-25",
+  "photo": "photos/sydney-taylor.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "SYDNEY TAYLOR",
+  "team": "CHICAGO",
+  "jersey": "12",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "@ CON \u00b7 Model: +865 points \u00b7 +858 FG \u00b7 best of 8 books",
+  "proj": "+865",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+1000",
+      "stake": "0.6u",
+      "best": true
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1000",
+      "stake": "0.6u"
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+950",
+      "stake": "0.5u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+900",
+      "stake": "0.2u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+900",
+      "stake": "0.2u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+900",
+      "stake": "0.2u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+900",
+      "stake": "0.2u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+900",
+      "stake": "0.2u"
+    }
+  ],
+  "photo_size": "380%",
+  "photo_pos": "34% 12%"
+}

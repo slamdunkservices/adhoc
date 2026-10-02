@@ -1,0 +1,38 @@
+{
+  "template": "ticket",
+  "slug": "georgia-amoore-first-basket-2026-08-21",
+  "photo": "photos/georgia-amoore.webp",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "GEORGIA AMOORE",
+  "team": "WASHINGTON",
+  "jersey": "8",
+  "kicker": "2ND ON THE ROSTER IN ASSISTS",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "vs MIN \u00b7 Model: +1323 points \u00b7 +1298 FG \u00b7 best of 6 books",
+  "proj": "+1323",
+  "books": [
+    {
+      "book": "BETMGM",
+      "odds": "+1800",
+      "stake": "0.9u",
+      "best": true
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1700",
+      "stake": "0.7u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1660",
+      "stake": "0.6u"
+    }
+  ],
+  "photo_size": "165%",
+  "photo_pos": "54% 22%"
+}

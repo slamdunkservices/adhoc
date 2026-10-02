@@ -1,0 +1,22 @@
+{
+  "template": "ticket",
+  "slug": "emily-engstler-first-basket-2026-09-20",
+  "photo": "photos/emily-engstler.png",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "EMILY ENGSTLER",
+  "team": "PORTLAND",
+  "jersey": "21",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "@ LAS · Model: +773 points · +781 FG · best of 3 books",
+  "proj": "+773",
+  "books": [
+    { "book": "FANDUEL", "odds": "+1000", "stake": "1.2u", "best": true },
+    { "book": "BETRIVERS", "odds": "+900", "stake": "0.7u" },
+    { "book": "HARD ROCK BET", "odds": "+900", "stake": "0.7u" }
+  ]
+}

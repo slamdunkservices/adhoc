@@ -1,0 +1,22 @@
+{
+  "slug": "julio-rodriguez-sb-2026-09-10",
+  "template": "base",
+  "accent": "cyan",
+  "photo": "photos/julio-rodriguez.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "JULIO RODRÍGUEZ",
+  "team": "SEATTLE",
+  "jersey": "44",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "vs TEX · Model: +520 · BR is the only book over the line",
+  "pick_sub": "vs TEX · Model: +520 · BR is the only book over the line",
+  "proj": "+520",
+  "books": [
+    { "book": "BETRIVERS", "odds": "+650", "stake": "0.8u", "best": true }
+  ]
+}

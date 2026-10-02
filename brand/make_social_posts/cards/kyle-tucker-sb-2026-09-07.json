@@ -1,0 +1,33 @@
+{
+  "slug": "kyle-tucker-sb-2026-09-07",
+  "template": "base",
+  "accent": "pink",
+  "photo": "photos/kyle-tucker.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "KYLE TUCKER",
+  "team": "LOS ANGELES",
+  "jersey": "23",
+  "pick_label": "THE PICK \u2014 TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "pick_sub": "vs CIN \u00b7 Model: +606 \u00b7 best of 6 books",
+  "proj": "+606",
+  "books": [
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+800",
+      "stake": "0.9u",
+      "best": true
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+750",
+      "stake": "0.7u"
+    }
+  ],
+  "photo_pos": "55% 45%",
+  "photo_size": "125%"
+}

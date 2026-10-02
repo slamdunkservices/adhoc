@@ -1,0 +1,62 @@
+{
+  "slug": "dk-metcalf-td-2026-10-01",
+  "template": "ticket",
+  "accent": "cyan",
+  "photo": "photos/dk-metcalf.jpg",
+  "photo_preset": "auto",
+  "name": "DK METCALF",
+  "team": "PITTSBURGH",
+  "jersey": "4",
+  "league": "NFL",
+  "tag_sub": "ANYTIME TD PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO FIND THE END ZONE",
+  "chip": "ATD",
+  "pick_text": "TOUCHDOWN",
+  "proj": "+189",
+  "note": "@ CLE · Model: +189 · best of 8 books",
+  "books": [
+    {
+      "book": "BETMGM",
+      "odds": "+250",
+      "stake": "0.8u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+250",
+      "stake": "0.8u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+230",
+      "stake": "0.6u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+230",
+      "stake": "0.6u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+230",
+      "stake": "0.6u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+230",
+      "stake": "0.6u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+225",
+      "stake": "0.6u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+225",
+      "stake": "0.6u"
+    }
+  ],
+  "photo_size": "auto 100%",
+  "photo_pos": "31% 40%"
+}

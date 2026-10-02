@@ -1,0 +1,23 @@
+{
+  "slug": "liam-hicks-hr-2026-09-11",
+  "template": "poster",
+  "accent": "pink",
+  "photo": "photos/liam-hicks.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "LIAM HICKS",
+  "team": "TAMPA BAY",
+  "jersey": "34",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs HOU · Model: +750 · best of 3 books",
+  "proj": "+750",
+  "books": [
+    { "book": "FANDUEL", "odds": "+980", "stake": "0.7u", "best": true },
+    { "book": "BETRIVERS", "odds": "+950", "stake": "0.6u" },
+    { "book": "FANATICS", "odds": "+950", "stake": "0.6u" }
+  ]
+}

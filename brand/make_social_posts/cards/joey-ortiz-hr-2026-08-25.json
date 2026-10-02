@@ -1,0 +1,23 @@
+{
+  "template": "poster",
+  "slug": "joey-ortiz-hr-2026-08-25",
+  "photo": "photos/joey-ortiz.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JOEY ORTIZ",
+  "team": "MILWAUKEE",
+  "jersey": "3",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ NYM · Model: +899 · FANATICS is the only board posting it",
+
+  "proj": "+899",
+  "book": "FANATICS",
+  "odds": "+1300",
+  "stake": "0.8u"
+}

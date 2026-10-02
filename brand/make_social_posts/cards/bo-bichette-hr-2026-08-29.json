@@ -1,0 +1,23 @@
+{
+  "template": "poster",
+  "slug": "bo-bichette-hr-2026-08-29",
+  "photo": "photos/bo-bichette.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "BO BICHETTE",
+  "team": "NEW YORK",
+  "jersey": "19",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs HOU · Model: +653 · FANATICS is the only board posting it",
+
+  "proj": "+653",
+  "book": "FANATICS",
+  "odds": "+800",
+  "stake": "0.6u"
+}

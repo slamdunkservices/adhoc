@@ -1,0 +1,36 @@
+{
+  "template": "poster",
+  "slug": "jorbit-vivas-sb-2026-09-05",
+  "photo": "photos/jorbit-vivas.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "JORBIT VIVAS",
+  "team": "WASHINGTON",
+  "jersey": "84",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "@ LAD · Model: +904 · best of 3 books",
+  "proj": "+904",
+  "books": [
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+2600",
+      "stake": "1.6u",
+      "best": true
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1300",
+      "stake": "0.8u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1200",
+      "stake": "0.6u"
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+{
+  "template": "ticket",
+  "slug": "mickey-moniak-sb-2026-09-04",
+  "photo": "photos/mickey-moniak.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "MICKEY MONIAK",
+  "team": "COLORADO",
+  "jersey": "22",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "vs STL · Model: +729 · best of 3 books",
+  "proj": "+729",
+  "books": [
+    { "book": "HARD ROCK BET", "odds": "+1000", "stake": "0.8u", "best": true },
+    { "book": "DRAFTKINGS", "odds": "+910", "stake": "0.6u" },
+    { "book": "CAESARS", "odds": "+900", "stake": "0.6u" }
+  ]
+}

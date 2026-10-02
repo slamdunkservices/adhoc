@@ -1,0 +1,25 @@
+{
+  "template": "ticket",
+  "slug": "sami-whitcomb-first-basket-2026-09-21",
+  "photo": "photos/sami-whitcomb.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "SAMI WHITCOMB",
+  "team": "PHOENIX",
+  "jersey": "33",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "vs DAL · Model: +1076 points · +1067 FG · best of 8 books",
+  "proj": "+1076",
+  "books": [
+    { "book": "FANDUEL", "odds": "+1500", "stake": "1.1u", "best": true },
+    { "book": "BETMGM", "odds": "+1500", "stake": "1.1u" },
+    { "book": "THESCORE BET", "odds": "+1500", "stake": "1.1u" },
+    { "book": "BETRIVERS", "odds": "+1400", "stake": "0.9u" },
+    { "book": "HARD ROCK BET", "odds": "+1400", "stake": "0.9u" }
+  ]
+}

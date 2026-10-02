@@ -1,0 +1,50 @@
+{
+  "slug": "carter-jensen-rbi-2026-09-25",
+  "template": "base",
+  "accent": "green",
+  "photo": "photos/carter-jensen.jpg",
+  "photo_preset": "auto",
+  "name": "CARTER JENSEN",
+  "team": "KANSAS CITY",
+  "jersey": "22",
+  "league": "MLB",
+  "tag_sub": "RBI PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO DRIVE ONE IN",
+  "chip": "1+",
+  "pick_text": "RBI",
+  "proj": "+224",
+  "pick_sub": "vs CLE · Model: +224 · best of 6 books",
+  "books": [
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+297",
+      "stake": "1.2u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+295",
+      "stake": "1.2u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+280",
+      "stake": "1u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+280",
+      "stake": "1u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+260",
+      "stake": "0.7u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+260",
+      "stake": "0.7u"
+    }
+  ]
+}

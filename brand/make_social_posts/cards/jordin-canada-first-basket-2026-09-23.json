@@ -1,0 +1,52 @@
+{
+  "slug": "jordin-canada-first-basket-2026-09-23",
+  "template": "ticket",
+  "accent": "pink",
+  "photo": "photos/jordin-canada-drive.jpg",
+  "photo_preset": "auto",
+  "name": "JORDIN CANADA",
+  "team": "ATLANTA",
+  "jersey": "3",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+1175",
+  "note": "@ NYL · Model: +1175 points · +1086 FG · best of 6 books",
+  "books": [
+    {
+      "book": "BETMGM",
+      "odds": "+1500",
+      "stake": "1.1u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1300",
+      "stake": "0.3u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1200",
+      "stake": "0.4u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1200",
+      "stake": "0.4u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1200",
+      "stake": "0.4u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1200",
+      "stake": "0.4u"
+    }
+  ],
+  "photo_size": "auto 112%",
+  "photo_pos": "36% 0%"
+}

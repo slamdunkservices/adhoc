@@ -1,0 +1,31 @@
+{
+  "template": "split",
+  "slug": "andres-chaparro-rbi-2026-09-20",
+  "photo": "photos/andres-chaparro.jpg",
+  "photo_preset": "auto",
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "RBI PROP",
+  "name": "ANDRÉS CHAPARRO",
+  "team": "WASHINGTON",
+  "jersey": "87",
+  "pick_label": "THE PICK — TO DRIVE ONE IN",
+  "chip": "1+",
+  "pick_text": "RBI",
+  "note": "@ STL · Model: +166 · best of 2 books",
+  "proj": "+166",
+  "books": [
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+202",
+      "stake": "1u",
+      "best": true
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+190",
+      "stake": "0.8u"
+    }
+  ],
+  "photo_pos": "55% 0%"
+}

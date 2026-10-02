@@ -1,0 +1,24 @@
+{
+  "template": "base",
+  "slug": "maya-caldwell-first-basket-exact-2026-08-24",
+  "photo": "photos/maya-caldwell.jpg",
+  "photo_preset": "auto",
+
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET EXACT",
+  "name": "MAYA CALDWELL",
+  "team": "MINNESOTA",
+  "jersey": "3",
+
+  "kicker": "SCORED IN 8 OF HER LAST 10",
+  "pick_label": "THE PICK — MINNESOTA'S FIRST, ON A TWO",
+  "chip": "2PT",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "vs GSV · Model: +993 · DK is the only board posting it",
+
+  "proj": "+993",
+  "book": "DRAFTKINGS",
+  "odds": "+1200",
+  "stake": "0.6u"
+}

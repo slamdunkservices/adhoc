@@ -1,0 +1,26 @@
+{
+  "template": "split",
+  "slug": "kayla-thornton-first-basket-2026-08-17",
+  "photo": "photos/kayla-thornton.jpg",
+  "photo_pos": "56% 50%",
+  "photo_size": "cover",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "KAYLA THORNTON",
+  "team": "GOLDEN STATE",
+  "jersey": "5",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "vs DAL · Model: +902 points · +903 FG · best of 2 books",
+
+  "proj": "+902",
+  "books": [
+    { "book": "DRAFTKINGS", "odds": "+1060", "stake": "0.7u", "best": true },
+    { "book": "FANATICS",   "odds": "+1000", "stake": "0.4u" }
+  ]
+}

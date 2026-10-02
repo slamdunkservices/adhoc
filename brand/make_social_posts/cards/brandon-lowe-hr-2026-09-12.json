@@ -1,0 +1,22 @@
+{
+  "slug": "brandon-lowe-hr-2026-09-12",
+  "template": "fullbleed",
+  "accent": "cyan",
+  "photo": "photos/brandon-lowe.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "BRANDON LOWE",
+  "team": "PITTSBURGH",
+  "jersey": "5",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ CHC · Model: +370 · Fanatics is the only book over the line",
+  "pick_sub": "@ CHC · Model: +370 · Fanatics is the only book over the line",
+  "proj": "+370",
+  "books": [
+    { "book": "FANATICS", "odds": "+420", "stake": "0.7u", "best": true }
+  ]
+}

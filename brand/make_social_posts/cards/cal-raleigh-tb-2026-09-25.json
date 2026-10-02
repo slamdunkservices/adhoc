@@ -1,0 +1,35 @@
+{
+  "slug": "cal-raleigh-tb-2026-09-25",
+  "template": "poster",
+  "accent": "pink",
+  "photo": "photos/cal-raleigh.jpg",
+  "photo_preset": "auto",
+  "name": "CAL RALEIGH",
+  "team": "SEATTLE",
+  "jersey": "29",
+  "league": "MLB",
+  "tag_sub": "TOTAL BASES PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO RACK UP BASES",
+  "chip": "2+",
+  "pick_text": "TOTAL BASES",
+  "proj": "+155",
+  "note": "vs LAA · Model: +155 · best of 3 books",
+  "books": [
+    {
+      "book": "BETMGM",
+      "odds": "+200",
+      "stake": "1.1u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+190",
+      "stake": "0.9u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+185",
+      "stake": "0.8u"
+    }
+  ]
+}

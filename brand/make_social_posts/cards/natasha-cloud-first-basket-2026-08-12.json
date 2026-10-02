@@ -1,0 +1,28 @@
+{
+  "template": "base",
+  "slug": "natasha-cloud-first-basket-2026-08-12",
+  "photo": "photos/natasha-cloud.jpg",
+  "photo_pos": "50% 20%",
+  "photo_size": "cover",
+  "photo_filter": "none",
+
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "NATASHA CLOUD",
+  "team": "CHICAGO",
+  "jersey": "9",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "Model: +997 points · +1028 FG · best of 3 books",
+
+  "proj": "+997",
+  "books": [
+    { "book": "FANDUEL",  "odds": "+1300", "stake": "1u",   "best": true },
+    { "book": "CAESARS",  "odds": "+1100", "stake": "0.4u" },
+    { "book": "DRAFTKINGS","odds": "+1060", "stake": "0.2u" }
+  ]
+}

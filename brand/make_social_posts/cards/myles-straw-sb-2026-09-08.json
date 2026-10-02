@@ -1,0 +1,29 @@
+{
+  "slug": "myles-straw-sb-2026-09-08",
+  "template": "ticket",
+  "accent": "cyan",
+  "photo": "photos/myles-straw.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "MYLES STRAW",
+  "team": "TORONTO",
+  "jersey": "3",
+  "pick_label": "THE PICK \u2014 TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "@ ATH \u00b7 Model: +908 \u00b7 HRB is the only board posting it",
+  "pick_sub": "@ ATH \u00b7 Model: +908 \u00b7 HRB is the only board posting it",
+  "proj": "+908",
+  "books": [
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1200",
+      "stake": "0.6u",
+      "best": true
+    }
+  ],
+  "photo_size": "168%",
+  "photo_pos": "52% 39%"
+}

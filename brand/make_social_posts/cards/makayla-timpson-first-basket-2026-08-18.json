@@ -1,0 +1,37 @@
+{
+  "template": "base",
+  "slug": "makayla-timpson-first-basket-2026-08-18",
+  "photo": "photos/makayla-timpson.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "MAKAYLA TIMPSON",
+  "team": "INDIANA",
+  "jersey": "21",
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "@ TOR \u00b7 Model: +1027 points \u00b7 +991 FG \u00b7 best of 3 books",
+  "proj": "+1027",
+  "books": [
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1280",
+      "stake": "0.8u",
+      "best": true
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1100",
+      "stake": "0.4u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+1100",
+      "stake": "0.4u"
+    }
+  ],
+  "pick_sub": "@ TOR \u00b7 Model: +1027 points \u00b7 +991 FG \u00b7 best of 3 books"
+}

@@ -1,0 +1,40 @@
+{
+  "template": "ticket",
+  "slug": "holly-winterburn-first-basket-2026-08-30",
+  "photo": "photos/holly-winterburn.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "HOLLY WINTERBURN",
+  "team": "PORTLAND",
+  "jersey": "77",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "vs GSV · Model: +960 points · +930 FG · best of 4 books",
+  "proj": "+960",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+1100",
+      "stake": "0.5u",
+      "best": true
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+1000",
+      "stake": "0.3u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1000",
+      "stake": "0.3u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1000",
+      "stake": "0.3u"
+    }
+  ]
+}

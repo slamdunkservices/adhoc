@@ -1,0 +1,42 @@
+{
+  "template": "base",
+  "slug": "jordin-canada-first-basket-2026-08-22",
+  "photo": "photos/jordin-canada.jpg",
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "JORDIN CANADA",
+  "team": "ATLANTA",
+  "jersey": "3",
+  "kicker": "TEAM-BEST 7.5 AST",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+1025",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+1200",
+      "stake": "0.6u",
+      "best": true
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+1200",
+      "stake": "0.6u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1200",
+      "stake": "0.6u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1100",
+      "stake": "0.2u"
+    }
+  ],
+  "pick_sub": "@ PHX · Model: +1025 points · +1054 FG · best of 4 books",
+  "photo_pos": "60% 45%",
+  "photo_size": "150%"
+}

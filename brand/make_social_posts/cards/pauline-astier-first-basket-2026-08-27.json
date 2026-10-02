@@ -1,0 +1,57 @@
+{
+  "template": "ticket",
+  "slug": "pauline-astier-first-basket-2026-08-27",
+  "photo": "photos/pauline-astier.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET",
+  "name": "PAULINE ASTIER",
+  "team": "NEW YORK",
+  "jersey": "18",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "vs GSV \u00b7 Model: +954 points \u00b7 +946 FG \u00b7 best of 7 books",
+  "proj": "+954",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+1200",
+      "stake": "0.9u",
+      "best": true
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1200",
+      "stake": "0.9u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1200",
+      "stake": "0.9u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1140",
+      "stake": "0.7u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1100",
+      "stake": "0.6u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+1100",
+      "stake": "0.6u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+1100",
+      "stake": "0.6u"
+    }
+  ],
+  "photo_size": "170%",
+  "photo_pos": "48% 12%"
+}

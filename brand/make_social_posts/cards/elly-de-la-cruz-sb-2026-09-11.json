@@ -1,0 +1,29 @@
+{
+  "slug": "elly-de-la-cruz-sb-2026-09-11",
+  "template": "ticket",
+  "accent": "green",
+  "photo": "photos/elly-de-la-cruz-sb.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "ELLY DE LA CRUZ",
+  "team": "CINCINNATI",
+  "jersey": "44",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "note": "@ MIL · Model: +421 · BR is the only book over the line",
+  "pick_sub": "@ MIL · Model: +421 · BR is the only book over the line",
+  "proj": "+421",
+  "books": [
+    {
+      "book": "BETRIVERS",
+      "odds": "+510",
+      "stake": "0.8u",
+      "best": true
+    }
+  ],
+  "photo_size": "180%",
+  "photo_pos": "100% 100%"
+}

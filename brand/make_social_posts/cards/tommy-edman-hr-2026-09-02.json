@@ -1,0 +1,23 @@
+{
+  "template": "poster",
+  "slug": "tommy-edman-hr-2026-09-02",
+  "photo": "photos/tommy-edman.jpg",
+  "photo_preset": "auto",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "TOMMY EDMAN",
+  "team": "LOS ANGELES",
+  "jersey": "25",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs STL · Model: +563 · best of 8 books",
+
+  "proj": "+563",
+  "book": "FANATICS",
+  "odds": "+1050",
+  "stake": "1.8u"
+}

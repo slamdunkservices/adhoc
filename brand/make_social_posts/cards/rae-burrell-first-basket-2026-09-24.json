@@ -1,0 +1,45 @@
+{
+  "slug": "rae-burrell-first-basket-2026-09-24",
+  "template": "base",
+  "accent": "pink",
+  "photo": "photos/rae-burrell.jpg",
+  "photo_preset": "auto",
+  "name": "RAE BURRELL",
+  "team": "LOS ANGELES",
+  "jersey": "12",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+790",
+  "pick_sub": "vs GSV · Model: +790 points · +781 FG · best of 5 books",
+  "books": [
+    {
+      "book": "BETMGM",
+      "odds": "+1200",
+      "stake": "1.8u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1200",
+      "stake": "1.8u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1200",
+      "stake": "1.8u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+1100",
+      "stake": "1.4u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+900",
+      "stake": "0.6u"
+    }
+  ]
+}

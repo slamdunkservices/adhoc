@@ -1,0 +1,27 @@
+{
+  "slug": "pete-crow-armstrong-hr-2026-09-22",
+  "template": "fullbleed",
+  "accent": "green",
+  "photo": "photos/pete-crow-armstrong.jpg",
+  "photo_preset": "auto",
+  "name": "PETE CROW-ARMSTRONG",
+  "team": "CHICAGO",
+  "jersey": "4",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+400",
+  "note": "vs MIA · Model: +400 · best of 7 books",
+  "books": [
+    { "book": "FANATICS", "odds": "+700", "stake": "2.3u" },
+    { "book": "BETRIVERS", "odds": "+650", "stake": "2u" },
+    { "book": "FANDUEL", "odds": "+600", "stake": "1.8u" },
+    { "book": "CAESARS", "odds": "+575", "stake": "1.6u" },
+    { "book": "DRAFTKINGS", "odds": "+563", "stake": "1.5u" },
+    { "book": "HARD ROCK BET", "odds": "+550", "stake": "1.4u" },
+    { "book": "THESCORE BET", "odds": "+525", "stake": "1.2u" }
+  ]
+}

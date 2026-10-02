@@ -1,0 +1,24 @@
+{
+  "template": "poster",
+  "slug": "bryce-harper-hr-2026-08-17",
+  "photo": "photos/bryce-harper.jpg",
+  "photo_preset": "auto",
+
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "BRYCE HARPER",
+  "team": "PHILADELPHIA",
+  "jersey": "3",
+
+  "kicker": "TONIGHT'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs MIA · Model: +268 · best of 7 books",
+
+  "proj": "+268",
+  "book": "FANDUEL",
+  "odds": "+350",
+  "stake": "1.6u"
+}

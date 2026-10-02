@@ -1,0 +1,30 @@
+{
+  "template": "fullbleed",
+  "slug": "christian-moore-hr-2026-08-24",
+  "photo": "photos/christian-moore.jpg",
+  "photo_preset": "auto",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "CHRISTIAN MOORE",
+  "team": "LOS ANGELES",
+  "jersey": "4",
+
+  "kicker": "112 MPH MAX EXIT VELO",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs CLE · Model: +618 · best of 7 books",
+
+  "proj": "+618",
+  "books": [
+    { "book": "BETRIVERS",     "odds": "+850", "stake": "1u",   "best": true },
+    { "book": "DRAFTKINGS",    "odds": "+800", "stake": "0.8u" },
+    { "book": "THESCORE BET",  "odds": "+800", "stake": "0.8u" },
+    { "book": "FANATICS",      "odds": "+800", "stake": "0.8u" },
+    { "book": "FANDUEL",       "odds": "+750", "stake": "0.6u" },
+    { "book": "CAESARS",       "odds": "+750", "stake": "0.6u" },
+    { "book": "HARD ROCK BET", "odds": "+750", "stake": "0.6u" }
+  ]
+}

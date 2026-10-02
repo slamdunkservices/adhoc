@@ -1,0 +1,25 @@
+{
+  "template": "split",
+  "slug": "elly-de-la-cruz-hr-2026-08-26",
+  "photo": "photos/elly-de-la-cruz.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "ELLY DE LA CRUZ",
+  "team": "CINCINNATI",
+  "jersey": "44",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ SF · Model: +669 · best of 3 books",
+
+  "proj": "+669",
+  "books": [
+    { "book": "FANATICS", "odds": "+950", "stake": "1u" },
+    { "book": "DRAFTKINGS", "odds": "+830", "stake": "0.6u" },
+    { "book": "FANDUEL", "odds": "+820", "stake": "0.6u" }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "template": "split",
+  "slug": "jonah-cox-hr-2026-08-28",
+  "photo": "photos/jonah-cox.jpg",
+  "photo_preset": "auto",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JONAH COX",
+  "team": "SAN FRANCISCO",
+  "jersey": "53",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs AZ · Model: +721 · best of 3 books",
+
+  "proj": "+721",
+  "books": [
+    { "book": "FANATICS", "odds": "+950", "stake": "0.7u", "best": true },
+    { "book": "THESCORE BET", "odds": "+900", "stake": "0.6u" },
+    { "book": "DRAFTKINGS", "odds": "+890", "stake": "0.6u" }
+  ]
+}

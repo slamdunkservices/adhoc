@@ -1,0 +1,22 @@
+{
+  "template": "base",
+  "slug": "wade-meckler-sb-2026-09-15",
+  "photo": "photos/wade-meckler.jpg",
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "WADE MECKLER",
+  "team": "LOS ANGELES",
+  "jersey": "53",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "pick_sub": "vs SEA · Model: +649 · DK is the only book over the line",
+  "proj": "+649",
+  "books": [
+    { "book": "DRAFTKINGS", "odds": "+820", "stake": "0.7u", "best": true }
+  ],
+  "photo_size": "190%",
+  "photo_pos": "72% 100%"
+}

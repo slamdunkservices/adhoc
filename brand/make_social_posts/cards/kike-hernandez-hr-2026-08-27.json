@@ -1,0 +1,23 @@
+{
+  "template": "fullbleed",
+  "slug": "kike-hernandez-hr-2026-08-27",
+  "photo": "photos/enrique-hernandez.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "KIKE HERNANDEZ",
+  "team": "LOS ANGELES",
+  "jersey": "8",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ ATL · Model: +829 · FANATICS is the only board posting it",
+
+  "proj": "+829",
+  "book": "FANATICS",
+  "odds": "+1050",
+  "stake": "0.6u"
+}

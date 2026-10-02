@@ -1,0 +1,26 @@
+{
+  "slug": "luke-keaschall-sb-2026-09-12",
+  "template": "base",
+  "accent": "pink",
+  "photo": "photos/luke-keaschall-sb.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "STOLEN BASE PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "LUKE KEASCHALL",
+  "team": "MINNESOTA",
+  "jersey": "15",
+  "pick_label": "THE PICK — TO STEAL A BAG",
+  "chip": "SB",
+  "pick_text": "STOLEN BASE",
+  "pick_sub": "vs CLE · Model: +500 · DK is the only book over the line",
+  "proj": "+500",
+  "books": [
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+630",
+      "stake": "0.9u",
+      "best": true
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "slug": "liam-hicks-runs-2026-09-26",
+  "template": "ticket",
+  "accent": "pink",
+  "photo": "photos/liam-hicks.jpg",
+  "photo_preset": "auto",
+  "name": "LIAM HICKS",
+  "team": "TAMPA BAY",
+  "jersey": "34",
+  "league": "MLB",
+  "tag_sub": "RUN SCORED PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO CROSS THE PLATE",
+  "chip": "1+",
+  "pick_text": "RUN SCORED",
+  "proj": "+168",
+  "note": "@ PHI · Model: +168 · best of 2 books",
+  "books": [
+    {"book": "BETRIVERS", "odds": "+230", "stake": "1.3u"},
+    {"book": "BETMGM", "odds": "+200", "stake": "0.8u"}
+  ]
+}

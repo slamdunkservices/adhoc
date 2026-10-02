@@ -1,0 +1,36 @@
+{
+  "template": "fullbleed",
+  "slug": "leo-bernal-hr-2026-09-05",
+  "photo": "photos/leo-bernal.jpg",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "LEO BERNAL",
+  "team": "ST. LOUIS",
+  "jersey": "13",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ COL · Model: +529 · best of 3 books",
+  "proj": "+529",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+680",
+      "stake": "0.9u",
+      "best": true
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+650",
+      "stake": "0.8u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+650",
+      "stake": "0.8u"
+    }
+  ]
+}

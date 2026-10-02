@@ -1,0 +1,25 @@
+{
+  "template": "fullbleed",
+  "slug": "jose-altuve-hr-2026-08-21",
+  "photo": "photos/jose-altuve.jpg",
+  "photo_preset": "auto",
+
+  "accent": "pink",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "JOSE ALTUVE",
+  "team": "HOUSTON",
+  "jersey": "27",
+
+  "kicker": "13 HOMERS IN 102 GAMES",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs ATH · Model: +749 · best of 2 books",
+
+  "proj": "+749",
+  "books": [
+    { "book": "FANATICS",   "odds": "+1050", "stake": "0.8u", "best": true },
+    { "book": "DRAFTKINGS", "odds": "+970",  "stake": "0.7u" }
+  ]
+}

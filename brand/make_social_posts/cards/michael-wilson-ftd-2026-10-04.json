@@ -1,0 +1,27 @@
+{
+  "slug": "michael-wilson-ftd-2026-10-04",
+  "template": "split",
+  "accent": "green",
+  "photo": "photos/michael-wilson.jpg",
+  "photo_preset": "auto",
+  "name": "MICHAEL WILSON",
+  "team": "ARIZONA",
+  "jersey": "14",
+  "league": "NFL",
+  "tag_sub": "FIRST TD PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — FIRST TO SCORE SIX",
+  "chip": "1ST",
+  "pick_text": "FIRST TOUCHDOWN",
+  "proj": "+940",
+  "note": "@ NYG · Model: +940 · TSB is the only book over the line",
+  "books": [
+    {
+      "book": "THESCORE BET",
+      "odds": "+1300",
+      "stake": "0.3u"
+    }
+  ],
+  "photo_size": "auto 100%",
+  "photo_pos": "21% 45%"
+}

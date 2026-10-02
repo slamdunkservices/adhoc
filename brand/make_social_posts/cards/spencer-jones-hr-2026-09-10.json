@@ -1,0 +1,24 @@
+{
+  "slug": "spencer-jones-hr-2026-09-10",
+  "template": "ticket",
+  "accent": "pink",
+  "photo": "photos/spencer-jones-dugout.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "SPENCER JONES",
+  "team": "NEW YORK",
+  "jersey": "78",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs COL · Model: +309 · MGM is the only book over the line",
+  "pick_sub": "vs COL · Model: +309 · MGM is the only book over the line",
+  "photo_size": "230%",
+  "photo_pos": "52% 22%",
+  "proj": "+309",
+  "books": [
+    { "book": "BETMGM", "odds": "+360", "stake": "0.9u", "best": true }
+  ]
+}

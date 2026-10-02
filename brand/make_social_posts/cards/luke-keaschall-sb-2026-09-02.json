@@ -1,0 +1,21 @@
+{
+  "slug": "luke-keaschall-sb-2026-09-02",
+  "template": "fullbleed",
+  "accent": "cyan",
+  "photo": "photos/luke-keaschall.jpg",
+  "photo_preset": "auto",
+  "league": "MLB",
+  "tag_sub": "PLAYER PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "LUKE KEASCHALL",
+  "team": "MINNESOTA",
+  "jersey": "15",
+  "pick_label": "THE PICK",
+  "pick_text": "STOLEN BASE",
+  "chip": "1+",
+  "note": "vs DET · Model: +518 · best of 7 books",
+  "proj": "+518",
+  "book": "BETRIVERS",
+  "odds": "+700",
+  "stake": "1.05u"
+}

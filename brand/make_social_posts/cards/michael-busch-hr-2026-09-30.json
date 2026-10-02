@@ -1,0 +1,22 @@
+{
+  "slug": "michael-busch-hr-2026-09-30",
+  "template": "poster",
+  "accent": "green",
+  "photo": "photos/michael-busch.jpg",
+  "photo_preset": "auto",
+  "name": "MICHAEL BUSCH",
+  "team": "CHICAGO",
+  "jersey": "29",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+589",
+  "note": "@ SD · Model: +589 · best of 2 books",
+  "books": [
+    {"book": "DRAFTKINGS", "odds": "+730", "stake": "0.7u"},
+    {"book": "HARD ROCK BET", "odds": "+700", "stake": "0.6u"}
+  ]
+}

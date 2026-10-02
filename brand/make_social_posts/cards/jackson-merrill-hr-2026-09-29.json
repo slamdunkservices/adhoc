@@ -1,0 +1,27 @@
+{
+  "slug": "jackson-merrill-hr-2026-09-29",
+  "template": "fullbleed",
+  "accent": "green",
+  "photo": "photos/jackson-merrill.jpg",
+  "photo_preset": "auto",
+  "name": "JACKSON MERRILL",
+  "team": "SAN DIEGO",
+  "jersey": "3",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+457",
+  "note": "vs CHC · Model: +457 · best of 7 books",
+  "books": [
+    {"book": "FANATICS", "odds": "+650", "stake": "1.4u"},
+    {"book": "DRAFTKINGS", "odds": "+610", "stake": "1.2u"},
+    {"book": "HARD ROCK BET", "odds": "+600", "stake": "1.1u"},
+    {"book": "FANDUEL", "odds": "+590", "stake": "1.1u"},
+    {"book": "CAESARS", "odds": "+575", "stake": "1u"},
+    {"book": "BETRIVERS", "odds": "+550", "stake": "0.8u"},
+    {"book": "THESCORE BET", "odds": "+550", "stake": "0.8u"}
+  ]
+}

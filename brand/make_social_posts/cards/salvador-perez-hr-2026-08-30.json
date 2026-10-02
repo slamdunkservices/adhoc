@@ -1,0 +1,23 @@
+{
+  "template": "fullbleed",
+  "slug": "salvador-perez-hr-2026-08-30",
+  "photo": "photos/salvador-perez.jpg",
+  "photo_preset": "auto",
+
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "SALVADOR PEREZ",
+  "team": "KANSAS CITY",
+  "jersey": "13",
+
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "@ CLE · Model: +600 · BETRIVERS is the only board posting it",
+
+  "proj": "+600",
+  "book": "BETRIVERS",
+  "odds": "+800",
+  "stake": "0.9u"
+}

@@ -1,0 +1,23 @@
+{
+  "template": "base",
+  "slug": "kia-nurse-first-basket-exact-2026-08-26",
+  "photo": "photos/kia-nurse.jpg",
+  "photo_preset": "auto",
+
+  "accent": "cyan",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET EXACT",
+  "name": "KIA NURSE",
+  "team": "TORONTO",
+  "jersey": "11",
+
+  "pick_label": "THE PICK — TO SCORE FIRST, ON A THREE",
+  "chip": "3PT",
+  "pick_text": "FIRST BASKET",
+  "pick_sub": "@ SEA · Model: +1648 · FANDUEL is the only board posting it",
+
+  "proj": "+1648",
+  "book": "FANDUEL",
+  "odds": "+2700",
+  "stake": "1.2u"
+}

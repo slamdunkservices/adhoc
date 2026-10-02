@@ -1,0 +1,23 @@
+{
+  "template": "base",
+  "slug": "temi-fagbenle-first-three-2026-08-29",
+  "photo": "photos/temi-fagbenle.jpg",
+  "photo_preset": "auto",
+
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST THREE PROP",
+  "name": "TEMI FAGBENLE",
+  "team": "TORONTO",
+  "jersey": "14",
+
+  "pick_label": "THE PICK — TORONTO'S FIRST THREE",
+  "chip": "1ST 3",
+  "pick_text": "FIRST THREE",
+  "pick_sub": "@ PHX · Model: +645 · DRAFTKINGS is the only board posting it",
+
+  "proj": "+645",
+  "book": "DRAFTKINGS",
+  "odds": "+900",
+  "stake": "1.2u"
+}

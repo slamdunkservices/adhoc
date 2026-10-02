@@ -1,0 +1,42 @@
+{
+  "template": "split",
+  "slug": "hunter-feduccia-hr-2026-08-23",
+  "photo": "photos/hunter-feduccia.jpg",
+  "accent": "green",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "name": "HUNTER FEDUCCIA",
+  "team": "LOS ANGELES",
+  "jersey": "46",
+  "kicker": "11 BARRELS ON 127 BIP",
+  "pick_label": "THE PICK \u2014 TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs PIT \u00b7 Model: +655 \u00b7 best of 4 books",
+  "proj": "+655",
+  "books": [
+    {
+      "book": "FANATICS",
+      "odds": "+950",
+      "stake": "1u",
+      "best": true
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+820",
+      "stake": "0.7u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+810",
+      "stake": "0.6u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+800",
+      "stake": "0.6u"
+    }
+  ],
+  "photo_pos": "14% 25%",
+  "photo_size": "cover"
+}

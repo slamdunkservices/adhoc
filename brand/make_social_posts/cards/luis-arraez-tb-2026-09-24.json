@@ -1,0 +1,50 @@
+{
+  "slug": "luis-arraez-tb-2026-09-24",
+  "template": "split",
+  "accent": "pink",
+  "photo": "photos/luis-arraez.jpg",
+  "photo_preset": "auto",
+  "name": "LUIS ARRAEZ",
+  "team": "PHILADELPHIA",
+  "jersey": "4",
+  "league": "MLB",
+  "tag_sub": "TOTAL BASES PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO RACK UP BASES",
+  "chip": "2+",
+  "pick_text": "TOTAL BASES",
+  "proj": "+123",
+  "note": "vs MIL · Model: +123 · best of 6 books",
+  "books": [
+    {
+      "book": "BETRIVERS",
+      "odds": "+165",
+      "stake": "1.4u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+160",
+      "stake": "1.3u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+146",
+      "stake": "0.9u"
+    },
+    {
+      "book": "FANDUEL",
+      "odds": "+145",
+      "stake": "0.9u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+140",
+      "stake": "0.7u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+140",
+      "stake": "0.7u"
+    }
+  ]
+}

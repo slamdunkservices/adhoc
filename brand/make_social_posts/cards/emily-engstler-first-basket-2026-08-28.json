@@ -1,0 +1,62 @@
+{
+  "template": "fullbleed",
+  "slug": "emily-engstler-first-basket-2026-08-28",
+  "photo": "photos/emily-engstler.png",
+  "photo_preset": "auto",
+  "accent": "green",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "EMILY ENGSTLER",
+  "team": "PORTLAND",
+  "jersey": "21",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "note": "@ ATL \u00b7 Model: +905 points \u00b7 +882 FG \u00b7 best of 8 books",
+  "proj": "+905",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+1300",
+      "stake": "1.5u",
+      "best": true
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+1300",
+      "stake": "1.5u"
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1200",
+      "stake": "1.2u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1200",
+      "stake": "1.2u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+1100",
+      "stake": "0.8u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+1100",
+      "stake": "0.8u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+1040",
+      "stake": "0.6u"
+    },
+    {
+      "book": "FANATICS",
+      "odds": "+1000",
+      "stake": "0.5u"
+    }
+  ],
+  "photo_size": "1000px",
+  "photo_pos": "50% 4%"
+}

@@ -1,0 +1,55 @@
+{
+  "template": "ticket",
+  "slug": "diamond-miller-first-basket-2026-08-28",
+  "photo": "photos/diamond-miller.png",
+  "photo_preset": "auto",
+  "accent": "pink",
+  "league": "WNBA",
+  "tag_sub": "FIRST BASKET PROP",
+  "name": "DIAMOND MILLER",
+  "team": "CONNECTICUT",
+  "jersey": "1",
+  "pick_label": "THE PICK \u2014 TO SCORE FIRST",
+  "chip": "1ST",
+  "pick_text": "FIRST BASKET",
+  "proj": "+871",
+  "books": [
+    {
+      "book": "FANDUEL",
+      "odds": "+1000",
+      "stake": "0.6u",
+      "best": true
+    },
+    {
+      "book": "BETRIVERS",
+      "odds": "+1000",
+      "stake": "0.6u"
+    },
+    {
+      "book": "HARD ROCK BET",
+      "odds": "+1000",
+      "stake": "0.6u"
+    },
+    {
+      "book": "DRAFTKINGS",
+      "odds": "+980",
+      "stake": "0.5u"
+    },
+    {
+      "book": "BETMGM",
+      "odds": "+950",
+      "stake": "0.4u"
+    },
+    {
+      "book": "CAESARS",
+      "odds": "+950",
+      "stake": "0.4u"
+    },
+    {
+      "book": "THESCORE BET",
+      "odds": "+900",
+      "stake": "0.1u"
+    }
+  ],
+  "note": "@ IND \u00b7 Model: +871 points \u00b7 +906 FG \u00b7 best of 7 books"
+}

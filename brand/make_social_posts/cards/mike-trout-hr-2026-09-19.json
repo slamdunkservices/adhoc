@@ -1,0 +1,24 @@
+{
+  "template": "poster",
+  "slug": "mike-trout-hr-2026-09-19",
+  "photo": "photos/mike-trout.jpg",
+  "photo_preset": "auto",
+  "accent": "cyan",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "name": "MIKE TROUT",
+  "team": "LOS ANGELES",
+  "jersey": "27",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "note": "vs MIN · Model: +345 · best of 8 books",
+  "proj": "+345",
+  "books": [
+    { "book": "DRAFTKINGS", "odds": "+468", "stake": "1.6u", "best": true },
+    { "book": "THESCORE BET", "odds": "+450", "stake": "1.4u" },
+    { "book": "FANDUEL", "odds": "+440", "stake": "1.3u" },
+    { "book": "CAESARS", "odds": "+425", "stake": "1.1u" }
+  ]
+}

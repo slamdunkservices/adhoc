@@ -1,0 +1,24 @@
+{
+  "slug": "lazaro-montes-hr-2026-09-26",
+  "template": "split",
+  "accent": "green",
+  "photo": "photos/lazaro-montes.jpg",
+  "photo_preset": "auto",
+  "name": "LAZARO MONTES",
+  "team": "SEATTLE",
+  "jersey": "99",
+  "league": "MLB",
+  "tag_sub": "HOME RUN PROP",
+  "kicker": "TODAY'S PLAY",
+  "pick_label": "THE PICK — TO GO YARD",
+  "chip": "1+",
+  "pick_text": "HOME RUN",
+  "proj": "+521",
+  "note": "vs LAA · Model: +521 · best of 4 books",
+  "books": [
+    {"book": "FANATICS", "odds": "+750", "stake": "1.3u"},
+    {"book": "FANDUEL", "odds": "+680", "stake": "1u"},
+    {"book": "DRAFTKINGS", "odds": "+650", "stake": "0.8u"},
+    {"book": "CAESARS", "odds": "+625", "stake": "0.7u"}
+  ]
+}
