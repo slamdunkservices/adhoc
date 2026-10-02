@@ -76,6 +76,9 @@ has its own variables:
 
 ## Conventions
 
+- **No branches.** Work and commit directly on `main` in the main checkout — no
+  feature branches, no worktrees, no PRs. If a session starts in a worktree, make
+  the change in the main checkout instead and commit it there.
 - No pip installs. `odds_analysis/` and `build_card.py` run on the system
   `python3` against the pandas/pyarrow already there.
 - `data/` and `out/` directories are rebuildable and gitignored.
